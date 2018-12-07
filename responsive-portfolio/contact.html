@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bryan Bloomquist</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div class="container">
+            <a href="index.html" id="logo">Bryan Bloomquist</a>
+            <div class="topnav">
+                <ul>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="maincontainer" class="container">
+        <div class="header2">
+            Contact Me
+        </div>
+        <hr>
+        <div class="contactme">
+            <form action="#">
+                Name:<br>
+                <input class="formtype" type="text" name="name" placeholder="Last Name, First Name" required="required">
+                <br>
+                Email:<br>
+                <input class="formtype" type="text" name="email" placeholder="example@domain.com" required="required">
+                <br>
+                Leave Me A Message:<br>
+                <input id="message" type="text" name="message" required="required">
+                <br><br>
+                <!--Here is the code for the submit button, but since it doesn't funtion I put a temporary button in it's place.
+                    <input class="subbut" type="submit" value="Submit"> -->
+                <input class="subbut" type="button" onclick="alert('This form does not do anything yet, sorry for that.')"
+                    value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            Copyright &copy;
+        </div>
+    </footer>
+</body>
+
+</html>
