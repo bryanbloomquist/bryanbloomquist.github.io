@@ -174,7 +174,6 @@ function checkGuess (letter) {
         lettersUsed.push(letter);
         guessesRemaining--;
     }
-    console.log(currentOpacity);
 }
 
 
