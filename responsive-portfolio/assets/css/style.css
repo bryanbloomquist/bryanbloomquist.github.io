@@ -186,6 +186,8 @@ footer {
 .prt {
     margin: 5px;
     border: 2px solid #4aaaa5;
+    width: 200px;
+    height: 200px;
 }
 
 .linktext {
