@@ -104,7 +104,7 @@ var monsters = [
 
 
 
-//set the initial variables for the game
+//set the initial variables for the games
 var level = 1;
 var health = 10;
 var guessesRemaining = 10;
@@ -183,7 +183,7 @@ function checkGuess(letter) {
 function gameWin() {
     //if they won
     if (guessWord.toString() === answerArray.toString()) {
-        document.getElementById("adventure-log").innerHTML = "You defeated the " + word + "!<br>You gained 1 Exp Level.<br>";
+        document.getElementById("adventure-log").innerHTML = "You defeated the " + word + " !<br>You gained 1 Exp Level.<br>";
         var audio = document.createElement("audio");
         audio.setAttribute("src", "assets/victorybyte.wav");
         audio.play();
