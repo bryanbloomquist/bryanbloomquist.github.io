@@ -104,6 +104,11 @@ var monsters = [
 
 
 
+//define valid keys for guesses
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+
+
 //set the initial variables for the games
 var level = 1;
 var health = 10;
@@ -183,7 +188,7 @@ function checkGuess(letter) {
 function gameWin() {
     //if they won
     if (guessWord.toString() === answerArray.toString()) {
-        document.getElementById("adventure-log").innerHTML = "You defeated the " + word + " !<br>You gained 1 Exp Level.<br>";
+        document.getElementById("adventure-log").innerHTML = "You defeated the " + word + "!<br>You gained 1 Exp Level.<br>";
         var audio = document.createElement("audio");
         audio.setAttribute("src", "assets/victorybyte.wav");
         audio.play();
@@ -227,8 +232,10 @@ game();
 document.onkeyup = function (event) {
     var guess = event.key;
     guess = guess.toLowerCase();
-    console.log(guess);
-    checkGuess(guess);
-    gameWin();
-    document.getElementById("lettersGuessed").innerHTML = " " + lettersUsed.join("  ");
+    if (alphabet.includes(guess)) {
+        console.log(guess);
+        checkGuess(guess);
+        gameWin();
+        document.getElementById("lettersGuessed").innerHTML = " " + lettersUsed.join("  ");
+    } else { }
 }
