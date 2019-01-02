@@ -110,6 +110,8 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 
 
 //set the initial variables for the games
+var wins = 0;
+var losses = 0;
 var level = 1;
 var health = 10;
 var guessesRemaining = 10;
@@ -122,12 +124,26 @@ var currentImage = monsters[randomNumber].image;
 
 
 
+function shuffle(array){
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex){
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array [randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+monsters = shuffle(monsters);
+
 
 //set the game function
 function game() {
-    randomNumber = Math.floor(Math.random() * monsters.length);
-    word = monsters[randomNumber].name;
-    currentImage = monsters[randomNumber].image;
+    var x = wins + losses;
+    console.log(x)
+    word = monsters[x].name;
+    currentImage = monsters[x].image;
     console.log(word);
     //seperate random word into new array
     guessWord = word.split("");
@@ -186,13 +202,15 @@ function checkGuess(letter) {
 
 //check if the user won the game
 function gameWin() {
+    var y = wins + losses;
     //if they won
-    if (guessWord.toString() === answerArray.toString()) {
+    if (guessWord.toString() === answerArray.toString() && y < monsters.length-1) {
         document.getElementById("adventure-log").innerHTML = "You defeated the " + word + "!<br>You gained 1 Exp Level.<br>";
         var audio = document.createElement("audio");
         audio.setAttribute("src", "assets/victorybyte.wav");
         audio.play();
         level++;
+        wins++;
         document.getElementById("expLevel").innerHTML = +level;
         reset();
         //if they lost but have more than 1 hit point remaining
@@ -202,9 +220,25 @@ function gameWin() {
         audio.setAttribute("src", "assets/wilhelmscream.wav");
         audio.play();
         health--;
+        losses++;
+        console.log(level, wins, health, losses);
         document.getElementById("healthPoints").innerHTML = +health;
         reset();
-        // if they lost but have only 1 hit point
+        //if they won and they cleared the whole array
+    } else if (guessWord.toString() === answerArray.toString() && y === monsters.length-1) {
+        var audio = document.createElement("audio");
+        audio.setAttribute("src", "assets/gamewin.wav");
+        audio.play();
+        level++;
+        wins++;
+        document.getElementById("expLevel").innerHTML = +level;
+        currentOpacity =1;
+        monsterImage.style.opacity = currentOpacity;
+        document.getElementById("logo").src = "assets/images/youwon.png";
+        document.getElementById("monsterImage").src = "assets/images/critwin.jpg";
+        document.getElementById("gameover").innerHTML = "Refresh Your Browser To Play Again.";
+        document.getElementById("adventure-log").innerHTML = "You Won All Of D&D! <br> Refresh Your Broswer To Play Again.";
+         // if they lost but have only 1 hit point
     } else if (guessesRemaining === 0 && health === 1) {
         health--;
         document.getElementById("healthPoints").innerHTML = +health;
