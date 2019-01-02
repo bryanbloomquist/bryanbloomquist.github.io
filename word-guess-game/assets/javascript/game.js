@@ -141,13 +141,10 @@ monsters = shuffle(monsters);
 //set the game function
 function game() {
     var x = wins + losses;
-    console.log(x)
     word = monsters[x].name;
     currentImage = monsters[x].image;
-    console.log(word);
     //seperate random word into new array
     guessWord = word.split("");
-    console.log(guessWord);
     //create __ for each letter in array
     for (var i = 0; i < guessWord.length; i++) {
         answerArray.push("_");
@@ -221,7 +218,6 @@ function gameWin() {
         audio.play();
         health--;
         losses++;
-        console.log(level, wins, health, losses);
         document.getElementById("healthPoints").innerHTML = +health;
         reset();
         //if they won and they cleared the whole array
