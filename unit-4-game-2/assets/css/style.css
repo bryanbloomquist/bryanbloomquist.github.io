@@ -1,0 +1,14 @@
+body {
+    background: url("../images/background.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+.card {
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+
+.btn {
+    margin: auto;
+}
