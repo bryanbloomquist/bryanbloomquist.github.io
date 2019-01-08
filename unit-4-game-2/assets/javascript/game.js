@@ -9,7 +9,7 @@ var lightSide = [
 ]
 var darkSide = [
     {name:"Boba Fett", id:"boba", attack:5, counter:21, health:190, image:"assets/images/boba.gif"},
-    {name:"The Emporer", id:"emporer", attack:9, counter:11, health:170, image:"assets/images/emporer.gif"},
+    {name:"Emperor Palpatine", id:"emperor", attack:9, counter:11, health:170, image:"assets/images/emperor.gif"},
     {name:"Darth Vader", id:"vader", attack:7, counter:16, health:150, image:"assets/images/vader.gif"}
 ]
 var playerArray = [];
@@ -90,7 +90,7 @@ $(document).ready(function() {
                 $('#enemyZone').append(enemyCard);
             $("#buttonZone").append(
                 $('<button/>', {
-                    text: "Attack", 
+                    text: "Atk", 
                     class: "btn btn-danger btn-lg mt-5",
                     id: "attackButton", 
                     click: function() {
