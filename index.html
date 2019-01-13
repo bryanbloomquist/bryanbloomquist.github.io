@@ -5,35 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Bryan Bloomquist's Github Site</title>
     <style>
         body {
             background-image: url("Basic-Portfolio/assets/images/background.png");
         }
-        .container {
-            width: 400px;
-            padding: 20px;
-            margin: 20px auto;
-            background: white;
-            text-align: center;
-        }
-        @media screen and (max-width: 640px) {
-            .container {
-                width: 300px;
-                padding: 15px;
-                margin: 10px auto;
-            }
+        #profile {
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>My GitHub Site</h1>
-        <a href="Basic-Portfolio/index.html"><h2>Basic Portfolio</h2></a>
-        <a href="responsive-portfolio/index.html"><h2>Responsive Portfolio</h2></a>
-        <a href="bootstrap-portfolio/index.html"><h2>Bootstrap Portfolio</h2></a>
-        <a href="word-guess-game/index.html"><h2>D & D Hangman Game</h2></a>
-        <a href="unit-4-game/index.html"><h2>Terraria Gem Game</h2></a>
+    <div class="container bg-dark my-5">
+        <div class="row">
+            <div class="col border border-dark rounded text-center text-light bg-primary p-3">
+                <h1>Bryan Bloomquist</h1>
+                <h2>Coding Bootcamp <a class="text-light" href="https://github.com/bryanbloomquist/">GitHub Directory</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="https://cdn0.iconfinder.com/data/icons/HTML5/512/HTML_Logo.png">
+                    <div class="card-body text-center">
+                            <h5>Week One:</h5><h5>Building a Wireframe / That Portfolio Though</h5>
+                            <a href="Basic-Portfolio/index.html"><h3>Basic Portfolio</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png">
+                    <div class="card-body text-center">
+                            <h5>Week Two: Responsiveness Assignment</h5>
+                            <a href="responsive-portfolio/index.html"><h3>Responsive Portfolio</h3></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="https://developersinstitute.com/wp-content/uploads/2017/05/icon-bootstrap.png">
+                    <div class="card-body text-center">
+                            <h5>Week Two: Responsiveness Assignment</h5>
+                            <a href="bootstrap-portfolio/index.html"><h3>Bootstrap Portfolio</h3></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="images/hangman.png">
+                    <div class="card-body text-center">
+                            <h5>Week Three: JavaScript Assignment</h5>
+                            <a href="https://bryanbloomquist.github.io/DnDHangman/index.html"><h3>D & D Hangman</h3></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="images/terraria.png">
+                    <div class="card-body text-center">
+                        <h5>Week Four:</h5><h5>jQuery Assignment: Option 1</h5>
+                        <a href="unit-4-game/index.html"><h3>Terraria Gem Collector</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="images/starwars.png">
+                    <div class="card-body text-center">
+                        <h5>Week Four:</h5><h5>jQuery Assignment: Option 2</h5>
+                        <a href="unit-4-game-2/index.html"><h3>Star Wars Battle</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 p-2">
+                <div class="card p-3 border-primary bg-light h-100">
+                    <img class="card-img-top mx-auto" src="images/fallout.png">
+                    <div class="card-body text-center">
+                        <h5>Week Four: JavaScript Assignment Two</h5>
+                        <a href="https://bryanbloomquist.github.io/TriviaGame//index.html"><h3>Fallout Trivia</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
