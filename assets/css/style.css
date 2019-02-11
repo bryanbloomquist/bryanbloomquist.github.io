@@ -8,7 +8,7 @@ body {
 }
 
 .jumbotron {
-    background-color: #5ac;
+    background-color: #222;
     border-bottom: 3px solid #cf8;
 }
 
@@ -16,29 +16,62 @@ body {
     text-shadow: -3px -2px 5px #b46;
 }
 
-#bio-link a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:active {
     color:#cf8;
+}
+
+a:hover {
+    color: #97b;
     text-decoration: none;
 }
 
-.page-link{
+.page-link {
     background-color: #97b;
     color: #cf8
 }
 
-.main {
-    background-color: #5ac;
-    color: #cf8;
-    border: 3px solid #97b;
+.page-link:hover {
+    background-color: #cf8;
+    color: #97b;
 }
 
-/* Index Specific Style */
+/* About Me Specific Style */
 
-
+.header {
+    background-color: #5ac;
+    color: #cf8;
+    border: 3px solid #f80;
+}
+.aboutme {
+    background-color: #222;
+    color: #5ac;
+    border: 3px solid #f80;
+}
 
 /* Portfolio Specific Style */
 
+.portfolio {
+    background-color: #5ac;
+    color: #b46;
+    border: 3px solid #f80;
+}
 
+.portfolio-img {
+    border: 3px solid #cf8;
+}
+
+.portfolio-img:hover {
+    border: 3px solid #97b;
+}
+
+.bg-card {
+    background-color: #222;
+    border: 3px solid #f80;
+}
+
+li {
+    color: #97b;
+}
 
 /* Contact Specific Style */
 
