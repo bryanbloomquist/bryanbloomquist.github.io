@@ -1,0 +1,44 @@
+/* Universal Style */
+
+body {
+    background-image: url("../images/coding-wp-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    background-color: #5ac;
+    border-bottom: 3px solid #cf8;
+}
+
+.engraved {
+    text-shadow: -3px -2px 5px #b46;
+}
+
+#bio-link a:link, a:visited, a:hover, a:active {
+    color:#cf8;
+    text-decoration: none;
+}
+
+.page-link{
+    background-color: #97b;
+    color: #cf8
+}
+
+.main {
+    background-color: rgb(85, 170, 204, 0.9);
+    color: #cf8;
+    border: 3px solid #97b;
+}
+
+/* Index Specific Style */
+
+
+
+/* Portfolio Specific Style */
+
+
+
+/* Contact Specific Style */
+
