@@ -1,5 +1,5 @@
 $(function(){
-    $("a").click(function(event){
+    $(".special").click(function(event){
         event.preventDefault();
         animateCss(".exit", "fadeOutRight");
         var link = $(this).attr("href");
