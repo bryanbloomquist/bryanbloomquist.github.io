@@ -16,7 +16,7 @@ body {
     text-shadow: -3px -2px 5px #b46;
 }
 
-a:link, a:visited, a:active {
+a:link, a:visited {
     color:#cf8;
 }
 
@@ -27,12 +27,14 @@ a:hover {
 
 .page-link {
     background-color: #97b;
-    color: #cf8
+    color: #cf8;
+    border: 2px solid #5ac
 }
 
 .page-link:hover {
     background-color: #cf8;
     color: #97b;
+    border: 2px solid #b46;
 }
 
 /* Index Specific Style */
@@ -73,8 +75,4 @@ a:hover {
 .bg-card {
     background-color: #222;
     border: 3px solid #f80;
-}
-
-li {
-    color: #97b;
 }
