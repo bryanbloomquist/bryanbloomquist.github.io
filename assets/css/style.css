@@ -35,6 +35,12 @@ a:hover {
     color: #97b;
 }
 
+/* Index Specific Style */
+
+.codousel{
+    background-color: rgb(34, 34, 34, 0.6);
+}
+
 /* About Me Specific Style */
 
 .header {
@@ -72,6 +78,3 @@ a:hover {
 li {
     color: #97b;
 }
-
-/* Contact Specific Style */
-
