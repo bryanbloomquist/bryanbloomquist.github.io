@@ -2,9 +2,7 @@
 
 body {
     background-image: url("../images/coding-wp-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: auto;
 }
 
 .jumbotron {
@@ -35,6 +33,17 @@ a:hover {
     background-color: #cf8;
     color: #97b;
     border: 2px solid #b46;
+}
+
+footer {
+    position: fixed;bottom:0;left:0;right:0;height:30px;
+    background-color: #222;
+    color: #5ac;
+    font-size: 12px;
+    height: 50px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 3px solid #b46;
 }
 
 /* Index Specific Style */
