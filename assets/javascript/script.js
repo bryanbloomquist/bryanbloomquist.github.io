@@ -22,3 +22,11 @@ $(function(){
         }, 800);
     });
 });
+
+
+// function rebootCareer(bryan){
+//     event.leaveThePostOffice();
+//     bryan.addClass("coding-boot-camp");
+//     if (activity === "Web-Development")
+//         { return happiness = true; }
+// }; $("#myLife").append("Hello World!");
