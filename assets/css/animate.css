@@ -3568,9 +3568,19 @@
   animation-iteration-count: infinite;
 }
 
+.animated.delay-250ms {
+  -webkit-animation-delay: 250ms;
+  animation-delay: 250ms;
+}
+
 .animated.delay-500ms {
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
+}
+
+.animated.delay-750ms {
+  -webkit-animation-delay: 750ms;
+  animation-delay: 750ms;
 }
 
 .animated.delay-1000ms {
@@ -3578,9 +3588,19 @@
   animation-delay: 1000ms;
 }
 
+.animated.delay-1250ms {
+  -webkit-animation-delay: 1250ms;
+  animation-delay: 1250ms;
+}
+
 .animated.delay-1500ms {
   -webkit-animation-delay: 1500ms;
   animation-delay: 1500ms;
+}
+
+.animated.delay-1750ms {
+  -webkit-animation-delay: 1750ms;
+  animation-delay: 1750ms;
 }
 
 .animated.delay-2000ms {
@@ -3588,9 +3608,19 @@
   animation-delay: 2000ms;
 }
 
+.animated.delay-2250ms {
+  -webkit-animation-delay: 2250ms;
+  animation-delay: 2250ms;
+}
+
 .animated.delay-2500ms {
   -webkit-animation-delay: 2500ms;
   animation-delay: 2500ms;
+}
+
+.animated.delay-2750ms {
+  -webkit-animation-delay: 2750ms;
+  animation-delay: 2750ms;
 }
 
 .animated.delay-3000ms {
@@ -3598,9 +3628,19 @@
   animation-delay: 3000ms;
 }
 
+.animated.delay-3250ms {
+  -webkit-animation-delay: 3250ms;
+  animation-delay: 3250ms;
+}
+
 .animated.delay-3500ms {
   -webkit-animation-delay: 3500ms;
   animation-delay: 3500ms;
+}
+
+.animated.delay-3750ms {
+  -webkit-animation-delay: 3750ms;
+  animation-delay: 3750ms;
 }
 
 .animated.delay-4000ms {
@@ -3608,9 +3648,19 @@
   animation-delay: 4000ms;
 }
 
+.animated.delay-4250ms {
+  -webkit-animation-delay: 4250ms;
+  animation-delay: 4250ms;
+}
+
 .animated.delay-4500ms {
   -webkit-animation-delay: 4500ms;
   animation-delay: 4500ms;
+}
+
+.animated.delay-4750ms {
+  -webkit-animation-delay: 4750ms;
+  animation-delay: 4750ms;
 }
 
 .animated.delay-5000ms {
