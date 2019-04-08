@@ -1,3 +1,11 @@
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+    });
+
+});
+
 function animateCss(element, animationName, callback) {
     var node = document.querySelector(element)
     node.classList.add('animated', animationName)

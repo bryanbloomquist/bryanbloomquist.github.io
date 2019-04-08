@@ -15,83 +15,87 @@
     <title>Bryan Bloomquist</title>
 </head>
 
-<body>
+<body class="coded-background">
 
-    <!--HEADER-->
-    <div class="jumbotron jumbotron-fluid p-3">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-9">
-                    <h1 class="engraved" id="bio-link"><a class="animeTrigger" href="index.html">Bryan Bloomquist</a></h1>
+    <div class="wrapper">
+        <!--SIDE NAVBAR-->
+        <nav id="sidebar">
+            <h3 class="engraved mb-5" id="bio-link">
+                <a class="animeTrigger active" href="index.html">Bryan Bloomquist</a>
+            </h3>
+            <a class="animeTrigger btn btn-block page-link" href="portfolio.html">
+                Portfolio
+            </a>
+            <br>
+            <a class="animeTrigger btn btn-block page-link" href="aboutme.html">
+                About Me
+            </a>
+            <br>
+            <a class="btn page-link p-1" href="https://github.com/bryanbloomquist" title="GitHub" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <br>
+            <a class="btn page-link p-1" href="https://linkedin.com/in/bryan-bloomquist-b1374416b" title="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <br>
+            <a class="btn page-link p-1" href="mailto:bmbloomquist@gmail.com?Subject=I%20Want%20To%20Hire%20You" title="Email" target="_top">
+                <i class="fas fa-envelope-square fa-2x"></i>
+            </a>
+            <br>
+            <a class="btn page-link p-1" href="Resume.pdf" title="Resume" target="_blank">
+                <i class="far fa-file fa-2x"></i>
+            </a>
+            <div class="footer mt-5">
+                Copyright &copy; 2019
+            </div>
+        </nav>
+
+        <!--PAGE CONTENT-->
+        <div id="content">
+            <nav class="navbar p-0">
+                <div class="container-fluid p-0">
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <div class="col-12 col-md-3">
-                    <div class="row">
-                        <div class="col-6 p-1">
-                            <a class="animeTrigger btn btn-block page-link" href="portfolio.html">Portfolio</a>
-                        </div>
-                        <div class="col-6 p-1">
-                            <a class="animeTrigger btn btn-block page-link" href="aboutme.html">About</a>
-                        </div>
+            </nav>
+
+            <!--MAIN CONTENT-->
+            <div class="container animated fadeInDownBig animeExit">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 header">
+                        <h2 class="engraved pt-2 pl-3">About Me</h2>
                     </div>
-                    <div class="row">
-                        <div class="col-3 p-1">
-                            <a class="btn page-link p-1" href="https://github.com/bryanbloomquist" title="GitHub" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                        <div class="col-3 p-1">
-                            <a class="btn page-link p-1" href="https://linkedin.com/in/bryan-bloomquist-b1374416b" title="LinkedIn" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                        <div class="col-3 p-1">
-                            <a class="btn page-link p-1" href="mailto:bmbloomquist@gmail.com?Subject=I%20Want%20To%20Hire%20You" title="Email" target="_top"><i class="fas fa-envelope-square fa-2x"></i></a>
-                        </div>
-                        <div class="col-3 p-1">
-                            <a class="btn page-link p-1" href="Resume.pdf" title="Resume" target="_blank"><i class="far fa-file fa-2x"></i></a>
-                        </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 aboutme animated fadeInUpBig delay-1000ms">
+                        <img class="float-left p-3 animated fadeInDownBig delay-1500ms" src="assets/images/bio-pic.jpg" alt="profile picture">
+                        <p class="p-3 animated fadeInUpBig delay-1500ms">
+                            I joined the Army Reserves right out of high school so I could pay for my college education.  
+                            My unit was activated during the Iraq War and I was deployed my senior year.  
+                            After my deployment I finished my bachelors degree while working full time at the United States Postal Service.  
+                            It was during those 14 years at the post office that I started my wonderful family and I had to make a choice:  
+                            Stay with my union protected federal job and never see my kids, or, leave the post office when I'm almost 40 years old and learn a new career.  
+                            Not that difficult of a decision, I became a full-time dad and a part-time student at the University of Minnesota Full-Stack Web Development Boot Camp.  
+                            In boot camp, both for the Army and for Web Development, I learned that I love a challenge and I push myself to overcome all obstacles.  
+                            I am a fast learner and enjoy working with others on tasks, and I really, really love coding. 
+                            I am fastly developing skills in HTML, CSS, Javascript, jQuery, and Bootstrap.
+                        </p>
                     </div>
                 </div>
             </div>
+            <!--END MAIN CONTENT-->
         </div>
     </div>
-    <!--END HEADER-->
 
-    <!--MAIN CONTENT-->
-    <div class="container mb-5 animated fadeInLeftBig animeExit">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 header">
-                <h2 class="engraved pt-2 pl-3">About Me</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8 aboutme animated fadeInRightBig delay-1000ms">
-                <img class="float-left p-3 animated fadeInLeftBig delay-1500ms" src="assets/images/bio-pic.jpg" alt="profile picture">
-                <p class="p-3 animated fadeInUpBig delay-1500ms">
-                    I joined the Army Reserves right out of high school so I could pay for my college education.  
-                    My unit was activated during the Iraq War and I was deployed my senior year.  
-                    After my deployment I finished my bachelors degree while working full time at the United States Postal Service.  
-                    It was during those 14 years at the post office that I started my wonderful family and I had to make a choice:  
-                    Stay with my union protected federal job and never see my kids, or, leave the post office when I'm almost 40 years old and learn a new career.  
-                    Not that difficult of a decision, I became a full-time dad and a part-time student at the University of Minnesota Full-Stack Web Development Boot Camp.  
-                    In boot camp, both for the Army and for Web Development, I learned that I love a challenge and I push myself to overcome all obstacles.  
-                    I am a fast learner and enjoy working with others on tasks, and I really, really love coding. 
-                    I am fastly developing skills in HTML, CSS, Javascript, jQuery, and Bootstrap.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!--END MAIN CONTENT-->
-
-    <!--FOOTER-->
-    <footer>
-        <div class="container">
-            Copyright &copy; 2019 Bryan Bloomquist
-        </div>
-    </footer>
-    <!--END FOOTER-->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/javascript/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
 </body>
     
 </html>

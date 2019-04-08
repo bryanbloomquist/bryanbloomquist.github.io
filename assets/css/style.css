@@ -3,6 +3,42 @@
 body {
     background-image: url("../images/coding-wp-2.jpg");
     background-size: auto;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    /* align-items: stretch; */
+}
+
+#sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -200px;
+}
+
+#content {
+    width: calc(100% - 200px);
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
 }
 
 .jumbotron {
@@ -11,7 +47,7 @@ body {
 }
 
 .engraved {
-    text-shadow: -3px -2px 5px #b46;
+    text-shadow: -3px -2px 5px #5ac;
 }
 
 a:link, a:visited {
@@ -35,15 +71,10 @@ a:hover {
     border: 2px solid #b46;
 }
 
-footer {
-    position: fixed;bottom:0;left:0;right:0;height:30px;
-    background-color: #222;
+.footer {
     color: #5ac;
     font-size: 12px;
-    height: 50px;
-    padding-top: 20px;
     text-align: center;
-    border-top: 3px solid #b46;
 }
 
 /* Index Specific Style */
@@ -85,3 +116,19 @@ footer {
     background-color: #222;
     border: 3px solid #f80;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 576) {
+    #sidebar {
+        margin-left: -200px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+/* @media screen and (min-width: 768px) {
+    #sidebarCollapse {
+        display: none;
+    }
+} */
