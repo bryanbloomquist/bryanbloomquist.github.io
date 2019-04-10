@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $('#sidebarCollapse').on('click', function () {
-        $('#sidebar, #content').toggleClass('active');
+        $('#sidebar, #content, .navbar').toggleClass('active');
     });
 
 });
@@ -32,9 +32,12 @@ $(function(){
 });
 
 
+
 // function rebootCareer(bryan){
 //     event.leaveThePostOffice();
 //     bryan.addClass("coding-boot-camp");
-//     if (activity === "Web-Development")
-//         { return happiness = true; }
-// }; $("#myLife").append("Hello World!");
+//     if (activity === "Web-Development"){ 
+//         return happiness = true; 
+//     }
+//     $("#myLife").append("Hello World!");
+// }; 
