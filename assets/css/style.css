@@ -114,8 +114,14 @@ a:hover {
 
 /* Portfolio Specific Style */
 
-.portfolio {
+.header2 {
     margin-top: 50px;
+    background-color: #222;
+    color: #cf8;
+    border: 3px solid #f80;
+}
+
+.portfolio {
     background-color: #5ac;
     color: #cf8;
     border: 3px solid #f80;
