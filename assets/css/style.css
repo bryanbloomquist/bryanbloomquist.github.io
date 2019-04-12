@@ -89,7 +89,63 @@ a:hover {
 
 /* Index Specific Style */
 
+.laptop {
+    margin-top: 100px;
+    background-color: #222;
+    border: 25px solid #444;
+    max-width: 600px;
+    max-height: 400px;
+    padding: 30px;
+    font-size: 18px;
+}
 
+#typed2 {
+    margin-left: 25px;
+}
+
+#typed3 {
+    margin-left: 25px;
+}
+
+#typed4 {
+    margin-left: 25px;
+}
+
+#typed5 {
+    margin-left: 50px;
+}
+
+#typed6 {
+    margin-left: 25px;
+}
+
+#typed7 {
+    margin-left: 25px;
+}
+
+.darkblue {
+    color: rgb(57, 57, 250);
+}
+
+.gold {
+    color: rgb(245, 233, 166);
+}
+
+.yellow {
+    color: rgb(255, 255, 0)
+}
+
+.blue {
+    color: rgb(86, 194, 230)
+}
+
+.purple {
+    color: rgb(153, 24, 153)
+}
+
+.orange {
+    color: rgb(202, 144, 35)
+}
 
 /* About Me Specific Style */
 
@@ -245,16 +301,31 @@ a:hover {
 
 /* Media Queries */
 
-@media screen and (max-width: 576) {
+@media screen and (max-width: 576px) {
     #sidebar {
         margin-left: -200px;
     }
     #sidebar.active {
         margin-left: 0;
     }
-}
-/* @media screen and (min-width: 768px) {
-    #sidebarCollapse {
-        display: none;
+    .navbar {
+        left: 0;
     }
-} */
+    .navbar.active {
+        left: 201px;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 200px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .laptop {
+        border: 15px solid #444;
+        padding: 15px 5px;
+        font-size: 14px;
+    }
+}

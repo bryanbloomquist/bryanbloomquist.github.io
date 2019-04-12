@@ -4,6 +4,24 @@ $(document).ready(function () {
         $('#sidebar, #content, .navbar').toggleClass('active');
     });
 
+    function typed (divID, string, delay) {
+        var typed = new Typed(divID, {
+            strings: [ string ],
+        typeSpeed: 10,
+        startDelay: delay,
+        loop: false,
+        });
+    };
+
+    typed ("#typed1", "<span class='darkblue'>function</span> <span class='gold'>rebootCareer</span><span class='yellow'>(</span> <span class='blue'>bryan</span> <span class='yellow'>) {</span>", 1000);
+    typed ("#typed2", "<span class='blue'>event</span>.<span class='gold'>leaveThePostOffice</span> <span class='purple'>( )</span>;", 3000);
+    typed ("#typed3", "<span class='blue'>bryan</span>.<span class='gold'>addClass</span><span class='purple'>(</span> <span class='orange'>'coding-boot-camp'</span> <span class='purple'>)</span>;", 5000);
+    typed ("#typed4", "<span class='purple'>if (</span> <span class='blue'>activity</span> === <span class='orange'>'webDevelopment'</span> <span class='purple'>) {</span>", 7000);
+    typed ("#typed5", "<span class='purple'>return</span> <span class='blue'>happiness</span> = <span class='darkblue'>true</span>;", 9000);
+    typed ("#typed6", "<span class='purple'>}</span>", 10000);
+    typed ("#typed7", "<span class='gold'>$</span><span class='purple'>(</span> <span class='orange'>'#myLife'</span> <span class='purple'>)</span>.<span class='gold'>append</span><span class='purple'>(</span> <span class='orange'>'Hello World!'</span> <span class='purple'>)</span>;", 10500);
+    typed ("#typed8", "<span class='yellow'>}</span>;", 12050);
+
 });
 
 function animateCss(element, animationName, callback) {
@@ -30,14 +48,3 @@ $(function(){
         }, 800);
     });
 });
-
-
-
-// function rebootCareer(bryan){
-//     event.leaveThePostOffice();
-//     bryan.addClass("coding-boot-camp");
-//     if (activity === "Web-Development"){ 
-//         return happiness = true; 
-//     }
-//     $("#myLife").append("Hello World!");
-// }; 
