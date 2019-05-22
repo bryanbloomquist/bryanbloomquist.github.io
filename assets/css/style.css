@@ -81,6 +81,12 @@ a:hover {
     border: 2px solid #b46;
 }
 
+.page-link-inactive {
+    background-color: #cf8n
+    color: #97b;
+    border: 2px solid #b46;
+}
+
 .footer {
     color: #5ac;
     font-size: 12px;
