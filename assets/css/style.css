@@ -215,6 +215,11 @@ a:hover {
     border: 3px solid #f80;
 }
 
+.hiddenLink {
+    color: #223;
+    float: right;
+}
+
 .portfolio {
     background-color: #5ac;
     color: #cf8;
