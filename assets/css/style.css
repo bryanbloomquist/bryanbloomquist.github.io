@@ -178,9 +178,7 @@ a:hover {
     text-align: center;
     color: #cf8;
     background-color: #222;
-    border-width: 0px 3px 3px;
-    border-color: #f80;
-    border-style: solid;
+    border: 3px solid #f80;
 }
 
 /* Techskills Specific Style */
