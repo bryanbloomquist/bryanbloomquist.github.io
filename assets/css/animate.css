@@ -3668,6 +3668,26 @@
   animation-delay: 5000ms;
 }
 
+.animated.delay-5250ms {
+  -webkit-animation-delay: 5250ms;
+  animation-delay: 5250ms;
+}
+
+.animated.delay-5500ms {
+  -webkit-animation-delay: 5500ms;
+  animation-delay: 5500ms;
+}
+
+.animated.delay-5750ms {
+  -webkit-animation-delay: 5750ms;
+  animation-delay: 5750ms;
+}
+
+.animated.delay-6000ms {
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+
 .animated.fast {
   -webkit-animation-duration: 800ms;
   animation-duration: 800ms;
