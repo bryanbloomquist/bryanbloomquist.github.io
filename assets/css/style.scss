@@ -1,0 +1,81 @@
+/* sass assets/css/style.scss assets/css/style.css */
+/* or to automate it while working */
+/* sass --watch assets/css/style.scss assets/css/style.css */
+
+/* Colors To Be Used */
+
+$black: #222222;
+$blue: #55aacc;
+$darkblue: #3939fa;
+$gold: #f5e9a6;
+$green: #ccff88;
+$orange: #ff8800;
+$purple: #9977bb;
+$red: #bb4466;
+$white: #ffffff;
+$yellow: #ffff00;
+
+$navWidth: 200px;
+$transition: all 0.5s;
+
+body {
+  background-image: url( "../images/coding-wp-2.jpg" );
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+a {
+  color: $green;
+  &:hover {
+  color: $purple;
+  text-decoration: none;
+  }
+}
+
+.engraved {
+  color: $green;
+  text-shadow: -3px -2px 5px $blue;
+}
+
+.pagelink {
+  background-color: $purple;
+  color: $green;
+  width: 100%;
+  margin-bottom: 20px;
+  float: left;
+  border: 2px solid $blue;
+  &:hover {
+    background-color: $green;
+    color: $purple;
+    border: 2px solid $red;
+  }
+}
+
+#navbar {
+  width: $navWidth;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1;
+  background-color: $black;
+  padding: 15px;
+  text-align: center;
+  transition: $transition;
+}
+
+#navbar.active {
+    margin-left: -$navWidth;
+}
+
+.navbutton {
+  position: fixed;
+  transition: $transition;
+  top: 0;
+  left: $navWidth - 40px;
+  z-index: 2;
+}
+
+.navbutton.active {
+  margin-left: -$navWidth + 40px;
+}
