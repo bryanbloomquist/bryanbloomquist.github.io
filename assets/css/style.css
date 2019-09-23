@@ -2,6 +2,7 @@
 /* or to automate it while working */
 /* sass --watch assets/css/style.scss assets/css/style.css */
 /* Colors To Be Used */
+/* Style elements for main page */
 body {
   background-image: url("../images/coding-wp-2.jpg");
   background-size: auto;
@@ -57,11 +58,81 @@ a:hover {
   transition: all 0.5s;
   top: 0;
   left: 160px;
-  z-index: 2;
+  z-index: 99;
 }
 
 .navbutton.active {
-  margin-left: -160px;
+  left: 0;
+}
+
+#content {
+  color: white;
+  width: calc( 100% - 200px);
+  transition: all 0.5s;
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  left: 200px;
+}
+
+#content.active {
+  width: 100%;
+  left: 0;
+}
+
+/* Style elements for welcome page */
+.laptop {
+  margin-top: calc( 200px / 2 );
+  background-color: #222222;
+  border: 25px solid #3c3c3c;
+  max-width: 600px;
+  height: 400px;
+  padding: 30px;
+  font-size: 1.2em;
+}
+
+.oneindent {
+  margin-left: 25px;
+}
+
+.twoindent {
+  margin-left: 50px;
+}
+
+.blue {
+  color: #55aacc;
+}
+
+.darkblue {
+  color: #3939fa;
+}
+
+.gold {
+  color: #f5e9a6;
+}
+
+.green {
+  color: #ccff88;
+}
+
+.orange {
+  color: #ff8800;
+}
+
+.purple {
+  color: #9977bb;
+}
+
+.red {
+  color: #bb4466;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.yellow {
+  color: #ffff00;
 }
 
 /*# sourceMappingURL=style.css.map */

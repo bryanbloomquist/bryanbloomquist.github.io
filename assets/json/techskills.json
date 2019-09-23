@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "image": "/images/HTML.png"
+  },{
+    "id": 2,
+    "name": "CSS",
+    "image": "/images/CSS.png"
+  },{
+    "id": 3,
+    "name": "JavaScript",
+    "image": "/images/JavaScript.png"
+  },{
+    "id": 4,
+    "name": "jQuery",
+    "image": "/images/jQuery.png"
+  },{
+    "id": 5,
+    "name": "React",
+    "image": "/images/React.png"
+  },{
+    "id": 6,
+    "name": "Bootstrap",
+    "image": "/images/Bootstrap.png"
+  },{
+    "id": 7,
+    "name": "Sass",
+    "image": "/images/Sass.png"
+  },{
+    "id": 8,
+    "name": "Git",
+    "image": "/images/Git.png"
+  },{
+    "id": 9,
+    "name": "GitHub",
+    "image": "/images/Github.png"
+  },{
+    "id": 10,
+    "name": "Node.JS",
+    "image": "/images/NodeJS.png"
+  },{
+    "id": 11,
+    "name": "MongoDB",
+    "image": "/images/MongoDB.png"
+  },{
+    "id": 12,
+    "name": "Express.JS",
+    "image": "/images/ExpressJS.png"
+  }
+]

@@ -18,6 +18,8 @@ $yellow: #ffff00;
 $navWidth: 200px;
 $transition: all 0.5s;
 
+/* Style elements for main page */
+
 body {
   background-image: url( "../images/coding-wp-2.jpg" );
   background-size: auto;
@@ -73,9 +75,48 @@ a {
   transition: $transition;
   top: 0;
   left: $navWidth - 40px;
-  z-index: 2;
+  z-index: 99;
 }
 
 .navbutton.active {
-  margin-left: -$navWidth + 40px;
+  left: 0;
 }
+
+#content {
+  color: white;
+  width: calc( 100% - #{ $navWidth });
+  transition: $transition;
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  left: $navWidth;
+}
+
+#content.active {
+  width: 100%;
+  left: 0;
+}
+
+/* Style elements for welcome page */
+
+.laptop {
+  margin-top: calc( #{ $navWidth } / 2 );
+  background-color: $black;
+  border: 25px solid lighten( $black, 10% );
+  max-width: 600px;
+  height: 400px;
+  padding: 30px;
+  font-size: 1.2em;
+}
+
+.oneindent { margin-left: 25px; }
+.twoindent { margin-left: 50px; }
+.blue { color: $blue; }
+.darkblue { color: $darkblue; }
+.gold { color: $gold; }
+.green { color: $green; }
+.orange { color: $orange; }
+.purple { color: $purple; }
+.red { color: $red; }
+.white { color: $white; }
+.yellow { color: $yellow; }
