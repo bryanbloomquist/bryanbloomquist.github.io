@@ -82,6 +82,12 @@ a {
   left: 0;
 }
 
+.footer {
+  color: $blue;
+  font-size: 12px;
+  text-align: center;
+}
+
 #content {
   color: white;
   width: calc( 100% - #{ $navWidth });
@@ -90,14 +96,13 @@ a {
   position: fixed;
   top: 0;
   left: $navWidth;
+  overflow: auto;
 }
 
 #content.active {
   width: 100%;
   left: 0;
 }
-
-/* Style elements for welcome page */
 
 .laptop {
   margin-top: calc( #{ $navWidth } / 2 );
@@ -120,3 +125,26 @@ a {
 .red { color: $red; }
 .white { color: $white; }
 .yellow { color: $yellow; }
+
+.header {
+  background-color: $black;
+  border: 3px solid $orange;
+  text-align: center;
+}
+
+.aboutme {
+  background-color: $black;
+  color: $blue;
+  border: 3px solid $orange;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.biopic {
+  max-width: 50%;
+}
+
+.contactinfo {
+  text-align: center;
+  color: $green;
+}

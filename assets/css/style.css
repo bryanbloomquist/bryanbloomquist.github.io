@@ -65,6 +65,12 @@ a:hover {
   left: 0;
 }
 
+.footer {
+  color: #55aacc;
+  font-size: 12px;
+  text-align: center;
+}
+
 #content {
   color: white;
   width: calc( 100% - 200px);
@@ -73,6 +79,7 @@ a:hover {
   position: fixed;
   top: 0;
   left: 200px;
+  overflow: auto;
 }
 
 #content.active {
@@ -80,7 +87,6 @@ a:hover {
   left: 0;
 }
 
-/* Style elements for welcome page */
 .laptop {
   margin-top: calc( 200px / 2 );
   background-color: #222222;
@@ -133,6 +139,29 @@ a:hover {
 
 .yellow {
   color: #ffff00;
+}
+
+.header {
+  background-color: #222222;
+  border: 3px solid #ff8800;
+  text-align: center;
+}
+
+.aboutme {
+  background-color: #222222;
+  color: #55aacc;
+  border: 3px solid #ff8800;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.biopic {
+  max-width: 50%;
+}
+
+.contactinfo {
+  text-align: center;
+  color: #ccff88;
 }
 
 /*# sourceMappingURL=style.css.map */
