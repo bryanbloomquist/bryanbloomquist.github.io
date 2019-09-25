@@ -38,7 +38,7 @@ a:hover {
   height: 100vh;
   overflow: auto;
   transition: all 0.5s;
-  padding: 50px;
+  padding: 50px 50px 0px;
   position: fixed;
   top: 0;
   left: 200px;
@@ -267,11 +267,43 @@ a:hover {
 
 .projectskills {
   width: 90%;
-  clear: right;
+}
+
+.hiddenLink {
+  background-color: rgba(85, 170, 204, 0.6);
+  color: #69b4d2;
+  border: solid 1px #69b4d2;
+  float: right;
+}
+.hiddenLink:hover {
+  color: #222222;
+  border: solid 1px #222222;
+}
+
+/* All Apps */
+.allapps {
+  background-color: #222222;
+  color: #55aacc;
+  border: 3px solid #ff8800;
+  overflow-x: hidden;
+}
+
+.applink {
+  background-color: #9977bb;
+  color: #ccff88;
+  border: 2px solid #55aacc;
+  width: 100%;
+  margin-bottom: 4%;
+}
+.applink:hover {
+  background-color: #ccff88;
+  color: #9977bb;
+  border: 2px solid #bb4466;
 }
 
 /* TechSkills */
 .techskills {
+  float: right;
   background-color: #55aacc;
   border: 3px solid #ff8800;
 }
@@ -298,6 +330,14 @@ a:hover {
 .contactinfo {
   text-align: center;
   color: #ccff88;
+}
+
+/* Web Dev All */
+.webdevall {
+  background-color: #222222;
+  color: #55aacc;
+  border: 3px solid #ff8800;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

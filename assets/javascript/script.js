@@ -1,14 +1,16 @@
 $( document ).ready( function() {
 
+  $( "#navbarCollapse" ).on( "click", toggel );
   $( "#portfolio" ).on( "click", portfolio );
   $( "#techskills" ).on( "click", techSkills );
   $( "#aboutme" ).on( "click", aboutMe );
-
-  $( "#navbarCollapse" ).on( "click", toggel );
+  $( "#webdevall" ).on( "click", webDevAll );
+  $( document ).on( "click", "#allapps", allApps );
 
   welcomePage();
 
 });
+
 
 
 // from Typed.js by Matt Boldt ( https://github.com/mattboldt/typed.js/ )
@@ -24,13 +26,12 @@ let typed = ( divID, string, delay ) => {
   )
 }
 
-
 let toggel = () => $( "#navbar, .navbutton, #content" ).toggleClass( "active" );
-
 
 /// WELCOMEPAGE //////////////////////////////////////////////////
 let welcomePage = ( ) => {
   $( "#content" ).empty( );
+  toggel();
   $( "#content" ).html( `
     <div class = "row justify-content-center">
       <div class = "col laptop">
@@ -57,19 +58,18 @@ let welcomePage = ( ) => {
   typed( "#typed8", "<span class='yellow'>}</span><span class ='white'>;</span>", 9750 );
 }
 
-
 /// PORTFOLIO //////////////////////////////////////////////////
 let portfolio = () => {
   $( "#content" ).empty( );
   toggel();
   $( "#content" ).html( `
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-10 header">
+      <div class = "col-12 col-lg-10 header">
         <h2 class = "engraved pt-2">Portfolio</h2>
       </div>
     </div>
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-10 portfolio p-3">
+      <div class = "col-12 col-lg-10 portfolio p-3">
         <div class = "row justify-content-center">
           <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
             <div class = "hovereffect m-1">
@@ -137,8 +137,8 @@ let portfolio = () => {
               </div>
             </div>
           </div>
-
         </div>
+        <button class = "animeTrigger hiddenLink" id = "allapps">[More Apps]</a>
       </div>
     </div>
   ` )
@@ -147,15 +147,14 @@ let portfolio = () => {
 /// TECH SKILLS //////////////////////////////////////////////////
 let techSkills = () => {
   $( "#content" ).empty( );
-  toggel();
   $( "#content" ).html( `
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-8 header">
+      <div class = "col-12 col-lg-8 header">
         <h2 class = "engraved pt-2">Technical Skills</h2>
       </div>
     </div>
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-8 techskills">
+      <div class = "col-12 col-lg-8 techskills">
         <div class = "row justify-content-center">
           <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
             <div class = "header my-1 p-3">
@@ -238,15 +237,14 @@ let techSkills = () => {
 /// ABOUTME //////////////////////////////////////////////////
 let aboutMe = () => {
   $( "#content" ).empty( );
-  toggel();
   $( "#content" ).html( `
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-8 header">
+      <div class = "col-12 col-lg-8 header">
         <h2 class = "engraved pt-2">About Me</h2>
       </div>
     </div>
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-8 aboutme p-3">
+      <div class = "col-12 col-lg-8 aboutme p-3">
         <img class = "float-right biopic p-3 " src = "assets/images/bio-pic.png" alt = "profile picture">
         <p>First and foremost, I am a Nerd.  I love Star Wars.  I read Marvel comic books.  I play board games.  I play Dungeons & Dragons and I am also a Dungeon Master.  I love to develop awesome websites and applications.</p>
         <p>I enlisted in the Army Reserves after high school so I could go to college, because that is what you were supposed to do.  I changed majors three times because at 18 I had no idea what I wanted to do with my life, and before I could graduate I was activated and sent to Iraq.  I spent most of 2003 driving a fuel truck through Iraq and Kuwait.</p>
@@ -255,18 +253,142 @@ let aboutMe = () => {
       </div>
     </div>
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-sm-5 col-lg-4 header contactinfo engraved p-3">
+      <div class = "col-12 col-sm-5 col-lg-4 header contactinfo engraved p-3">
         <h5>Phone: <a href = "tel:1-612-226-8339">(612) 226 - 8339</a></h5>
       </div>
-      <div class = "col-xs-12 col-sm-7 col-lg-4 header contactinfo engraved p-3">
+      <div class = "col-12 col-sm-7 col-lg-4 header contactinfo engraved p-3">
         <h5>email: <a href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">bmbloomquist@gmail.com</a></h5>
       </div>
     </div>
   ` )
 }
 
-
 /// ALL APPS //////////////////////////////////////////////////
-
+let allApps = () => {
+  $( "#content" ).empty( );
+  if ( $( "#navbar" ).attr( "class" ) === "active" ) { 
+    toggel(); 
+  }
+  $( "#content" ).html( `
+    <div class = "row justify-content-center">
+      <div class = "col-12 col-md-10 header">
+        <h2 class = "engraved pt-2">Full Project List</h2>
+      </div>
+    </div>
+    <div class = "row justify-content-center">
+      <div class = "col-6 col-md-5 allapps p-3">
+        <a class="btn applink p-1 animated flipInX delay-1000ms" href="https://bryanbloomquist.com/word-guess-game" title="Word Guess Game" target="_blank">
+          Dungeons and Dragons Hangman
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-1250ms" href="https://bryanbloomquist.com/crystal-collector" title="Crystal Collector" target="_blank">
+          Terraria Gem Collector
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-1500ms" href="https://bryanbloomquist.com/star-wars-rpg" title="Star Wars RPG" target="_blank">
+          Star Wars RPG
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-1750ms" href="https://bryanbloomquist.com/trivia-game" title="Trivia Game" target="_blank">
+          Fallout Trivia
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-2000ms" href="https://bryanbloomquist.com/giftastic" title="Giftastic" target="_blank">
+          Giftastic
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-2250ms" href="https://bryanbloomquist.com/train-activity" title="Train Activity" target="_blank">
+          Lud Train Station
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-2500ms" href="https://bryanbloomquist.com/group-project-1" title="Group Project 1" target="_blank">
+          D & D Combat Battalion
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-2750ms" href="https://bryanbloomquist.github.io/liri-bot" title="Liri Bot" target="_blank">
+          Liri Bot CLI (Github Repo)
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-3000ms" href="https://bryanbloomquist.github.io/bamazon" title="Bamazon" target="_blank">
+          Bamazon CLI (Github Repo)
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-3250ms" href="https://nerd-friend-finder.herokuapp.com/" title="Friend Finder" target="_blank">
+          Nerd Friend Finder
+        </a>
+      </div>
+      <div class = "col-6 col-md-5 allapps p-3">
+        <a class="btn applink p-1 animated flipInX delay-3500ms" href="https://eater-of-burgers.herokuapp.com/" title="Eat Da Burger" target="_blank">
+          Eat Da Burger
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-3750ms" href="https://eater-of-burgers-sequel.herokuapp.com" title="Eat Da Burger Sequelized" target="_blank">
+          Eat Da Burger (da Sequel)
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-4000ms" href="https://cyoa-bc.herokuapp.com" title="Group Project 2" target="_blank">
+          Choose Your Own Adventure (Boot Camp)
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-4250ms" href="https://gimlet.herokuapp.com" title="News Scraper" target="_blank">
+          Gimlet Podcast Scraper
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-4500ms" href="https://bryanbloomquist.com/clicky-game" title="Clicky Game" target="_blank">
+          Venture Bros. Memory Game
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-4750ms" href="https://react-google.herokuapp.com" title="Google Book Search" target="_blank">
+          Google Book Search
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-5000ms" href="https://try-athlete.herokuapp.com" title="Group Project 3" target="_blank">
+          Try Athlete
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-5250ms" href="https://sezzle-calc.herokuapp.com" title="Sezzle Calculator" target="_blank">
+          Sezzle Calculator Challenge
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-5500ms" href="https://molly-pony.herokuapp.com" title="My Little Pony Math Rescue" target="_blank">
+          My Little Pony Math Rescue
+        </a>
+      </div>
+    </div>
+  ` )
+}
 
 /// WEB DEV ALL //////////////////////////////////////////////////
+let webDevAll = () => {
+  $( "#content" ).empty( );
+  $( "#content" ).html( `
+    <div class = "row justify-content-center">
+      <div class = "col-12 col-md-6 header">
+        <h2 class = "engraved pt-2">Web Dev Alliance</h2>
+      </div>
+    </div>
+    <div class = "row justify-content-center">
+      <div class = "col-12 col-md-6 webdevall p-3">
+        <a class="btn applink p-1 animated flipInX delay-1000ms" href="https://ashlenbruns.github.io/" title="Ashlen Bruns" target="_blank">
+          Ashlen Bruns
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-1250ms" href="#" title="Bryan Bloomquist">
+          Bryan Bloomquist
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-1500ms" href="http://johnevans.tech/" title="John Evans" target="_blank">
+          John Evans
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-1750ms" href="http://scottandersondev.com/" title="Scott T Anderson" target="_blank">
+          Scott T Anderson
+        </a>
+        <br>
+        <a class="btn applink p-1 animated flipInX delay-2000ms" href="https://sthmpsn.github.io/" title="Steve Thompson" target="_blank">
+          Steve Thompson
+        </a>
+      </div>
+    </div>
+  ` )
+}

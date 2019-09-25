@@ -54,7 +54,7 @@ a {
   width: calc( 100% - #{ $navWidth });
   height: 100vh; overflow: auto;
   transition: $transition;
-  padding: 50px;
+  padding: 50px 50px 0px;
   position: fixed;
   top: 0;
   left: $navWidth;
@@ -254,12 +254,45 @@ a {
 
 .projectskills {
   width: 90%;
-  clear: right;
+}
+
+.hiddenLink {
+  background-color: rgba( $blue, 0.6 );
+  color: lighten( $blue, 5% );
+  border: solid 1px lighten( $blue, 5% );
+  float: right;
+  &:hover {
+    color: $black;
+    border: solid 1px $black;
+  }
+}
+
+/* All Apps */
+
+.allapps {
+  background-color: $black;
+  color: $blue;
+  border: 3px solid $orange;
+  overflow-x: hidden;
+}
+
+.applink {
+  background-color: $purple;
+  color: $green;
+  border: 2px solid $blue;
+  width: 100%;
+  margin-bottom: 4%;
+  &:hover {
+    background-color: $green;
+    color: $purple;
+    border: 2px solid $red;
+  }
 }
 
 /* TechSkills */
 
 .techskills {
+  float: right;
   background-color: $blue;
   border: 3px solid $orange;
 }
@@ -287,4 +320,13 @@ a {
 .contactinfo {
   text-align: center;
   color: $green;
+}
+
+/* Web Dev All */
+
+.webdevall {
+  background-color: $black;
+  color: $blue;
+  border: 3px solid $orange;
+  overflow-x: hidden;
 }
