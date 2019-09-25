@@ -258,7 +258,7 @@ a:hover {
     top:0;
     left:0;
     opacity:0;
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0, 0, 0, 0.5);
     -webkit-transition:all .4s ease-in-out;
     transition:all .4s ease-in-out
 }
@@ -340,6 +340,11 @@ a:hover {
 .ghub {
     display: inline-block;
     padding: 2px 10px;
+}
+
+.projectskills {
+    width: 90%;
+    clear: right;
 }
 
 /* Media Queries */

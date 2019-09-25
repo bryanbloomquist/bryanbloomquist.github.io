@@ -1,11 +1,10 @@
 $( document ).ready( function() {
 
+  $( "#portfolio" ).on( "click", portfolio );
   $( "#techskills" ).on( "click", techSkills );
   $( "#aboutme" ).on( "click", aboutMe );
 
-  $( "#navbarCollapse" ).on( "click", function() {
-    $( "#navbar, .navbutton, #content" ).toggleClass( "active" );
-  })
+  $( "#navbarCollapse" ).on( "click", toggel );
 
   welcomePage();
 
@@ -24,6 +23,9 @@ let typed = ( divID, string, delay ) => {
     }
   )
 }
+
+
+let toggel = () => $( "#navbar, .navbutton, #content" ).toggleClass( "active" );
 
 
 /// WELCOMEPAGE //////////////////////////////////////////////////
@@ -57,11 +59,95 @@ let welcomePage = ( ) => {
 
 
 /// PORTFOLIO //////////////////////////////////////////////////
+let portfolio = () => {
+  $( "#content" ).empty( );
+  toggel();
+  $( "#content" ).html( `
+    <div class = "row justify-content-center">
+      <div class = "col-xs-12 col-lg-10 header">
+        <h2 class = "engraved pt-2">Portfolio</h2>
+      </div>
+    </div>
+    <div class = "row justify-content-center">
+      <div class = "col-xs-12 col-lg-10 portfolio p-3">
+        <div class = "row justify-content-center">
+          <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
+            <div class = "hovereffect m-1">
+              <img src = "assets/images/molly-pony.png" alt = "My Little Pony Math Rescue" class = "img-responsive portfolio-img" />
+              <div class = "overlay">
+                <h2>My Little Pony Math Rescue</h2>
+                <p class = "projectskills mx-auto">React | CSS | Sass | JavaScript | Express.js | Node.js | MongoDB | Bootstrap</p>
+                <a class = "info btn" href = "https://molly-pony.herokuapp.com" target = "_blank">View Project</a>
+                <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/molly-pony" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
+            <div class = "hovereffect m-1">
+              <img src = "assets/images/cyoa.png" alt = "Choose Your Own Adventure" class = "img-responsive portfolio-img" />
+              <div class = "overlay">
+                <h2>Choose Your Own Adventure</h2>
+                <p class = "projectskills mx-auto">Bootstrap | JavaScript | jQuery | Node.js | Express.js | mySQL | bCrypt | Gauge.js | Express-Validate</p>
+                <a class = "info btn" href = "https://cyao-bc.herokuapp.com" target = "_blank">View Project</a>
+                <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/group-project-2" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
+            <div class = "hovereffect m-1">
+              <img src = "assets/images/hangman.png" alt = "Dungeons & Dragons Hangman" class = "img-responsive portfolio-img" />
+              <div class = "overlay">
+                <h2>Dungeons & Dragons Hangman</h2>
+                <p class = "projectskills mx-auto">HTML | CSS | JavaScript</p>
+                <a class = "info btn" href = "https://bryanbloomquist.github.io/word-guess-game" target = "_blank">View Project</a>
+                <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/word-guess-game" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
+            <div class = "hovereffect m-1">
+              <img src = "assets/images/gimlet.PNG" alt = "Gimlet Podcast Scraper" class = "img-responsive portfolio-img" />
+              <div class = "overlay">
+                <h2>Gimlet Podcast Scraper</h2>
+                <p class = "projectskills mx-auto">JavaScript | jQuery | Moment.js | Node.js | Handlebars | Express.js | Mongoose | Cheerio | Axios</p>
+                <a class = "info btn" href = "https://gimlet.herokuapp.com" target = "_blank">View Project</a>
+                <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/news-scraper" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
+            <div class = "hovereffect m-1">
+              <img src = "assets/images/google-book.png" alt = "Google Book Search" class = "img-responsive portfolio-img" />
+              <div class = "overlay">
+                <h2>Google Book Search</h2>
+                <p class = "projectskills mx-auto">MongoDB | Express.js | React | Node.js | Bootstrap | CSS | JavaScript</p>
+                <a class = "info btn" href = "https://react-google" target = "_blank">View Project</a>
+                <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/google-book-search" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class = "col-12 col-md-6 col-xl-4 p-2 float-left">
+            <div class = "hovereffect m-1">
+              <img src = "assets/images/fallout.png" alt = "Fallout Trivia" class = "img-responsive portfolio-img" />
+              <div class = "overlay">
+                <h2>Fallout Trivia</h2>
+                <p class = "projectskills mx-auto">HTML | CSS | JavaScript | jQuery</p>
+                <a class = "info btn" href = "https://bryanbloomquist.github.io/trivia-game" target = "_blank">View Project</a>
+                <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/trivia-game" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  ` )
+}
 
 /// TECH SKILLS //////////////////////////////////////////////////
 let techSkills = () => {
   $( "#content" ).empty( );
+  toggel();
   $( "#content" ).html( `
     <div class = "row justify-content-center">
       <div class = "col-xs-12 col-lg-8 header">
@@ -69,7 +155,7 @@ let techSkills = () => {
       </div>
     </div>
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-lg-8 techskills p-3">
+      <div class = "col-xs-12 col-lg-8 techskills">
         <div class = "row justify-content-center">
           <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
             <div class = "header my-1 p-3">
@@ -152,6 +238,7 @@ let techSkills = () => {
 /// ABOUTME //////////////////////////////////////////////////
 let aboutMe = () => {
   $( "#content" ).empty( );
+  toggel();
   $( "#content" ).html( `
     <div class = "row justify-content-center">
       <div class = "col-xs-12 col-lg-8 header">
