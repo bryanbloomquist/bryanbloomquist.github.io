@@ -1,5 +1,6 @@
 $( document ).ready( function() {
 
+  $( "#techskills" ).on( "click", techSkills );
   $( "#aboutme" ).on( "click", aboutMe );
 
   $( "#navbarCollapse" ).on( "click", function() {
@@ -25,7 +26,7 @@ let typed = ( divID, string, delay ) => {
 }
 
 
-/// WELCOMEPAGE //////////////////////////////////////////////////////////
+/// WELCOMEPAGE //////////////////////////////////////////////////
 let welcomePage = ( ) => {
   $( "#content" ).empty( );
   $( "#content" ).html( `
@@ -55,7 +56,100 @@ let welcomePage = ( ) => {
 }
 
 
-/// ABOUTME ///////////////////////////////////////////////////////////
+/// PORTFOLIO //////////////////////////////////////////////////
+
+
+/// TECH SKILLS //////////////////////////////////////////////////
+let techSkills = () => {
+  $( "#content" ).empty( );
+  $( "#content" ).html( `
+    <div class = "row justify-content-center">
+      <div class = "col-xs-12 col-lg-8 header">
+        <h2 class = "engraved pt-2">Technical Skills</h2>
+      </div>
+    </div>
+    <div class = "row justify-content-center">
+      <div class = "col-xs-12 col-lg-8 techskills p-3">
+        <div class = "row justify-content-center">
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">HTML</h4>
+              <img src = "assets/images/HTML.png" alt = "HTML" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">CSS</h4>
+              <img src = "assets/images/CSS.png" alt = "CSS" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">JavaScript</h4>
+              <img src = "assets/images/JavaScript.png" alt = "JavaScript" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">jQuery</h4>
+              <img src = "assets/images/jQuery.png" alt = "jQuery" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">React</h4>
+              <img src = "assets/images/React.png" alt = "React" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">Bootstrap</h4>
+              <img src = "assets/images/Bootstrap.png" alt = "Bootstrap" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">Sass</h4>
+              <img src = "assets/images/Sass.png" alt = "Sass" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">Git</h4>
+              <img src = "assets/images/Git.png" alt = "Git" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">Github</h4>
+              <img src = "assets/images/Github.png" alt = "Github" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">NodeJS</h4>
+              <img src = "assets/images/NodeJS.png" alt = "NodeJS" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">MongoDB</h4>
+              <img src = "assets/images/MongoDB.png" alt = "MongoDB" class = "skillimage" />
+            </div>
+          </div>
+          <div class = "col-12 col-sm-6 col-md-4 col-xl-3 float-left p-1">
+            <div class = "header my-1 p-3">
+              <h4 class = "engraved">ExpressJS</h4>
+              <img src = "assets/images/ExpressJS.png" alt = "ExpressJS" class = "skillimage" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ` )
+}
+
+/// ABOUTME //////////////////////////////////////////////////
 let aboutMe = () => {
   $( "#content" ).empty( );
   $( "#content" ).html( `
@@ -67,25 +161,25 @@ let aboutMe = () => {
     <div class = "row justify-content-center">
       <div class = "col-xs-12 col-lg-8 aboutme p-3">
         <img class = "float-right biopic p-3 " src = "assets/images/bio-pic.png" alt = "profile picture">
-        <p>
-          I enlisted in the Army Reserves after high school so I could go to college because that is what you were supposed to do.  I changed majors three times because at 18 I had no idea what I wanted to do with my life, and before I could graduate I was activated and sent to Iraq.  I spent most of 2003 driving a fuel truck through Iraq and Kuwait.
-        </p>
-        <p>
-          After I got home I got a job as a letter carrier at the USPS.  I had gone to college because I love to learn new things. As a mailman the only new things I learned came from the plethora of podcasts and audio books of which I listened in order to avoid boredom. When you aren’t running away from dogs (it really is a thing) most of being a mailman is boredom.
-        </p>
-        <p>
-          In 2018 I quit my job at the post office to become a full time dad and devote all my free time to learning web development, plus I completed a 24 week full stack web development boot camp at the University of Minnesota. I had learned some early coding when I was in college, even made a couple web sites that thankfully no longer exist (this was the era of hamster dance), but I never thought to make a career out of it.  Now, I'm ready to make it a career.
-        </p>
+        <p>First and foremost, I am a Nerd.  I love Star Wars.  I read Marvel comic books.  I play board games.  I play Dungeons & Dragons and I am also a Dungeon Master.  I love to develop awesome websites and applications.</p>
+        <p>I enlisted in the Army Reserves after high school so I could go to college, because that is what you were supposed to do.  I changed majors three times because at 18 I had no idea what I wanted to do with my life, and before I could graduate I was activated and sent to Iraq.  I spent most of 2003 driving a fuel truck through Iraq and Kuwait.</p>
+        <p>After I got home I got a job as a letter carrier at the USPS.  I had gone to college because I love to learn new things. As a mailman the only new things I learned came from the plethora of podcasts and audio books of which I listened to in order to avoid boredom. When you aren’t running away from dogs (it really is a thing) most of being a mailman is boredom.</p>
+        <p>In 2018 I quit my job at the post office to become a full time dad and devote all my free time to learning web development, plus I completed a 24 week full stack web development boot camp at the University of Minnesota. I had learned some early web development when I was in college, even made a few web sites that thankfully no longer exist (this was the era of hamster dance), but I never thought to make a career out of it.  Now, I'm ready to make it a career.</p>
       </div>
     </div>
     <div class = "row justify-content-center">
-      <div class = "col-xs-12 col-sm-5 col-md-3 header contactinfo engraved p-3">
+      <div class = "col-xs-12 col-sm-5 col-lg-4 header contactinfo engraved p-3">
         <h5>Phone: <a href = "tel:1-612-226-8339">(612) 226 - 8339</a></h5>
       </div>
-      <div class = "col-xs-12 col-sm-7 col-md-5 header contactinfo engraved p-3">
+      <div class = "col-xs-12 col-sm-7 col-lg-4 header contactinfo engraved p-3">
         <h5>email: <a href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">bmbloomquist@gmail.com</a></h5>
       </div>
-      <div class = "clear"></div>
     </div>
   ` )
 }
+
+
+/// ALL APPS //////////////////////////////////////////////////
+
+
+/// WEB DEV ALL //////////////////////////////////////////////////

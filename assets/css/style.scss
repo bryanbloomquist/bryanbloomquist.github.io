@@ -18,7 +18,7 @@ $yellow: #ffff00;
 $navWidth: 200px;
 $transition: all 0.5s;
 
-/* Style elements for main page */
+/* Universal */
 
 body {
   background-image: url( "../images/coding-wp-2.jpg" );
@@ -53,6 +53,29 @@ a {
   }
 }
 
+#content {
+  width: calc( 100% - #{ $navWidth });
+  height: 100vh; overflow: auto;
+  transition: $transition;
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  left: $navWidth;
+}
+
+#content.active {
+  width: 100%;
+  left: 0;
+}
+
+.header {
+  background-color: $black;
+  border: 3px solid $orange;
+  text-align: center;
+}
+
+/* Navbar */
+
 #navbar {
   width: $navWidth;
   position: fixed;
@@ -64,6 +87,7 @@ a {
   padding: 15px;
   text-align: center;
   transition: $transition;
+  overflow: auto;
 }
 
 #navbar.active {
@@ -88,26 +112,7 @@ a {
   text-align: center;
 }
 
-#content {
-  width: calc( 100% - #{ $navWidth });
-  height: auto; overflow: auto;
-  transition: $transition;
-  padding: 50px;
-  position: fixed;
-  top: 0;
-  left: $navWidth;
-}
-
-#content.active {
-  width: 100%;
-  left: 0;
-}
-
-.clear {
-  clear: both;
-  width: 100%;
-  height: 0px;
-}
+/* Welcome Page */
 
 .laptop {
   margin-top: calc( #{ $navWidth } / 2 );
@@ -132,11 +137,18 @@ a {
 .white { color: $white; }
 .yellow { color: $yellow; }
 
-.header {
-  background-color: $black;
+/* TechSkills */
+
+.techskills {
+  background-color: $blue;
   border: 3px solid $orange;
-  text-align: center;
 }
+
+.skillimage {
+  max-width: 100px;
+}
+
+/* AboutMe */
 
 .aboutme {
   background-color: $black;
@@ -149,7 +161,7 @@ a {
 }
 
 .biopic {
-  max-width: 50%;
+  max-width: 250px;
 }
 
 .contactinfo {
