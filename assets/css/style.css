@@ -94,13 +94,13 @@ a:hover {
 
 /* Welcome Page */
 .laptop {
-  margin-top: calc( 200px / 2 );
+  margin-top: calc( 200px / 4 );
   background-color: #222222;
   border: 25px solid #3c3c3c;
   max-width: 600px;
   height: 400px;
   padding: 30px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #ffffff;
 }
 
@@ -330,14 +330,6 @@ a:hover {
 .contactinfo {
   text-align: center;
   color: #ccff88;
-}
-
-/* Web Dev All */
-.webdevall {
-  background-color: #222222;
-  color: #55aacc;
-  border: 3px solid #ff8800;
-  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

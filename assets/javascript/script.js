@@ -4,16 +4,13 @@ $( document ).ready( function() {
   $( "#portfolio" ).on( "click", portfolio );
   $( "#techskills" ).on( "click", techSkills );
   $( "#aboutme" ).on( "click", aboutMe );
-  $( "#webdevall" ).on( "click", webDevAll );
   $( document ).on( "click", "#allapps", allApps );
 
   welcomePage();
 
 });
 
-
-
-// from Typed.js by Matt Boldt ( https://github.com/mattboldt/typed.js/ )
+// Typed.js by Matt Boldt https://github.com/mattboldt/typed.js/
 let typed = ( divID, string, delay ) => {
   let typed = new Typed (
     divID, { 
@@ -246,7 +243,7 @@ let aboutMe = () => {
     <div class = "row justify-content-center">
       <div class = "col-12 col-lg-8 aboutme p-3">
         <img class = "float-right biopic p-3 " src = "assets/images/bio-pic.png" alt = "profile picture">
-        <p>First and foremost, I am a Nerd.  I love Star Wars.  I read Marvel comic books.  I play board games.  I play Dungeons & Dragons and I am also a Dungeon Master.  I love to develop awesome websites and applications.</p>
+        <p>First and foremost, I am a Nerd.  I love Star Wars.  I read Marvel comic books.  I play board games.  I play Role Playing Games.  I am a Dungeon Master.  I love to develop awesome websites and applications.</p>
         <p>I enlisted in the Army Reserves after high school so I could go to college, because that is what you were supposed to do.  I changed majors three times because at 18 I had no idea what I wanted to do with my life, and before I could graduate I was activated and sent to Iraq.  I spent most of 2003 driving a fuel truck through Iraq and Kuwait.</p>
         <p>After I got home I got a job as a letter carrier at the USPS.  I had gone to college because I love to learn new things. As a mailman the only new things I learned came from the plethora of podcasts and audio books of which I listened to in order to avoid boredom. When you aren’t running away from dogs (it really is a thing) most of being a mailman is boredom.</p>
         <p>In 2018 I quit my job at the post office to become a full time dad and devote all my free time to learning web development, plus I completed a 24 week full stack web development boot camp at the University of Minnesota. I had learned some early web development when I was in college, even made a few web sites that thankfully no longer exist (this was the era of hamster dance), but I never thought to make a career out of it.  Now, I'm ready to make it a career.</p>
@@ -277,116 +274,81 @@ let allApps = () => {
     </div>
     <div class = "row justify-content-center">
       <div class = "col-6 col-md-5 allapps p-3">
-        <a class="btn applink p-1 animated flipInX delay-1000ms" href="https://bryanbloomquist.com/word-guess-game" title="Word Guess Game" target="_blank">
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/word-guess-game" title = "Word Guess Game" target = "_blank">
           Dungeons and Dragons Hangman
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-1250ms" href="https://bryanbloomquist.com/crystal-collector" title="Crystal Collector" target="_blank">
-          Terraria Gem Collector
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-1500ms" href="https://bryanbloomquist.com/star-wars-rpg" title="Star Wars RPG" target="_blank">
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/star-wars-rpg" title = "Star Wars RPG" target = "_blank">
           Star Wars RPG
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-1750ms" href="https://bryanbloomquist.com/trivia-game" title="Trivia Game" target="_blank">
-          Fallout Trivia
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-2000ms" href="https://bryanbloomquist.com/giftastic" title="Giftastic" target="_blank">
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/giftastic" title = "Giftastic" target = "_blank">
           Giftastic
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-2250ms" href="https://bryanbloomquist.com/train-activity" title="Train Activity" target="_blank">
-          Lud Train Station
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/group-project-1" title = "D & D Combat Tracker" target = "_blank">
+          D & D Combat Tracker
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-2500ms" href="https://bryanbloomquist.com/group-project-1" title="Group Project 1" target="_blank">
-          D & D Combat Battalion
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-2750ms" href="https://bryanbloomquist.github.io/liri-bot" title="Liri Bot" target="_blank">
-          Liri Bot CLI (Github Repo)
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-3000ms" href="https://bryanbloomquist.github.io/bamazon" title="Bamazon" target="_blank">
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.github.io/bamazon" title = "Bamazon" target = "_blank">
           Bamazon CLI (Github Repo)
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-3250ms" href="https://nerd-friend-finder.herokuapp.com/" title="Friend Finder" target="_blank">
-          Nerd Friend Finder
-        </a>
-      </div>
-      <div class = "col-6 col-md-5 allapps p-3">
-        <a class="btn applink p-1 animated flipInX delay-3500ms" href="https://eater-of-burgers.herokuapp.com/" title="Eat Da Burger" target="_blank">
+        <a class = "btn applink p-1" href = "https://eater-of-burgers.herokuapp.com/" title = "Eat Da Burger" target = "_blank">
           Eat Da Burger
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-3750ms" href="https://eater-of-burgers-sequel.herokuapp.com" title="Eat Da Burger Sequelized" target="_blank">
-          Eat Da Burger (da Sequel)
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-4000ms" href="https://cyoa-bc.herokuapp.com" title="Group Project 2" target="_blank">
+        <a class = "btn applink p-1" href = "https://cyoa-bc.herokuapp.com" title = "Group Project 2" target = "_blank">
           Choose Your Own Adventure (Boot Camp)
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-4250ms" href="https://gimlet.herokuapp.com" title="News Scraper" target="_blank">
-          Gimlet Podcast Scraper
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-4500ms" href="https://bryanbloomquist.com/clicky-game" title="Clicky Game" target="_blank">
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/clicky-game" title = "Clicky Game" target = "_blank">
           Venture Bros. Memory Game
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-4750ms" href="https://react-google.herokuapp.com" title="Google Book Search" target="_blank">
-          Google Book Search
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-5000ms" href="https://try-athlete.herokuapp.com" title="Group Project 3" target="_blank">
+        <a class = "btn applink p-1" href = "https://try-athlete.herokuapp.com" title = "Group Project 3" target = "_blank">
           Try Athlete
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-5250ms" href="https://sezzle-calc.herokuapp.com" title="Sezzle Calculator" target="_blank">
-          Sezzle Calculator Challenge
-        </a>
-        <br>
-        <a class="btn applink p-1 animated flipInX delay-5500ms" href="https://molly-pony.herokuapp.com" title="My Little Pony Math Rescue" target="_blank">
+        <a class = "btn applink p-1" href = "https://molly-pony.herokuapp.com" title = "My Little Pony Math Rescue" target = "_blank">
           My Little Pony Math Rescue
         </a>
       </div>
-    </div>
-  ` )
-}
-
-/// WEB DEV ALL //////////////////////////////////////////////////
-let webDevAll = () => {
-  $( "#content" ).empty( );
-  $( "#content" ).html( `
-    <div class = "row justify-content-center">
-      <div class = "col-12 col-md-6 header">
-        <h2 class = "engraved pt-2">Web Dev Alliance</h2>
-      </div>
-    </div>
-    <div class = "row justify-content-center">
-      <div class = "col-12 col-md-6 webdevall p-3">
-        <a class="btn applink p-1 animated flipInX delay-1000ms" href="https://ashlenbruns.github.io/" title="Ashlen Bruns" target="_blank">
-          Ashlen Bruns
+      <div class = "col-6 col-md-5 allapps p-3">
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/crystal-collector" title = "Crystal Collector" target = "_blank">
+          Terraria Gem Collector
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-1250ms" href="#" title="Bryan Bloomquist">
-          Bryan Bloomquist
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/trivia-game" title = "Trivia Game" target = "_blank">
+          Fallout Trivia
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-1500ms" href="http://johnevans.tech/" title="John Evans" target="_blank">
-          John Evans
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.com/train-activity" title = "Train Activity" target = "_blank">
+          Lud Train Station
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-1750ms" href="http://scottandersondev.com/" title="Scott T Anderson" target="_blank">
-          Scott T Anderson
+        <a class = "btn applink p-1" href = "https://bryanbloomquist.github.io/liri-bot" title = "Liri Bot" target = "_blank">
+          Liri Bot CLI (Github Repo)
         </a>
         <br>
-        <a class="btn applink p-1 animated flipInX delay-2000ms" href="https://sthmpsn.github.io/" title="Steve Thompson" target="_blank">
-          Steve Thompson
+        <a class = "btn applink p-1" href = "https://nerd-friend-finder.herokuapp.com/" title = "Friend Finder" target = "_blank">
+          Nerd Friend Finder
+        </a>
+        <br>
+        <a class = "btn applink p-1" href = "https://eater-of-burgers-sequel.herokuapp.com" title = "Eat Da Burger Sequelized" target = "_blank">
+          Eat Da Burger (da Sequel)
+        </a>
+        <br>
+        <a class = "btn applink p-1" href = "https://gimlet.herokuapp.com" title = "News Scraper" target = "_blank">
+          Gimlet Podcast Scraper
+        </a>
+        <br>
+        <a class = "btn applink p-1" href = "https://react-google.herokuapp.com" title = "Google Book Search" target = "_blank">
+          Google Book Search
+        </a>
+        <br>
+        <a class = "btn applink p-1" href = "https://sezzle-calc.herokuapp.com" title = "Sezzle Calculator" target = "_blank">
+          Sezzle Calculator Challenge
         </a>
       </div>
     </div>

@@ -112,13 +112,13 @@ a {
 /* Welcome Page */
 
 .laptop {
-  margin-top: calc( #{ $navWidth } / 2 );
+  margin-top: calc( #{ $navWidth } / 4 );
   background-color: $black;
   border: 25px solid lighten( $black, 10% );
   max-width: 600px;
   height: 400px;
   padding: 30px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: $white;
 }
 
@@ -322,11 +322,23 @@ a {
   color: $green;
 }
 
-/* Web Dev All */
+// @media screen and ( max-width: 768px ) {
+//   #content { 
+//     width: 100%;
+//     padding: 40px 0px; 
+//   }
+// }
 
-.webdevall {
-  background-color: $black;
-  color: $blue;
-  border: 3px solid $orange;
-  overflow-x: hidden;
-}
+// @media screen and ( max-width: 480px ) {
+//   .laptop { 
+//     margin: 0px 15px;
+//     border: 10px solid lighten( $black, 10% );
+//     width: 100%;
+//     height: 300px;
+//     padding: 15px 3px;
+//     font-size: 0.7em;
+//   }
+//   .typed-code {
+//     padding: 0px;
+//   }
+// }
