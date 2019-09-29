@@ -159,73 +159,73 @@ let techSkills = () => {
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-1000ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">HTML</h4>
-              <img src = "assets/images/HTML.png" alt = "HTML" class = "skillimage" />
+              <img src = "assets/images/html.png" alt = "HTML" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-1250ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">CSS</h4>
-              <img src = "assets/images/CSS.png" alt = "CSS" class = "skillimage" />
+              <img src = "assets/images/css.png" alt = "CSS" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-1500ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">JavaScript</h4>
-              <img src = "assets/images/JavaScript.png" alt = "JavaScript" class = "skillimage" />
+              <img src = "assets/images/javascript.png" alt = "JavaScript" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-1750ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">jQuery</h4>
-              <img src = "assets/images/jQuery.png" alt = "jQuery" class = "skillimage" />
+              <img src = "assets/images/jquery.png" alt = "jQuery" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-2000ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">React</h4>
-              <img src = "assets/images/React.png" alt = "React" class = "skillimage" />
+              <img src = "assets/images/react.png" alt = "React" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-2250ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">Bootstrap</h4>
-              <img src = "assets/images/Bootstrap.png" alt = "Bootstrap" class = "skillimage" />
+              <img src = "assets/images/bootstrap.png" alt = "Bootstrap" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-2500ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">Sass</h4>
-              <img src = "assets/images/Sass.png" alt = "Sass" class = "skillimage" />
+              <img src = "assets/images/sass.png" alt = "Sass" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-2750ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">Git</h4>
-              <img src = "assets/images/Git.png" alt = "Git" class = "skillimage" />
+              <img src = "assets/images/git.png" alt = "Git" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-3000ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">Github</h4>
-              <img src = "assets/images/Github.png" alt = "Github" class = "skillimage" />
+              <img src = "assets/images/github.png" alt = "Github" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-3250ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">NodeJS</h4>
-              <img src = "assets/images/NodeJS.png" alt = "NodeJS" class = "skillimage" />
+              <img src = "assets/images/nodejs.png" alt = "NodeJS" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-3500ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">MongoDB</h4>
-              <img src = "assets/images/MongoDB.png" alt = "MongoDB" class = "skillimage" />
+              <img src = "assets/images/mongodb.png" alt = "MongoDB" class = "skillimage" />
             </div>
           </div>
           <div class = "col-6 col-md-4 col-xl-3 float-left p-1 animated flipInY delay-3750ms">
             <div class = "header my-1 p-3">
               <h4 class = "engraved">ExpressJS</h4>
-              <img src = "assets/images/ExpressJS.png" alt = "ExpressJS" class = "skillimage" />
+              <img src = "assets/images/expressjs.png" alt = "ExpressJS" class = "skillimage" />
             </div>
           </div>
         </div>
