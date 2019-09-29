@@ -1,14 +1,34 @@
 $( document ).ready( function() {
 
   $( "#navbarCollapse" ).on( "click", toggel );
-  $( "#portfolio" ).on( "click", portfolio );
-  $( "#techskills" ).on( "click", techSkills );
-  $( "#aboutme" ).on( "click", aboutMe );
-  $( document ).on( "click", "#allapps", allApps );
+
+  $( "#portfolio" ).on( "click", function() { setTimeout( portfolio, 800 )});
+
+  $( "#techskills" ).on( "click", function() { setTimeout( techSkills, 800 )});
+
+  $( "#aboutme" ).on( "click", function() { setTimeout( aboutMe, 800 )});
+
+  $( document ).on( "click", "#allapps", function() { setTimeout( allApps, 800 )});
+
+  $( ".trigger" ).on( "click", function( event ) {
+    event.preventDefault();
+    animateCss( ".animateExit", "fadeOutLeftBig" );
+  })
 
   welcomePage();
 
 });
+
+let animateCss = ( element, animation, callback ) => {
+  let node = document.querySelector( element )
+  node.classList.add( "animated", animation )
+  let endAnimation = () => {
+    node.classList.remove( "animated", animation )
+    node.removeEventListener( "animationEnd", endAnimation )
+    if ( typeof callback === "function" ) callback()
+  }
+  node.addEventListener( "animationEnd", endAnimation );
+}
 
 // Typed.js by Matt Boldt https://github.com/mattboldt/typed.js/
 let typed = ( divID, string, delay ) => {
@@ -135,7 +155,7 @@ let portfolio = () => {
             </div>
           </div>
         </div>
-        <button class = "animeTrigger hiddenLink" id = "allapps">[More Apps]</a>
+        <button class = "trigger hiddenLink" id = "allapps">[More Apps]</a>
       </div>
     </div>
   ` )

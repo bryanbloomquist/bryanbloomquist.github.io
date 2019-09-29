@@ -323,22 +323,23 @@ a {
 }
 
 // @media screen and ( max-width: 768px ) {
-//   #content { 
-//     width: 100%;
-//     padding: 40px 0px; 
-//   }
+
 // }
 
-// @media screen and ( max-width: 480px ) {
-//   .laptop { 
-//     margin: 0px 15px;
-//     border: 10px solid lighten( $black, 10% );
-//     width: 100%;
-//     height: 300px;
-//     padding: 15px 3px;
-//     font-size: 0.7em;
-//   }
-//   .typed-code {
-//     padding: 0px;
-//   }
-// }
+@media screen and ( max-width: 480px ) {
+  #content { 
+    width: 100%;
+    padding: 40px 5px; 
+  }  
+  .laptop { 
+    margin: 0px 15px;
+    border: 10px solid lighten( $black, 10% );
+    width: 100%;
+    height: 300px;
+    padding: 15px 5px;
+    font-size: 0.7em;
+  }
+  .typed-code {
+    padding: 0px;
+  }
+}
