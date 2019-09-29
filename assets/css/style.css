@@ -1,374 +1,376 @@
-/* Universal Style */
-
+/* sass assets/css/style.scss assets/css/style.css */
+/* or to automate it while working */
+/* sass --watch assets/css/style.scss assets/css/style.css */
+/* Colors To Be Used */
+/* Universal */
 body {
-    background-image: url("../images/coding-wp-2.jpg");
-    background-size: auto;
-    background-attachment: fixed;
+  background-image: url("../images/coding-wp-2.jpg");
+  background-size: auto;
+  background-attachment: fixed;
 }
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    /* align-items: stretch; */
+a {
+  color: #ccff88;
+}
+a:hover {
+  color: #9977bb;
+  text-decoration: none;
 }
 
-#sidebar {
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 999;
-    background-color: #222;
-    padding: 15px;
-    text-align: center;
-    transition: all 0.3s;
-}
-
-#sidebar.active {
-    margin-left: -200px;
-}
-
-#content {
-    width: calc(100% - 200px);
-    transition: all 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-#content.active {
-    width: 100%;
-}
-
-.navbar {
-    position: fixed;
-    transition: all 0.3s;
-    top: 0;
-    left: 201px;
-    z-index: 999;
-}
-
-.navbar.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
+#bio-link {
+  margin-bottom: 3rem;
 }
 
 .engraved {
-    text-shadow: -3px -2px 5px #5ac;
+  color: #ccff88;
+  text-shadow: -3px -2px 5px #55aacc;
 }
 
-a:link, a:visited {
-    color:#cf8;
+.pagelink {
+  background-color: #9977bb;
+  color: #ccff88;
+  border: 2px solid #55aacc;
+  margin-bottom: 1.5rem;
+}
+.pagelink:hover {
+  background-color: #ccff88;
+  color: #9977bb;
+  border: 2px solid #bb4466;
 }
 
-a:hover {
-    color: #97b;
-    text-decoration: none;
+#content {
+  width: calc( 100% - 200px);
+  height: 100vh;
+  overflow: auto;
+  transition: all 1s;
+  padding: 50px 50px 0px;
+  position: fixed;
+  top: 0;
+  left: 200px;
 }
 
-.page-link {
-    background-color: #97b;
-    color: #cf8;
-    border: 2px solid #5ac
+#content.active {
+  width: 100%;
+  left: 0;
 }
 
-.page-link:hover {
-    background-color: #cf8;
-    color: #97b;
-    border: 2px solid #b46;
+.header {
+  background-color: #222222;
+  border: 3px solid #ff8800;
+  text-align: center;
 }
 
-.page-link-inactive {
-    background-color: #cf8;
-    color: #97b;
-    border: 2px solid #b46;
+/* Navbar */
+#navbar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1;
+  background-color: #222222;
+  padding: 15px;
+  text-align: center;
+  transition: all 1s;
+  overflow: auto;
+}
+
+#navbar.active {
+  margin-left: -200px;
+}
+
+.navbutton {
+  position: fixed;
+  transition: all 1s;
+  top: 0;
+  left: 160px;
+  z-index: 99;
+}
+
+.navbutton.active {
+  left: 0;
 }
 
 .footer {
-    color: #5ac;
-    font-size: 12px;
-    text-align: center;
+  color: #55aacc;
+  font-size: 12px;
+  text-align: center;
 }
 
-/* Index Specific Style */
-
+/* Welcome Page */
 .laptop {
-    margin-top: 100px;
-    background-color: #222;
-    border: 25px solid #444;
-    max-width: 600px;
-    max-height: 400px;
-    padding: 30px;
-    font-size: 18px;
+  margin-top: calc( 200px / 4 );
+  background-color: #222222;
+  border: 25px solid #3c3c3c;
+  max-width: 600px;
+  height: 400px;
+  padding: 30px;
+  font-size: 1.1em;
+  color: #ffffff;
 }
 
-#typed2 {
-    margin-left: 25px;
+.oneindent {
+  margin-left: 25px;
 }
 
-#typed3 {
-    margin-left: 25px;
-}
-
-#typed4 {
-    margin-left: 25px;
-}
-
-#typed5 {
-    margin-left: 50px;
-}
-
-#typed6 {
-    margin-left: 25px;
-}
-
-#typed7 {
-    margin-left: 25px;
-}
-
-.darkblue {
-    color: rgb(57, 57, 250);
-}
-
-.gold {
-    color: rgb(245, 233, 166);
-}
-
-.yellow {
-    color: rgb(255, 255, 0)
+.twoindent {
+  margin-left: 50px;
 }
 
 .blue {
-    color: rgb(86, 194, 230)
+  color: #55aacc;
 }
 
-.purple {
-    color: rgb(153, 24, 153)
+.darkblue {
+  color: #3939fa;
+}
+
+.gold {
+  color: #f5e9a6;
+}
+
+.green {
+  color: #ccff88;
 }
 
 .orange {
-    color: rgb(202, 144, 35)
+  color: #ff8800;
 }
 
-/* About Me Specific Style */
-
-.header {
-    margin-top: 50px;
-    background-color: #5ac;
-    color: #cf8;
-    border: 3px solid #f80;
+.purple {
+  color: #9977bb;
 }
 
-.aboutme {
-    background-color: #222;
-    color: #5ac;
-    border: 3px solid #f80;
-    text-align: justify;
-    text-justify: auto;
+.red {
+  color: #bb4466;
 }
 
-.biopic {
-    max-width: 50%;
+.white {
+  color: #ffffff;
 }
 
-.contact-info {
-    text-align: center;
-    color: #cf8;
-    background-color: #222;
-    border: 3px solid #f80;
+.yellow {
+  color: #ffff00;
 }
 
-/* Techskills Specific Style */
-
-.skills-container {
-    background-color: #5ac;
-    color: #cf8;
-    border: 3px solid #f80;
-    padding-bottom: 20px;
-}
-
-.skills-header {
-    color: #cf8;
-    text-shadow: -3px -2px 5px #5ac;
-}
-
-.skills-list {
-    border: 3px solid #f80;
-    background-color: #222;
-    color: #5ac;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    height: 100%;
-    text-shadow: -3px -2px 5px #97b;
-}
-
-/* Portfolio Specific Style */
-
-.header2 {
-    margin-top: 50px;
-    background-color: #222;
-    color: #cf8;
-    border: 3px solid #f80;
-}
-
-.hiddenLink {
-    color: #223;
-    float: right;
-}
-
+/* Portfolio */
 .portfolio {
-    background-color: #5ac;
-    color: #cf8;
-    border: 3px solid #f80;
+  background-color: #55aacc;
+  border: 3px solid #ff8800;
+  color: #ccff88;
 }
 
 .portfolio-img {
-    width: 100%;
-    border: 3px solid #cf8;
+  width: 100%;
+  border: 3px solid #ccff88;
 }
-
 .portfolio-img:hover {
-    border: 3px solid #97b;
-}
-
-.bg-card {
-    background-color: #222;
-    border: 3px solid #f80;
+  border: 3px solid #9977bb;
 }
 
 .hovereffect {
-    width:100%;
-    height:100%;
-    float:left;
-    overflow:hidden;
-    position:relative;
-    text-align:center;
-    cursor:default;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
 }
 
 .hovereffect .overlay {
-    width:100%;
-    height:100%;
-    position:absolute;
-    overflow:hidden;
-    top:0;
-    left:0;
-    opacity:0;
-    background-color:rgba(0,0,0,0.5);
-    -webkit-transition:all .4s ease-in-out;
-    transition:all .4s ease-in-out
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(34, 34, 34, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .hovereffect img {
-    display:block;
-    position:relative;
-    -webkit-transition:all .4s linear;
-    transition:all .4s linear;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .hovereffect h2 {
-    text-transform: uppercase;
-    color:#5ac;
-    text-align:center;
-    position:relative;
-    font-size:17px;
-    background:rgba(0,0,0,0.6);
-    -webkit-transform:translatey(-100px);
-    -ms-transform:translatey(-100px);
-    transform:translatey(-100px);
-    -webkit-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
-    padding:20px;
+  text-transform: uppercase;
+  color: #55aacc;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  background: rgba(34, 34, 34, 0.6);
+  -webkit-transform: translatey(-100px);
+  -ms-transform: translatey(-100px);
+  transform: translatey(-100px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 20px;
 }
 
 .hovereffect p {
-    display: inline-block;
-    clear: both;
-    font-size: 12px;
-    border: 2px solid #cf8;
-    background-color: #b46;
-    color: #cf8;
-    padding: 5px 10px;
-    min-width: 45%;
-    max-width: 90%;
+  display: inline-block;
+  clear: both;
+  font-size: 12px;
+  border: 2px solid #ccff88;
+  background-color: #bb4466;
+  color: #ccff88;
+  padding: 5px 10px;
+  min-width: 45%;
+  max-width: 90%;
 }
 
 .hovereffect a.info {
-    text-decoration:none;
-    display:inline-block;
-    color:#cf8;
-    border: 2px solid #5ac;
-    background-color: #97b;
-    opacity:0;
-    filter:alpha(opacity=0);
-    -webkit-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
-    margin: 5px;
-    padding: 7px 14px;
+  text-decoration: none;
+  display: inline-block;
+  color: #ccff88;
+  border: 2px solid #55aacc;
+  background-color: #9977bb;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 7px 14px;
 }
 
 .hovereffect a.info:hover {
-    box-shadow:0 0 5px #fff;
-    background-color: #cf8;
-    border: 2px solid #b46;
-    color: #97b;
+  box-shadow: 0 0 5px #ffffff;
+  background-color: #ccff88;
+  border: 2px solid #bb4466;
+  color: #9977bb;
 }
 
 .hovereffect:hover img {
-    -ms-transform:scale(1.2);
-    -webkit-transform:scale(1.2);
-    transform:scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .hovereffect:hover .overlay {
-    opacity:1;
-    filter:alpha(opacity=100);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
-    
-.hovereffect:hover h2,.hovereffect:hover a.info {
-    opacity:1;
-    filter:alpha(opacity=100);
-    -ms-transform:translatey(0);
-    -webkit-transform:translatey(0);
-    transform:translatey(0);
+
+.hovereffect:hover h2, .hovereffect:hover a.info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -ms-transform: translatey(0);
+  -webkit-transform: translatey(0);
+  transform: translatey(0);
 }
 
 .ghub {
-    display: inline-block;
-    padding: 2px 10px;
+  display: inline-block;
+  padding: 2px 10px;
+  width: calc( height );
 }
 
-/* Media Queries */
-
-@media screen and (max-width: 576px) {
-    #sidebar {
-        margin-left: -200px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    .navbar {
-        left: 0;
-    }
-    .navbar.active {
-        left: 201px;
-    }
-    #content {
-        width: 100%;
-    }
-    #content.active {
-        width: calc(100% - 200px);
-    }
+.projectskills {
+  width: 90%;
 }
 
-@media screen and (max-width: 768px) {
-    .laptop {
-        border: 15px solid #444;
-        padding: 15px 5px;
-        font-size: 14px;
-    }
+.hiddenLink {
+  background-color: rgba(85, 170, 204, 0.6);
+  color: #69b4d2;
+  border: solid 1px #69b4d2;
+  float: right;
 }
+.hiddenLink:hover {
+  color: #222222;
+  border: solid 1px #222222;
+}
+
+/* All Apps */
+.allapps {
+  background-color: #222222;
+  color: #55aacc;
+  border: 3px solid #ff8800;
+  overflow-x: hidden;
+}
+
+.applink {
+  background-color: #9977bb;
+  color: #ccff88;
+  border: 2px solid #55aacc;
+  width: 100%;
+  margin-bottom: 4%;
+}
+.applink:hover {
+  background-color: #ccff88;
+  color: #9977bb;
+  border: 2px solid #bb4466;
+}
+
+/* TechSkills */
+.techskills {
+  float: right;
+  background-color: #55aacc;
+  border: 3px solid #ff8800;
+}
+
+.skillimage {
+  max-width: 100px;
+}
+
+/* AboutMe */
+.aboutme {
+  background-color: #222222;
+  color: #55aacc;
+  border: 3px solid #ff8800;
+  text-align: justify;
+  text-justify: auto;
+  overflow: auto;
+  display: inline-block;
+}
+
+.biopic {
+  max-width: 250px;
+}
+
+.contactinfo {
+  text-align: center;
+  color: #ccff88;
+}
+
+@media screen and (max-width: 480px) {
+  #content {
+    width: 100%;
+    padding: 40px 5px;
+  }
+
+  .laptop {
+    margin: 0px 15px;
+    border: 10px solid #3c3c3c;
+    width: 100%;
+    height: 300px;
+    padding: 15px 5px;
+    font-size: 0.7em;
+  }
+
+  .typed-code {
+    padding: 0px;
+  }
+
+  #bio-link {
+    margin-bottom: 1rem;
+  }
+
+  .pagelink {
+    font-size: 0.75em;
+    margin-bottom: 0.75rem;
+  }
+
+  .aboutme {
+    font-size: 0.75em;
+  }
+
+  .biopic {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
