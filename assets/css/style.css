@@ -17,6 +17,10 @@ a:hover {
   text-decoration: none;
 }
 
+#bio-link {
+  margin-bottom: 3rem;
+}
+
 .engraved {
   color: #ccff88;
   text-shadow: -3px -2px 5px #55aacc;
@@ -26,6 +30,7 @@ a:hover {
   background-color: #9977bb;
   color: #ccff88;
   border: 2px solid #55aacc;
+  margin-bottom: 1.5rem;
 }
 .pagelink:hover {
   background-color: #ccff88;
@@ -37,7 +42,7 @@ a:hover {
   width: calc( 100% - 200px);
   height: 100vh;
   overflow: auto;
-  transition: all 0.5s;
+  transition: all 1s;
   padding: 50px 50px 0px;
   position: fixed;
   top: 0;
@@ -66,7 +71,7 @@ a:hover {
   background-color: #222222;
   padding: 15px;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 1s;
   overflow: auto;
 }
 
@@ -76,7 +81,7 @@ a:hover {
 
 .navbutton {
   position: fixed;
-  transition: all 0.5s;
+  transition: all 1s;
   top: 0;
   left: 160px;
   z-index: 99;
@@ -229,7 +234,6 @@ a:hover {
   filter: alpha(opacity=0);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  margin: 5px;
   padding: 7px 14px;
 }
 
@@ -349,6 +353,23 @@ a:hover {
 
   .typed-code {
     padding: 0px;
+  }
+
+  #bio-link {
+    margin-bottom: 1rem;
+  }
+
+  .pagelink {
+    font-size: 0.75em;
+    margin-bottom: 0.75rem;
+  }
+
+  .aboutme {
+    font-size: 0.75em;
+  }
+
+  .biopic {
+    width: 50%;
   }
 }
 

@@ -16,7 +16,7 @@ $white: #ffffff;
 $yellow: #ffff00;
 
 $navWidth: 200px;
-$transition: all 0.5s;
+$transition: all 1s;
 
 /* Universal */
 
@@ -34,6 +34,10 @@ a {
   }
 }
 
+#bio-link {
+  margin-bottom: 3rem;
+}
+
 .engraved {
   color: $green;
   text-shadow: -3px -2px 5px $blue;
@@ -43,6 +47,7 @@ a {
   background-color: $purple;
   color: $green;
   border: 2px solid $blue;
+  margin-bottom: 1.5rem;
   &:hover {
     background-color: $green;
     color: $purple;
@@ -216,7 +221,6 @@ a {
   filter: alpha( opacity = 0 );
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  margin: 5px;
   padding: 7px 14px;
 }
 
@@ -339,7 +343,12 @@ a {
     padding: 15px 5px;
     font-size: 0.7em;
   }
-  .typed-code {
-    padding: 0px;
+  .typed-code { padding: 0px; }
+  #bio-link { margin-bottom: 1rem; }
+  .pagelink { 
+    font-size: 0.75em;
+    margin-bottom: .75rem;
   }
+  .aboutme { font-size: 0.75em}
+  .biopic { width: 50%; }
 }
