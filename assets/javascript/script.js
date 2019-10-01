@@ -88,7 +88,7 @@ let portfolio = () => {
               <div class = "overlay">
                 <h2>Choose Your Own Adventure</h2>
                 <p class = "projectskills mx-auto">Bootstrap | JavaScript | jQuery | Node.js | Express.js | mySQL | bCrypt | Gauge.js | Express-Validate</p>
-                <a class = "pagelink info btn" href = "https://cyao-bc.herokuapp.com" target = "_blank">View Project</a>
+                <a class = "pagelink info btn" href = "https://cyoa-bc.herokuapp.com" target = "_blank">View Project</a>
                 <a class = "pagelink btn ghub p-1" href = "https://github.com/bryanbloomquist/group-project-2" target = "_blank"><i class = "fab fa-github fa-2x"></i></a>
               </div>
             </div>
