@@ -262,12 +262,11 @@ a {
 
 .hiddenLink {
   background-color: rgba( $blue, 0.6 );
-  color: lighten( $blue, 5% );
-  border: solid 1px lighten( $blue, 5% );
+  color: darken( $blue, 25% );
+  border: none;
   float: right;
   &:hover {
     color: $black;
-    border: solid 1px $black;
   }
 }
 

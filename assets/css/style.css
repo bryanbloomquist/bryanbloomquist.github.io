@@ -275,13 +275,12 @@ a:hover {
 
 .hiddenLink {
   background-color: rgba(85, 170, 204, 0.6);
-  color: #69b4d2;
-  border: solid 1px #69b4d2;
+  color: #25637c;
+  border: none;
   float: right;
 }
 .hiddenLink:hover {
   color: #222222;
-  border: solid 1px #222222;
 }
 
 /* All Apps */
