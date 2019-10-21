@@ -61,7 +61,7 @@ let welcomePage = ( ) => {
 /// PORTFOLIO //////////////////////////////////////////////////
 let portfolio = () => {
   $( "#content" ).empty( );
-  // toggel();
+  toggel();
   $( "#content" ).html( `
 
     <div class = "row justify-content-center">
