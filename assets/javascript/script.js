@@ -19,7 +19,7 @@ let typed = ( divID, string, delay ) => {
   let typed = new Typed (
     divID, { 
       strings: [ string ],
-      typeSpeed: 10,
+      typeSpeed: 1,
       startDelay: delay,
       loop: false,
       showCursor: false
@@ -48,14 +48,14 @@ let welcomePage = ( ) => {
       </div>
     </div>
   ` )
-  typed( "#typed1", "<span class='darkblue'>function</span> <span class='gold'>rebootCareer</span><span class='yellow'>(</span> <span class='blue'>bryan</span> <span class='yellow'>) {</span>", 1000 );
-  typed( "#typed2", "<span class='blue'>event</span><span class ='white'>.</span><span class='gold'>leaveThePostOffice</span> <span class='purple'>( )</span><span class ='white'>;</span>", 2500 );
-  typed( "#typed3", "<span class='blue'>bryan</span><span class ='white'>.</span><span class='gold'>addClass</span><span class='purple'>(</span> <span class='orange'>'coding-boot-camp'</span> <span class='purple'>)</span><span class ='white'>;</span>", 4000 );
-  typed( "#typed4", "<span class='purple'>if (</span> <span class='blue'>activity</span> <span class='white'>===</span> <span class='orange'>'webDevelopment'</span> <span class='purple'>) {</span>", 5500 );
-  typed( "#typed5", "<span class='purple'>return</span> <span class='blue'>happiness</span> <span class ='white'>=</span> <span class='darkblue'>true</span><span class ='white'>;</span>", 7000 );
-  typed( "#typed6", "<span class='purple'>}</span>", 8000 );
-  typed( "#typed7", "<span class='gold'>$</span><span class='purple'>(</span> <span class='orange'>'#myLife'</span> <span class='purple'>)</span>.<span class='gold'>append</span><span class='purple'>(</span> <span class='orange'>'Hello World!'</span> <span class='purple'>)</span><span class ='white'>;</span>", 8250 );
-  typed( "#typed8", "<span class='yellow'>}</span><span class ='white'>;</span>", 9750 );
+  typed( "#typed1", "<span class='darkblue'>function</span> <span class='gold'>rebootCareer</span><span class='yellow'>(</span> <span class='blue'>bryan</span> <span class='yellow'>) {</span>", 0 );
+  typed( "#typed2", "<span class='blue'>event</span><span class ='white'>.</span><span class='gold'>leaveThePostOffice</span> <span class='purple'>( )</span><span class ='white'>;</span>", 750 );
+  typed( "#typed3", "<span class='blue'>bryan</span><span class ='white'>.</span><span class='gold'>addClass</span><span class='purple'>(</span> <span class='orange'>'coding-boot-camp'</span> <span class='purple'>)</span><span class ='white'>;</span>", 1500 );
+  typed( "#typed4", "<span class='purple'>if (</span> <span class='blue'>activity</span> <span class='white'>===</span> <span class='orange'>'webDevelopment'</span> <span class='purple'>) {</span>", 2250 );
+  typed( "#typed5", "<span class='purple'>return</span> <span class='blue'>happiness</span> <span class ='white'>=</span> <span class='darkblue'>true</span><span class ='white'>;</span>", 3000 );
+  typed( "#typed6", "<span class='purple'>}</span>", 3500 );
+  typed( "#typed7", "<span class='gold'>$</span><span class='purple'>(</span> <span class='orange'>'#myLife'</span> <span class='purple'>)</span>.<span class='gold'>append</span><span class='purple'>(</span> <span class='orange'>'Hello World!'</span> <span class='purple'>)</span><span class ='white'>;</span>", 3625 );
+  typed( "#typed8", "<span class='yellow'>}</span><span class ='white'>;</span>", 4375 );
 }
 
 /// PORTFOLIO //////////////////////////////////////////////////
