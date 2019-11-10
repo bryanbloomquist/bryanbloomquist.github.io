@@ -38,18 +38,16 @@ a:hover {
   border: 2px solid #bb4466;
 }
 
-#content {
+.content {
   width: calc( 100% - 200px);
-  height: 100vh;
-  overflow: auto;
   transition: all 1s;
   padding: 50px 50px 0px;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 200px;
 }
 
-#content.active {
+.content.active {
   width: 100%;
   left: 0;
 }
@@ -72,7 +70,7 @@ a:hover {
   padding: 15px;
   text-align: center;
   transition: all 1s;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #navbar.active {
@@ -98,169 +96,70 @@ a:hover {
 }
 
 /* Welcome Page */
-.laptop {
-  margin-top: calc( 200px / 4 );
-  background-color: #222222;
-  border: 25px solid #3c3c3c;
-  max-width: 600px;
-  height: 400px;
-  padding: 30px;
-  font-size: 1.1em;
-  color: #ffffff;
+#welcome-page {
+  padding: 100px;
+  height: 100vh;
 }
 
-.oneindent {
-  margin-left: 25px;
+.logo-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  opacity: 75%;
+  border: 5px solid #cccccc;
+  border-radius: 10%;
 }
 
-.twoindent {
-  margin-left: 50px;
-}
-
-.blue {
+.greetings {
+  border: 5px solid #cccccc;
+  width: 75%;
+  padding: 30px 50px;
+  margin: 50px auto;
   color: #55aacc;
-}
-
-.darkblue {
-  color: #3939fa;
-}
-
-.gold {
-  color: #f5e9a6;
-}
-
-.green {
-  color: #ccff88;
-}
-
-.orange {
-  color: #ff8800;
-}
-
-.purple {
-  color: #9977bb;
-}
-
-.red {
-  color: #bb4466;
-}
-
-.white {
-  color: #ffffff;
-}
-
-.yellow {
-  color: #ffff00;
+  background-color: rgba(34, 34, 34, 0.9);
 }
 
 /* Portfolio */
-.portfolio {
-  background-color: #55aacc;
-  border: 3px solid #ff8800;
-  color: #ccff88;
+#portfolio-page {
+  padding: 100px;
+  height: 100vh;
 }
 
-.portfolio-img {
-  width: 100%;
+.card {
   border: 3px solid #ccff88;
-}
-.portfolio-img:hover {
-  border: 3px solid #9977bb;
+  width: 100%;
 }
 
-.hovereffect {
+.card-body {
+  padding: 0px;
+  align-content: center;
+}
+
+.card-image {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+}
+
+.card-title {
   text-align: center;
-  cursor: default;
-}
-
-.hovereffect .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-color: rgba(34, 34, 34, 0.5);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-}
-
-.hovereffect h2 {
-  text-transform: uppercase;
+  background: rgba(34, 34, 34, 0.9);
   color: #55aacc;
-  text-align: center;
-  position: relative;
   font-size: 17px;
-  background: rgba(34, 34, 34, 0.6);
-  -webkit-transform: translatey(-100px);
-  -ms-transform: translatey(-100px);
-  transform: translatey(-100px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
   padding: 20px;
 }
 
-.hovereffect p {
-  display: inline-block;
-  clear: both;
+.card-skills {
+  text-align: center;
   font-size: 12px;
   border: 2px solid #ccff88;
   background-color: #bb4466;
   color: #ccff88;
   padding: 5px 10px;
-  min-width: 45%;
-  max-width: 90%;
+  margin: 0px auto;
 }
 
-.hovereffect a.info {
-  text-decoration: none;
-  display: inline-block;
-  color: #ccff88;
-  border: 2px solid #55aacc;
-  background-color: #9977bb;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  padding: 7px 14px;
-}
-
-.hovereffect a.info:hover {
-  box-shadow: 0 0 5px #ffffff;
-  background-color: #ccff88;
-  border: 2px solid #bb4466;
-  color: #9977bb;
-}
-
-.hovereffect:hover img {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.hovereffect:hover .overlay {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-.hovereffect:hover h2, .hovereffect:hover a.info {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -ms-transform: translatey(0);
-  -webkit-transform: translatey(0);
-  transform: translatey(0);
+.card a {
+  margin: 20px;
 }
 
 .ghub {

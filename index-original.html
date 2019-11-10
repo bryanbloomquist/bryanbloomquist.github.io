@@ -15,21 +15,20 @@
       integrity = "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
       crossorigin = "anonymous">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/animate.css">
     <link rel = "shortcut icon" href = "assets/images/favicon.ico" type = "image/x-icon">
     <title>Bryan Bloomquist</title>
   </head>
   <body>
     <div class = "wrapper">
-
       <!--navbar-->
-
       <nav id = "navbar">
         <h3 class = "engraved" id = "bio-link">
-          <a href = "#">Bryan Bloomquist</a>
+          <a href = "index.html">Bryan Bloomquist</a>
         </h3>
-        <a class = "btn btn-block pagelink" href = "#portfolio-page" id = "portfolio">Portfolio</a>
-        <a class = "btn btn-block pagelink" href = "#techskills-page" id = "techskills">Tech Skills</a>
-        <a class = "btn btn-block pagelink" href = "aboutme-page" id = "aboutme">About Me</a>
+        <button class = "btn btn-block pagelink" id = "portfolio">Portfolio</button>
+        <button class = "btn btn-block pagelink" id = "techskills">Tech Skills</button>
+        <button class = "btn btn-block pagelink" id = "aboutme">About Me</button>
         <a class = "btn btn-block pagelink p-1" href = "https://github.com/bryanbloomquist" title = "GitHub" target = "_blank">
           <i class = "fab fa-github fa-2x"></i>
         </a>
@@ -46,44 +45,17 @@
           Copyright &copy; 2019
         </div>
       </nav>
-
       <!--navbar control-->
-
       <nav class = "navbutton p-0">
         <button type = "button" id = "navbarCollapse" class = "btn btn-dark">
           <i class = "fas fa-bars"></i>
         </button>
       </nav>
-
       <!--main page content-->
-
-      <div class = "content" id = "welcome-page">
-        <img src = "assets/images/logo-color.png" alt = "B B Logo" class = "logo-img" />
-        <h1 class = "greetings">
-          Hi, I'm Bryan.  I design and develop awesome websites and web applications.
-        </h1>
-      </div>
-
-      <!--portfolio content-->
-
-      <div class = "content" id = "portfolio-page">
-        <div class = "mx-3 card-columns" id = "portfolio-cards"></div>
-      </div>
-
-      <!--tech skills content-->
-
-      <div class = "content" id = "techskills-page">
-
-      </div>
-
-      <!--about me content-->
-
-      <div class = "content" id = "aboutme-page">
-
-      </div>
+      <div class = "container-fluid" id = "content">Hello World</div>
 
     </div>
-    <!--required scripts for jQuery,Bootstrap, and Typed.js-->
+    <!--required scripts for jQuery and Bootstrap and Typed.js-->
     <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "assets/javascript/script.js"></script>
