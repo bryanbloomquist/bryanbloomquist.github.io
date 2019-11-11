@@ -129,13 +129,13 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 150px;
-  opacity: 75%;
-  border: 5px solid darken( $white, 20% );
+  // opacity: 75%;
+  border: 5px solid $blue;
   border-radius: 10%;
 }
 
 .greetings {
-  border: 5px solid darken( $white, 20% );
+  border: 5px solid $orange;
   width: 75%;
   padding: 30px 50px;
   margin: 50px auto;
@@ -146,26 +146,35 @@ a {
 /* Spacer */
 
 .spacer {
-  height: 100vh;
+  height: 25vh;
 }
 
 /* AboutMe */
 
+.aboutme-page {
+  padding: 100px;
+  height: 100vh;
+}
+
+.aboutme-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  padding: 15px;
+  border: 5px solid $blue;
+  border-radius: 10%;
+  background-color: $black;
+}
+
 .aboutme {
   background-color: $black;
+  width: 60%;
   font-size: 1.5em;
   padding: 30px 50px;
   margin: 50px auto;
   color: $blue;
   border: 3px solid $orange;
-  text-align: justify;
-  text-justify: auto;
-  overflow: auto;
-  display: inline-block;
-}
-
-.biopic {
-  max-width: 250px;
 }
 
 .contactinfo {
@@ -176,8 +185,8 @@ a {
 /* Portfolio */
 
 #portfolio-page {
-  padding: 100px;
-  height: 100vh;
+  padding: 0px 100px;
+  min-height: 100vh;
 }
 
 .project {
@@ -193,8 +202,9 @@ a {
 }
 
 .project-image {
-  width: 100%;
+  width: 75%;
   border: 2px solid $green;
+  margin-bottom: 20px;
 }
 
 .project-title {
@@ -209,12 +219,12 @@ a {
 .project-skills {
   text-align: center;
   font-size: 12px;
-  border-top: 2px solid $green;
-  border-bottom: 2px solid $green;
+  border: 2px solid $green;
   background-color: $red;
   color: $green;
   padding: 5px 10px;
   margin: 0px auto;
+  width: 90%;
 }
 
 .project a {
@@ -229,8 +239,12 @@ a {
 
 /* TechSkills */
 
+#techskills-page {
+  padding: 100px;
+  min-height: 100vh;
+}
+
 .techskills {
-  float: right;
   background-color: $blue;
   border: 3px solid $orange;
 }
@@ -239,20 +253,78 @@ a {
   max-width: 100px;
 }
 
-// @media screen and ( max-width: 768px ) {
-
-// }
-
-@media screen and ( max-width: 480px ) {
-  .content { 
+@media screen and ( max-width: 1200px ) {
+  .aboutme {
     width: 100%;
+    font-size: 1.3em;
+  }
+  .aboutme-pic {
+    float: none;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .content { 
+    // width: 100%;
     padding: 40px 5px; 
   }  
-  #bio-link { margin-bottom: 1rem; }
+  #welcome-page {
+    padding: 50px;
+  }
+  #aboutme-page {
+    padding: 50px;
+  }
+  .aboutme {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #portfolio-page {
+    padding: 50px;
+  }
+  #techskills-page {
+    padding: 50px;
+  }
+}
+
+@media screen and ( max-width: 480px ) {
+  .content {
+    width: 100%;
+    padding: 25px;
+  }
+  #bio-link { 
+    margin-bottom: 1rem;
+  }
   .pagelink { 
     font-size: 0.75em;
     margin-bottom: .75rem;
   }
-  .aboutme { font-size: 0.75em}
-  .biopic { width: 50%; }
+  #welcome-page {
+    padding: 25px;
+  }
+  .greetings {
+    font-size: 1.5em;
+    width: 100%;
+    padding: 25px;
+  }
+  .spacer {
+    height: 10vh;
+  }
+  #aboutme-page {
+    padding: 25px;
+  }
+  .aboutme {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 25px;
+  }
+  #portfolio-page {
+    padding: 25px;
+  }
+  #techskills-page {
+    padding: 25px;
+  }
 }

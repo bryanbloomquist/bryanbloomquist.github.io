@@ -110,13 +110,12 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   width: 150px;
-  opacity: 75%;
-  border: 5px solid #cccccc;
+  border: 5px solid #55aacc;
   border-radius: 10%;
 }
 
 .greetings {
-  border: 5px solid #cccccc;
+  border: 5px solid #ff8800;
   width: 75%;
   padding: 30px 50px;
   margin: 50px auto;
@@ -126,25 +125,34 @@ a:hover {
 
 /* Spacer */
 .spacer {
-  height: 100vh;
+  height: 25vh;
 }
 
 /* AboutMe */
+.aboutme-page {
+  padding: 100px;
+  height: 100vh;
+}
+
+.aboutme-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  padding: 15px;
+  border: 5px solid #55aacc;
+  border-radius: 10%;
+  background-color: #222222;
+}
+
 .aboutme {
   background-color: #222222;
+  width: 60%;
   font-size: 1.5em;
   padding: 30px 50px;
   margin: 50px auto;
   color: #55aacc;
   border: 3px solid #ff8800;
-  text-align: justify;
-  text-justify: auto;
-  overflow: auto;
-  display: inline-block;
-}
-
-.biopic {
-  max-width: 250px;
 }
 
 .contactinfo {
@@ -154,8 +162,8 @@ a:hover {
 
 /* Portfolio */
 #portfolio-page {
-  padding: 100px;
-  height: 100vh;
+  padding: 0px 100px;
+  min-height: 100vh;
 }
 
 .project {
@@ -170,8 +178,9 @@ a:hover {
 }
 
 .project-image {
-  width: 100%;
+  width: 75%;
   border: 2px solid #ccff88;
+  margin-bottom: 20px;
 }
 
 .project-title {
@@ -186,12 +195,12 @@ a:hover {
 .project-skills {
   text-align: center;
   font-size: 12px;
-  border-top: 2px solid #ccff88;
-  border-bottom: 2px solid #ccff88;
+  border: 2px solid #ccff88;
   background-color: #bb4466;
   color: #ccff88;
   padding: 5px 10px;
   margin: 0px auto;
+  width: 90%;
 }
 
 .project a {
@@ -205,8 +214,12 @@ a:hover {
 }
 
 /* TechSkills */
+#techskills-page {
+  padding: 100px;
+  min-height: 100vh;
+}
+
 .techskills {
-  float: right;
   background-color: #55aacc;
   border: 3px solid #ff8800;
 }
@@ -215,10 +228,50 @@ a:hover {
   max-width: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+  .aboutme {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  .aboutme-pic {
+    float: none;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 40px 5px;
+  }
+
+  #welcome-page {
+    padding: 50px;
+  }
+
+  #aboutme-page {
+    padding: 50px;
+  }
+
+  .aboutme {
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  #portfolio-page {
+    padding: 50px;
+  }
+
+  #techskills-page {
+    padding: 50px;
+  }
+}
 @media screen and (max-width: 480px) {
   .content {
     width: 100%;
-    padding: 40px 5px;
+    padding: 25px;
   }
 
   #bio-link {
@@ -230,12 +283,36 @@ a:hover {
     margin-bottom: 0.75rem;
   }
 
-  .aboutme {
-    font-size: 0.75em;
+  #welcome-page {
+    padding: 25px;
   }
 
-  .biopic {
-    width: 50%;
+  .greetings {
+    font-size: 1.5em;
+    width: 100%;
+    padding: 25px;
+  }
+
+  .spacer {
+    height: 10vh;
+  }
+
+  #aboutme-page {
+    padding: 25px;
+  }
+
+  .aboutme {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 25px;
+  }
+
+  #portfolio-page {
+    padding: 25px;
+  }
+
+  #techskills-page {
+    padding: 25px;
   }
 }
 
