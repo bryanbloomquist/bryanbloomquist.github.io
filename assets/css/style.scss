@@ -26,6 +26,10 @@ body {
   background-attachment: fixed;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: $green;
   &:hover {
@@ -55,17 +59,16 @@ a {
   }
 }
 
-#content {
+.content {
   width: calc( 100% - #{ $navWidth });
-  height: 100vh; overflow: auto;
   transition: $transition;
   padding: 50px 50px 0px;
-  position: fixed;
+  position: relative;
   top: 0;
   left: $navWidth;
 }
 
-#content.active {
+.content.active {
   width: 100%;
   left: 0;
 }
@@ -89,7 +92,7 @@ a {
   padding: 15px;
   text-align: center;
   transition: $transition;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #navbar.active {
@@ -116,138 +119,116 @@ a {
 
 /* Welcome Page */
 
-.laptop {
-  margin-top: calc( #{ $navWidth } / 4 );
-  background-color: $black;
-  border: 25px solid lighten( $black, 10% );
-  max-width: 600px;
-  height: 400px;
-  padding: 30px;
-  font-size: 1.1em;
-  color: $white;
+#welcome-page {
+  padding: 100px;
+  height: 100vh;
 }
 
-.oneindent { margin-left: 25px; }
-.twoindent { margin-left: 50px; }
-.blue { color: $blue; }
-.darkblue { color: $darkblue; }
-.gold { color: $gold; }
-.green { color: $green; }
-.orange { color: $orange; }
-.purple { color: $purple; }
-.red { color: $red; }
-.white { color: $white; }
-.yellow { color: $yellow; }
+.logo-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  // opacity: 75%;
+  border: 5px solid $blue;
+  border-radius: 10%;
+}
 
-/* Portfolio */
+.greetings {
+  border: 5px solid $orange;
+  width: 75%;
+  padding: 30px 50px;
+  margin: 50px auto;
+  color: $blue;
+  background-color: rgba( $black, 0.9 );
+}
 
-.portfolio {
-  background-color: $blue;
+/* Spacer */
+
+.spacer {
+  height: 25vh;
+}
+
+/* AboutMe */
+
+.aboutme-page {
+  padding: 100px;
+  height: 100vh;
+}
+
+.aboutme-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  padding: 15px;
+  border: 5px solid $blue;
+  border-radius: 10%;
+  background-color: $black;
+}
+
+.aboutme {
+  background-color: $black;
+  width: 60%;
+  font-size: 1.5em;
+  padding: 30px 50px;
+  margin: 50px auto;
+  color: $blue;
   border: 3px solid $orange;
+}
+
+.contactinfo {
+  text-align: center;
   color: $green;
 }
 
-.portfolio-img {
-  width: 100%;
+/* Portfolio */
+
+#portfolio-page {
+  padding: 0px 100px;
+  min-height: 100vh;
+}
+
+.project {
+  height: 100%;
+}
+
+.project-body {
+  padding: 0px;
+  align-content: center;
   border: 3px solid $green;
-  &:hover {
-    border: 3px solid $purple;
-  }
+  background: rgba( $black, 0.9 );
+
 }
 
-.hovereffect {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+.project-image {
+  width: 75%;
+  border: 2px solid $green;
+  margin-bottom: 20px;
+}
+
+.project-title {
   text-align: center;
-  cursor: default;
-}
-
-.hovereffect .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-color: rgba( $black, 0.5 );
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
-}
-
-.hovereffect h2 {
-  text-transform: uppercase;
+  background: rgba( $black, 0.9 );
   color: $blue;
-  text-align: center;
-  position: relative;
   font-size: 17px;
-  background: rgba( $black, 0.6 );
-  -webkit-transform: translatey(-100px);
-  -ms-transform: translatey(-100px);
-  transform: translatey(-100px);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
   padding: 20px;
+  margin-bottom: 0px;
 }
 
-.hovereffect p {
-  display: inline-block;
-  clear: both;
+.project-skills {
+  text-align: center;
   font-size: 12px;
   border: 2px solid $green;
   background-color: $red;
   color: $green;
   padding: 5px 10px;
-  min-width: 45%;
-  max-width: 90%;
+  margin: 0px auto;
+  width: 90%;
 }
 
-.hovereffect a.info {
-  text-decoration: none;
-  display: inline-block;
-  color: $green;
-  border: 2px solid $blue;
-  background-color: $purple;
-  opacity: 0;
-  filter: alpha( opacity = 0 );
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  padding: 7px 14px;
-}
-
-.hovereffect a.info:hover {
-  box-shadow: 0 0 5px $white;
-  background-color: $green;
-  border: 2px solid $red;
-  color: $purple;
-}
-
-.hovereffect:hover img {
-  -ms-transform: scale( 1.2 );
-  -webkit-transform: scale( 1.2 );
-  transform: scale( 1.2 );
-}
-
-.hovereffect:hover .overlay {
-  opacity: 1;
-  filter: alpha( opacity = 100 );
-}
-  
-.hovereffect:hover h2,.hovereffect:hover a.info {
-  opacity: 1;
-  filter: alpha( opacity = 100 );
-  -ms-transform: translatey( 0 );
-  -webkit-transform: translatey( 0 );
-  transform: translatey( 0 );
+.project a {
+  margin: 20px;
 }
 
 .ghub { 
@@ -256,46 +237,14 @@ a {
   width: calc( height );
 }
 
-.projectskills {
-  width: 90%;
-}
-
-.hiddenLink {
-  background-color: rgba( $blue, 0.6 );
-  color: darken( $blue, 25% );
-  border: none;
-  float: right;
-  &:hover {
-    color: $black;
-  }
-}
-
-/* All Apps */
-
-.allapps {
-  background-color: $black;
-  color: $blue;
-  border: 3px solid $orange;
-  overflow-x: hidden;
-}
-
-.applink {
-  background-color: $purple;
-  color: $green;
-  border: 2px solid $blue;
-  width: 100%;
-  margin-bottom: 4%;
-  &:hover {
-    background-color: $green;
-    color: $purple;
-    border: 2px solid $red;
-  }
-}
-
 /* TechSkills */
 
+#techskills-page {
+  padding: 100px;
+  min-height: 100vh;
+}
+
 .techskills {
-  float: right;
   background-color: $blue;
   border: 3px solid $orange;
 }
@@ -304,50 +253,78 @@ a {
   max-width: 100px;
 }
 
-/* AboutMe */
-
-.aboutme {
-  background-color: $black;
-  color: $blue;
-  border: 3px solid $orange;
-  text-align: justify;
-  text-justify: auto;
-  overflow: auto;
-  display: inline-block;
-}
-
-.biopic {
-  max-width: 250px;
-}
-
-.contactinfo {
-  text-align: center;
-  color: $green;
-}
-
-// @media screen and ( max-width: 768px ) {
-
-// }
-
-@media screen and ( max-width: 480px ) {
-  #content { 
+@media screen and ( max-width: 1200px ) {
+  .aboutme {
     width: 100%;
+    font-size: 1.3em;
+  }
+  .aboutme-pic {
+    float: none;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .content { 
+    // width: 100%;
     padding: 40px 5px; 
   }  
-  .laptop { 
-    margin: 0px 15px;
-    border: 10px solid lighten( $black, 10% );
-    width: 100%;
-    height: 300px;
-    padding: 15px 5px;
-    font-size: 0.7em;
+  #welcome-page {
+    padding: 50px;
   }
-  .typed-code { padding: 0px; }
-  #bio-link { margin-bottom: 1rem; }
+  #aboutme-page {
+    padding: 50px;
+  }
+  .aboutme {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #portfolio-page {
+    padding: 50px;
+  }
+  #techskills-page {
+    padding: 50px;
+  }
+}
+
+@media screen and ( max-width: 480px ) {
+  .content {
+    width: 100%;
+    padding: 25px;
+  }
+  #bio-link { 
+    margin-bottom: 1rem;
+  }
   .pagelink { 
     font-size: 0.75em;
     margin-bottom: .75rem;
   }
-  .aboutme { font-size: 0.75em}
-  .biopic { width: 50%; }
+  #welcome-page {
+    padding: 25px;
+  }
+  .greetings {
+    font-size: 1.5em;
+    width: 100%;
+    padding: 25px;
+  }
+  .spacer {
+    height: 10vh;
+  }
+  #aboutme-page {
+    padding: 25px;
+  }
+  .aboutme {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 25px;
+  }
+  #portfolio-page {
+    padding: 25px;
+  }
+  #techskills-page {
+    padding: 25px;
+  }
 }
