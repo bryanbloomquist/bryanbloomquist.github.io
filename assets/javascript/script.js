@@ -35,12 +35,12 @@ const portfolio = [
     deployed: "https://gimlet.herokuapp.com",
     github: "https://github.com/bryanbloomquist/news-scraper"
   },{
-    name: "Fallout Trivia",
-    src: "assets/images/fallout.png",
-    alt: "Fallout Trivia screenshot",
+    name: "Tarot Reader",
+    src: "assets/images/tarot-reader.PNG",
+    alt: "Tarot Reader screenshot",
     skills: "HTML | CSS | JavaScript | jQuery",
-    deployed: "https://bryanbloomquist.github.io/trivia-game",
-    github: "https://github.com/bryanbloomquist/trivia-game"
+    deployed: "https://bryanbloomquist.github.io/tarot-reader",
+    github: "https://github.com/bryanbloomquist/tarot-reader"
   }
 ]
 
