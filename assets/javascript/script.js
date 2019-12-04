@@ -36,7 +36,7 @@ const portfolio = [
     github: "https://github.com/bryanbloomquist/news-scraper"
   },{
     name: "Tarot Reader",
-    src: "assets/images/tarot-reader.PNG",
+    src: "assets/images/tarot-reader.png",
     alt: "Tarot Reader screenshot",
     skills: "HTML | CSS | JavaScript | jQuery",
     deployed: "https://bryanbloomquist.github.io/tarot-reader",
