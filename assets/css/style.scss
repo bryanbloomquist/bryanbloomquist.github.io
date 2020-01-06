@@ -146,7 +146,7 @@ a {
 /* Spacer */
 
 .spacer {
-  height: 25vh;
+  height: 50vh;
 }
 
 /* AboutMe */
@@ -202,9 +202,9 @@ a {
 }
 
 .project-image {
-  width: 75%;
+  width: 90%;
   border: 2px solid $green;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .project-title {
@@ -225,22 +225,19 @@ a {
   padding: 5px 10px;
   margin: 0px auto;
   width: 90%;
+  min-height: 50px;
 }
 
 .project a {
-  margin: 20px;
+  margin: 10px 0 20px;
+  width: 45%;
 }
 
-.ghub { 
-  display: inline-block;
-  padding: 2px 10px;
-  width: calc( height );
-}
 
 /* TechSkills */
 
 #techskills-page {
-  padding: 100px;
+  padding: 50px;
   min-height: 100vh;
 }
 
@@ -265,6 +262,12 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+  #portfolio-page {
+    padding: 0 50px;
+  }
+  #techskills-page {
+    padding: 0 50px;
+  }
 }
 
 @media screen and ( max-width: 768px ) {
@@ -282,18 +285,16 @@ a {
     width: 100%;
     font-size: 1.2em;
   }
-  #portfolio-page {
-    padding: 50px;
-  }
-  #techskills-page {
-    padding: 50px;
-  }
 }
 
 @media screen and ( max-width: 480px ) {
   .content {
     width: 100%;
     padding: 25px;
+    left: 0;
+  }
+  .content.active {
+    left: $navWidth;
   }
   #bio-link { 
     margin-bottom: 1rem;
@@ -301,6 +302,18 @@ a {
   .pagelink { 
     font-size: 0.75em;
     margin-bottom: .75rem;
+  }
+  #navbar {
+    margin-left: -$navWidth;
+  }
+  #navbar.active {
+    margin-left: 0;
+  }
+  .navbutton {
+    left: 0;
+  }
+  .navbutton.active {
+    left: $navWidth - 40px;
   }
   #welcome-page {
     padding: 25px;
@@ -322,9 +335,9 @@ a {
     padding: 25px;
   }
   #portfolio-page {
-    padding: 25px;
+    padding: 0 25px;
   }
   #techskills-page {
-    padding: 25px;
+    padding: 0 25px;
   }
 }

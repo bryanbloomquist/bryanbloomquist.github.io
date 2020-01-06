@@ -7,6 +7,13 @@ const portfolio = [
     deployed: "https://molly-pony.herokuapp.com",
     github: "https://github.com/bryanbloomquist/molly-pony"
   },{
+    name: "Tarot Reader",
+    src: "assets/images/tarot-reader.png",
+    alt: "Tarot Reader screenshot",
+    skills: "HTML | CSS | JavaScript | jQuery | Bootstrap",
+    deployed: "https://bryanbloomquist.github.io/tarot-reader",
+    github: "https://github.com/bryanbloomquist/tarot-reader"
+  },{
     name: "Choose Your Own Adventure",
     src: "assets/images/cyoa.png",
     alt: "Choose Your Own Adventure screenshot",
@@ -28,18 +35,12 @@ const portfolio = [
     deployed: "https://react-google.herokuapp.com",
     github: "https://github.com/bryanbloomquist/google-book-search"
   },{
-    name: "Gimlet Podcast Scraper",
-    src: "assets/images/gimlet.PNG",
-    alt: "Gimlet Podcast Scraper screenshot",
-    skills: "JavaScript | jQuery | Node.js | Express.js | Cheerio | Axios",
-    deployed: "https://gimlet.herokuapp.com",
-    github: "https://github.com/bryanbloomquist/news-scraper"
-  },{
-    name: "Tarot Reader",
-    src: "assets/images/tarot-reader.png",
-    alt: "Tarot Reader screenshot",
-    skills: "HTML | CSS | JavaScript | jQuery",
-    deployed: "https://bryanbloomquist.github.io/tarot-reader",
-    github: "https://github.com/bryanbloomquist/tarot-reader"
+    name: "Terraria Gem Collector",
+    src: "assets/images/terraria.png",
+    alt: "Terraria Gem Collector screenshot",
+    skills: "JavaScript | jQuery | HTML | CSS",
+    deployed: "https://bryanbloomquist.github.io/crystal-collector",
+    github: "https://github.com/bryanbloomquist/crystal-collector"
+
   }
 ];
