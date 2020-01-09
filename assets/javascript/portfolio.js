@@ -10,7 +10,7 @@ const portfolio = [
     name: "Tarot Reader",
     src: "assets/images/tarot-reader.png",
     alt: "Tarot Reader screenshot",
-    skills: "HTML | CSS | JavaScript | jQuery | Bootstrap",
+    skills: "HTML | CSS | JavaScript | React | React-Bootstrap",
     deployed: "https://bryanbloomquist.github.io/tarot-reader",
     github: "https://github.com/bryanbloomquist/tarot-reader"
   },{
