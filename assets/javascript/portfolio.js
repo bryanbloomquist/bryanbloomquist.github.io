@@ -14,12 +14,12 @@ const portfolio = [
     deployed: "https://bryanbloomquist.github.io/tarot-reader",
     github: "https://github.com/bryanbloomquist/tarot-reader"
   },{
-    name: "Choose Your Own Adventure",
+    name: "Boot Camp Adventure",
     src: "assets/images/cyoa.png",
-    alt: "Choose Your Own Adventure screenshot",
+    alt: "Boot Camp Adventure screenshot",
     skills: "Bootstrap | JavaScript | jQuery | Node.js | Express.js | mySQL",
-    deployed: "https://cyoa-bc.herokuapp.com",
-    github: "https://github.com/bryanbloomquist/group-project-2"
+    deployed: "https://bootcamp-adventure.herokuapp.com",
+    github: "https://github.com/bryanbloomquist/bootcamp-adventure"
   },{
     name: "Dungeons & Dragons Hangman",
     src: "assets/images/hangman.png",
@@ -34,13 +34,5 @@ const portfolio = [
     skills: "MongoDB | Express.js | React | Node.js | Bootstrap | CSS",
     deployed: "https://react-google.herokuapp.com",
     github: "https://github.com/bryanbloomquist/google-book-search"
-  },{
-    name: "Terraria Gem Collector",
-    src: "assets/images/terraria.png",
-    alt: "Terraria Gem Collector screenshot",
-    skills: "JavaScript | jQuery | HTML | CSS",
-    deployed: "https://bryanbloomquist.github.io/crystal-collector",
-    github: "https://github.com/bryanbloomquist/crystal-collector"
-
   }
 ];
