@@ -4,15 +4,11 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+    <script src="https://kit.fontawesome.com/05388d649a.js" crossorigin="anonymous"></script>
     <link 
       rel = "stylesheet" 
       href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin = "anonymous">
-    <link 
-      rel = "stylesheet"
-      href = "https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity = "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
       crossorigin = "anonymous">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
     <link rel = "shortcut icon" href = "assets/images/favicon.ico" type = "image/x-icon">
@@ -30,8 +26,10 @@
         <a class = "btn btn-block pagelink" href = "#aboutme-page" id = "aboutme">About Me</a>
         <a class = "btn btn-block pagelink" href = "#portfolio-page" id = "portfolio">Projects</a>
         <a class = "btn btn-block pagelink" href = "#techskills-page" id = "techskills">Tool Box</a>
+        <a class = "btn btn-block pagelink" href = "#contactme-page" id = "contactme">Contact Me</a>
         <a class = "btn btn-block pagelink p-1" href = "https://github.com/bryanbloomquist" title = "GitHub" target = "_blank">
-          <i class = "fab fa-github fa-2x"></i>
+          <i class="fab fa-github-square fa-2x"></i>
+          <!-- <i class = "fab fa-github fa-2x"></i> -->
         </a>
         <a class = "btn btn-block pagelink p-1" href = "https://linkedin.com/in/bryan-bloomquist-b1374416b" title = "LinkedIn" target = "_blank">
           <i class = "fab fa-linkedin fa-2x"></i>
@@ -39,11 +37,11 @@
         <a class = "btn btn-block pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
           <i class = "fas fa-envelope-square fa-2x"></i>
         </a>
-        <a class = "btn btn-block pagelink p-1" href = "resume.pdf" title = "Resume" target = "_blank">
+        <!-- <a class = "btn btn-block pagelink p-1" href = "resume.pdf" title = "Resume" target = "_blank">
           <i class = "far fa-file fa-2x"></i>
-        </a>
+        </a> -->
         <div class = "footer mt-5">
-          Copyright &copy; 2019
+          Copyright &copy; 2020
         </div>
       </nav>
 
@@ -60,7 +58,7 @@
       <div class = "content" id = "welcome-page">
         <img src = "assets/images/logo-color.png" alt = "B B Logo" class = "logo-img" />
         <h1 class = "greetings">
-          Hi, I'm Bryan.  I design and develop awesome websites and web applications.
+          Hi, I'm Bryan.  I make cool stuff happen on the internet.
         </h1>
       </div>
 
@@ -71,10 +69,10 @@
       <!--about me content-->
 
       <div class = "content" id = "aboutme-page">
-        <img src = "assets/images/bio-pic.JPG" alt = "my beautiful visage" class = "aboutme-pic" />
         <div class = "aboutme">
+        <img src = "assets/images/bryan.jpg" alt = "my beautiful visage" class = "aboutme-pic" />
           <p>
-            A front end web developer with full stack development skills.  Finished top of his class at Web Development boot camp at the University of Minnesota.  Loves making awesome-looking, responsive web projects; from single page sites to full stack applications.  Let's work together and make something amazing.
+            I am a front end web developer and designer with training in full stack web development.  I love making awesome-looking responsive projects; from single page websites to full stack applications.  Let's work together and make something amazing.
           </p>
         </div>
       </div>
@@ -96,10 +94,39 @@
       <!--tech skills content-->
 
       <div class = "content" id = "techskills-page">
-          <div class = "row justify-content-around" id = "toolbox"></div>
+        <div class = "row justify-content-around" id = "toolbox"></div>
       </div>
 
+      <!--spacer-->
+
+      <div class = "spacer"></div>
+
+      <!--contact me content-->
+
+      <div class = "content" id = "contactme-page">
+        <div class = "contact-me">
+          <form action = "https://formspree.io/mrgkeypr" method = "POST" >
+            <div class = "form-group">
+              <label for = "name">Your Name:</label>
+              <input type = "text" class = "form-control" id = "name" name = "name" placeholder = "Enter Name" />
+            </div>
+            <div class = "form-group">
+              <label for = "email">Your Email:</label>
+              <input type = "email" class = "form-control" id = "email" name = "_replyto" placeholder = "Enter Email" />
+            </div>
+            <div class = "form-group">
+              <label for = "message">Your Message:</label>
+              <textarea class = "form-control" id = "message" name = "message" placeholder = "Enter Message" rows = "4"></textarea>
+            </div>
+            <button type="submit" class = "btn btn-block pagelink">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class = "spacer"></div>
+
     </div>
+
     <!--required scripts for jQuery,Bootstrap, and Typed.js-->
     <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

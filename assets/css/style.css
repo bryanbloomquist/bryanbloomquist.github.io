@@ -1,8 +1,8 @@
 /* sass assets/css/style.scss assets/css/style.css */
 /* or to automate it while working */
 /* sass --watch assets/css/style.scss assets/css/style.css */
-/* Colors To Be Used */
-/* Universal */
+/********** Colors To Be Used **********/
+/********** Universal **********/
 body {
   background-image: url("../images/coding-wp-2.jpg");
   background-size: auto;
@@ -21,13 +21,41 @@ a:hover {
   text-decoration: none;
 }
 
-#bio-link {
-  margin-bottom: 3rem;
+.content {
+  width: calc( 100% - 200px);
+  transition: all 1s;
+  padding: 100px 50px 0px;
+  position: relative;
+  top: 0;
+  left: 200px;
 }
 
-.engraved {
+.content.active {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 40px 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content {
+    width: 100%;
+    padding: 25px;
+    left: 0;
+  }
+
+  .content.active {
+    left: 200px;
+  }
+}
+/********** Navbar **********/
+#bio-link {
+  margin-bottom: 3rem;
   color: #ccff88;
-  text-shadow: -3px -2px 5px #55aacc;
+  text-shadow: -3px -3px 6px #55aacc;
 }
 
 .pagelink {
@@ -42,27 +70,6 @@ a:hover {
   border: 2px solid #bb4466;
 }
 
-.content {
-  width: calc( 100% - 200px);
-  transition: all 1s;
-  padding: 50px 50px 0px;
-  position: relative;
-  top: 0;
-  left: 200px;
-}
-
-.content.active {
-  width: 100%;
-  left: 0;
-}
-
-.header {
-  background-color: #222222;
-  border: 3px solid #ff8800;
-  text-align: center;
-}
-
-/* Navbar */
 #navbar {
   width: 200px;
   position: fixed;
@@ -99,7 +106,33 @@ a:hover {
   text-align: center;
 }
 
-/* Welcome Page */
+@media screen and (max-width: 480px) {
+  #bio-link {
+    margin-bottom: 1rem;
+  }
+
+  .pagelink {
+    font-size: 0.75em;
+    margin-bottom: 0.75rem;
+  }
+
+  #navbar {
+    margin-left: -200px;
+  }
+
+  #navbar.active {
+    margin-left: 0;
+  }
+
+  .navbutton {
+    left: 0;
+  }
+
+  .navbutton.active {
+    left: 160px;
+  }
+}
+/********** Welcome Page **********/
 #welcome-page {
   padding: 100px;
   height: 100vh;
@@ -117,50 +150,92 @@ a:hover {
 .greetings {
   border: 5px solid #ff8800;
   width: 75%;
+  min-height: 166px;
   padding: 30px 50px;
   margin: 50px auto;
   color: #55aacc;
   background-color: rgba(34, 34, 34, 0.9);
 }
 
-/* Spacer */
+@media screen and (max-width: 768px) {
+  #welcome-page {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #welcome-page {
+    padding: 25px;
+  }
+
+  .greetings {
+    font-size: 1.5em;
+    width: 100%;
+    padding: 25px;
+  }
+}
+/********** Spacer **********/
 .spacer {
   height: 50vh;
 }
 
-/* AboutMe */
+@media screen and (max-width: 480px) {
+  .spacer {
+    height: 10vh;
+  }
+}
+/********** AboutMe **********/
 .aboutme-page {
   padding: 100px;
   height: 100vh;
 }
 
 .aboutme-pic {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 190px;
-  padding: 15px;
+  width: 240px;
+  padding: 5px;
   border: 5px solid #55aacc;
-  border-radius: 10%;
+  border-radius: 25%;
   background-color: #222222;
 }
 
 .aboutme {
+  position: relative;
   background-color: #222222;
-  width: 60%;
-  font-size: 1.5em;
-  padding: 30px 50px;
+  width: 50%;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  padding: 28px 56px 28px 128px;
   margin: 50px auto;
   color: #55aacc;
-  border: 3px solid #ff8800;
+  border: 5px solid #ff8800;
+  border-radius: 100px;
 }
 
-.contactinfo {
-  text-align: center;
-  color: #ccff88;
-}
+@media screen and (max-width: 768px) {
+  #aboutme-page {
+    padding: 25px;
+  }
 
-/* Portfolio */
+  .aboutme {
+    width: 100%;
+    font-size: 24px;
+    padding: 100px 25px 25px;
+    border-radius: 25px;
+    line-height: 30px;
+  }
+
+  .aboutme-pic {
+    top: 0;
+    left: 80px;
+    width: 200px;
+  }
+}
+/********** Portfolio **********/
 #portfolio-page {
   padding: 0px 100px;
   min-height: 100vh;
@@ -209,10 +284,49 @@ a:hover {
   width: 45%;
 }
 
-/* TechSkills */
+@media screen and (max-width: 1200px) {
+  #portfolio-page {
+    padding: 0 50px;
+  }
+
+  #techskills-page {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #portfolio-page {
+    padding: 0 25px;
+  }
+
+  #techskills-page {
+    padding: 0 25px;
+  }
+}
+/********** TechSkills **********/
 #techskills-page {
   padding: 50px;
   min-height: 100vh;
+}
+
+#techskills-page h4 {
+  color: #ccff88;
+  text-shadow: -2px -2px 5px #55aacc;
+}
+
+.toolbox-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  border: 5px solid #9977bb;
+  background: #222222;
+  margin-bottom: 20px;
+}
+.toolbox-item:focus {
+  outline: none;
 }
 
 .techskills {
@@ -224,112 +338,61 @@ a:hover {
   max-width: 100px;
 }
 
-@media screen and (max-width: 1200px) {
-  .aboutme {
-    width: 100%;
-    font-size: 1.3em;
-  }
-
-  .aboutme-pic {
-    float: none;
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #portfolio-page {
-    padding: 0 50px;
-  }
-
-  #techskills-page {
-    padding: 0 50px;
-  }
+.header {
+  background-color: #222222;
+  border: 3px solid #ff8800;
+  text-align: center;
 }
+
 @media screen and (max-width: 768px) {
-  .content {
-    padding: 40px 5px;
+  #techskills-page {
+    min-height: 50vh;
+    padding: 20px;
   }
 
-  #welcome-page {
-    padding: 50px;
+  #techskills-page h4 {
+    font-size: 16px;
   }
 
-  #aboutme-page {
-    padding: 50px;
+  .toolbox-item {
+    width: 110px;
+    height: 110px;
   }
 
-  .aboutme {
-    width: 100%;
-    font-size: 1.2em;
+  .skillimage {
+    width: 50px;
   }
 }
-@media screen and (max-width: 480px) {
-  .content {
+/********** Contact Me **********/
+.contact-me {
+  position: relative;
+  background-color: #222222;
+  width: 50%;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  padding: 28px 56px;
+  margin: 50px auto;
+  color: #ccff88;
+  border: 5px solid #55aacc;
+  border-radius: 100px;
+}
+
+.contact-me input, .contact-me textarea {
+  border-radius: 10px;
+  background-color: #f5e9a6;
+  color: white;
+}
+
+#norton-idsafe-field-styling-divId {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-me {
     width: 100%;
-    padding: 25px;
-    left: 0;
-  }
-
-  .content.active {
-    left: 200px;
-  }
-
-  #bio-link {
-    margin-bottom: 1rem;
-  }
-
-  .pagelink {
-    font-size: 0.75em;
-    margin-bottom: 0.75rem;
-  }
-
-  #navbar {
-    margin-left: -200px;
-  }
-
-  #navbar.active {
-    margin-left: 0;
-  }
-
-  .navbutton {
-    left: 0;
-  }
-
-  .navbutton.active {
-    left: 160px;
-  }
-
-  #welcome-page {
-    padding: 25px;
-  }
-
-  .greetings {
-    font-size: 1.5em;
-    width: 100%;
-    padding: 25px;
-  }
-
-  .spacer {
-    height: 10vh;
-  }
-
-  #aboutme-page {
-    padding: 25px;
-  }
-
-  .aboutme {
-    width: 100%;
-    font-size: 1.2em;
-    padding: 25px;
-  }
-
-  #portfolio-page {
-    padding: 0 25px;
-  }
-
-  #techskills-page {
-    padding: 0 25px;
+    padding: 28px 28px;
+    border-radius: 25px;
   }
 }
 
