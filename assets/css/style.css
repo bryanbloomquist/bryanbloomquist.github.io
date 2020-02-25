@@ -22,7 +22,7 @@ a:hover {
 }
 
 .content {
-  width: calc( 100% - 200px);
+  width: calc(100% - 200px);
   transition: all 1s;
   padding: 100px 50px 0px;
   position: relative;
@@ -131,6 +131,10 @@ a:hover {
   .navbutton.active {
     left: 160px;
   }
+
+  #techskills, #techskills-page {
+    display: none;
+  }
 }
 /********** Welcome Page **********/
 #welcome-page {
@@ -155,6 +159,7 @@ a:hover {
   margin: 50px auto;
   color: #55aacc;
   background-color: rgba(34, 34, 34, 0.9);
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -304,7 +309,7 @@ a:hover {
 }
 /********** TechSkills **********/
 #techskills-page {
-  padding: 50px;
+  padding: 100px 50px 0px;
   min-height: 100vh;
 }
 
@@ -378,7 +383,8 @@ a:hover {
   border-radius: 100px;
 }
 
-.contact-me input, .contact-me textarea {
+.contact-me input,
+.contact-me textarea {
   border-radius: 10px;
   background-color: #f5e9a6;
   color: white;
@@ -394,6 +400,274 @@ a:hover {
     padding: 28px 28px;
     border-radius: 25px;
   }
+}
+/********** TOOLBOX SLIDER **********/
+.slider {
+  padding: 50px 0;
+}
+
+.slider-origin {
+  border-radius: 50%;
+  display: block;
+  margin: auto !important;
+  height: 100%;
+  width: 115px !important;
+}
+
+.slider-inner {
+  display: block;
+  width: 100% !important;
+  height: 550px !important;
+  margin: auto;
+}
+
+.slider-item {
+  width: 150px;
+  height: 150px;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  position: absolute;
+  cursor: pointer;
+  left: 41%;
+  transform-origin: center 175%;
+  -webkit-transform-origin: center 175%;
+  -ms-transform-origin: center 175%;
+  -moz-transform-origin: center 175%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  text-align: left;
+  color: #fff;
+  padding: 7px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  /*Introduced in IE 10. See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/ */
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 5px solid #9977bb;
+}
+
+.slider-item img {
+  width: 100px;
+}
+
+.slider-item.active {
+  background-color: #222222;
+  cursor: default;
+  -webkit-box-shadow: 5px 5px 10px #97b, 5px -5px 10px #5ac, -5px -5px 10px #cf8, -5px 5px 10px #f80;
+  box-shadow: 5px 5px 10px #97b, 5px -5px 10px #5ac, -5px -5px 10px #cf8, -5px 5px 10px #f80;
+  border-color: #222;
+}
+
+.slider-item:not(.active):hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+.slider-item:not(.active) {
+  -webkit-filter: brightness(0.6);
+  filter: brightness(0.6);
+}
+
+.text-section div {
+  -webkit-animation: fadeIt 2s;
+  animation: fadeIt 2s;
+  margin-left: 50px;
+  text-align: right;
+}
+
+@-webkit-keyframes fadeIt {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeIt {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes bouncing {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-5px) scaleY(1.1);
+  }
+  70% {
+    transform: translatey(0px) scaleY(0.8);
+  }
+  100% {
+    transform: translatey(0px) scaleY(1);
+  }
+}
+.text-section {
+  margin-top: 30px;
+  margin-right: 20px;
+  color: #ffffff;
+  background: #222222;
+  padding: 20px;
+  border: 5px solid #bb4466;
+  border-radius: 25px;
+}
+
+.text-section p {
+  font-size: 35px;
+}
+
+.text-section h2 {
+  font-size: 55px !important;
+  color: #f5e9a6;
+  margin: 0px !important;
+  line-height: 1 !important;
+  padding-bottom: 13px;
+  margin-bottom: 20px !important;
+  border-bottom: 2px solid #ccff88;
+}
+
+.slider-item {
+  background-color: #222222;
+}
+
+.slider-wrap img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.slider-wrap img:nth-child(2) {
+  top: 0px;
+  right: -20px;
+}
+
+.slider-wrap img:nth-child(3) {
+  top: 0;
+  left: 7px;
+}
+
+.slider-wrap img:nth-child(4) {
+  bottom: 20%;
+  right: -10px;
+}
+
+.slider-wrap img:nth-child(5) {
+  bottom: -12px;
+  left: 87px;
+}
+
+.slider-wrap img:nth-child(6) {
+  top: -72px;
+  right: 28%;
+  max-width: 111px;
+  left: auto;
+  margin: auto;
+}
+
+.slider-wrap .fusion-imageframe:nth-child(7) {
+  bottom: 20%;
+  right: 0;
+  left: -81px;
+  margin: auto;
+}
+
+.slider-wrap .fusion-imageframe:nth-child(8) {
+  left: auto;
+  right: 91px;
+  bottom: -70px;
+}
+
+.slider-wrap .fusion-imageframe:nth-child(9) {
+  left: 241px;
+  right: 91px;
+  display: none !important;
+  max-width: 112px;
+  bottom: -96px;
+  right: auto;
+}
+
+.slider-wrap > div {
+  max-width: 650px;
+  margin: auto;
+  position: relative;
+}
+
+@-webkit-keyframes breath {
+  0% {
+    max-width: 690px;
+    max-height: 535px;
+  }
+  50% {
+    max-width: 670px;
+    max-height: 520px;
+  }
+  100% {
+    max-width: 690px;
+    max-height: 535px;
+  }
+}
+@keyframes breath {
+  0% {
+    max-width: 690px;
+    max-height: 535px;
+  }
+  50% {
+    max-width: 670px;
+    max-height: 520px;
+  }
+  100% {
+    max-width: 690px;
+    max-height: 535px;
+  }
+}
+.min-it {
+  min-height: 800px;
+  max-width: 1400px;
+  margin: auto !important;
+  margin-top: 200px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .reveal {
+    display: none !important;
+  }
+}
+.menu-item:hover > a {
+  color: #9b9b9b !important;
 }
 
 /*# sourceMappingURL=style.css.map */
