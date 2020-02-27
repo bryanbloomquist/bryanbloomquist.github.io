@@ -16,7 +16,7 @@ $white: #ffffff;
 $yellow: #ffff00;
 
 $navWidth: 200px;
-$transition: all 1s;
+$transition: all 0.5s;
 
 /********** Universal **********/
 
@@ -24,6 +24,7 @@ body {
   background-image: url("../images/coding-wp-2.jpg");
   background-size: auto;
   background-attachment: fixed;
+  overflow-x:hidden;
 }
 
 html {
@@ -41,6 +42,7 @@ a {
 .content {
   width: calc(100% - #{$navWidth});
   transition: $transition;
+  margin-top: 100px;
   padding: 100px 50px 0px;
   position: relative;
   top: 0;
@@ -60,8 +62,8 @@ a {
 
 @media screen and (max-width: 480px) {
   .content {
-    width: 100%;
-    padding: 25px;
+    width: 100%; 
+    padding: 25px; 
     left: 0;
   }
   .content.active {
@@ -130,7 +132,7 @@ a {
     margin-bottom: 1rem;
   }
   .pagelink {
-    font-size: 0.75em;
+    font-size: 0.75em; 
     margin-bottom: 0.75rem;
   }
   #navbar {
@@ -145,9 +147,6 @@ a {
   .navbutton.active {
     left: $navWidth - 40px;
   }
-  #techskills, #techskills-page {
-    display: none;
-  }
 }
 
 /********** Welcome Page **********/
@@ -157,29 +156,57 @@ a {
   height: 100vh;
 }
 
-.logo-img {
+.welcome {
+  position: relative;
+  border: 5px solid $orange;
+  width: 75%;
+  min-height: 175px;
+  padding: 30px 50px;
+  margin: 0 auto;
+  color: $blue;
+  background-color: rgba($black, 0.9);
+  border-radius: 10px;
+}
+
+.welcome img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 150px;
   border: 5px solid $blue;
-  border-radius: 10%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -77px;
+  right: -40px;
 }
 
-.greetings {
-  border: 5px solid $orange;
-  width: 75%;
-  min-height: 166px;
-  padding: 30px 50px;
-  margin: 50px auto;
-  color: $blue;
-  background-color: rgba($black, 0.9);
-  border-radius: 50px;
+@media screen and (max-width: 1200px) {
+  .welcome {
+    width: 100%; 
+    min-height: 270px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   #welcome-page {
-    padding: 50px;
+    padding: 0px;
+  }
+  .welcome img {
+    right: 10px; 
+    bottom: -80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome {
+    padding: 15px 30px; 
+    min-height:200px
+  }
+  .welcome h1 {
+    font-size: 32px;
+  }
+  .welcome img {
+    bottom: -100px;
   }
 }
 
@@ -187,9 +214,8 @@ a {
   #welcome-page {
     padding: 25px;
   }
-  .greetings {
-    font-size: 1.5em;
-    width: 100%;
+  .welcome {
+    font-size: 32px; 
     padding: 25px;
   }
 }
@@ -221,7 +247,7 @@ a {
   display: block;
   width: 240px;
   padding: 5px;
-  border: 5px solid $blue;
+  border: 5px solid $orange;
   border-radius: 25%;
   background-color: $black;
 }
@@ -235,26 +261,38 @@ a {
   text-align: right;
   padding: 28px 56px 28px 128px;
   margin: 50px auto;
-  color: $blue;
-  border: 5px solid $orange;
+  color: $purple;
+  border: 5px solid $blue;
   border-radius: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutme {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   #aboutme-page {
-    padding: 25px;
+    padding: 150px 25px;
   }
   .aboutme {
     width: 100%;
-    font-size: 24px;
+    font-size: 32px;
     padding: 100px 25px 25px;
     border-radius: 25px;
     line-height: 30px;
   }
   .aboutme-pic {
-    top: 0;
-    left: 80px;
-    width: 200px;
+    top: -25px;
+    left: 90px;
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aboutme {
+    font-size: 24px;
   }
 }
 
@@ -326,105 +364,30 @@ a {
   }
 }
 
-/********** TechSkills **********/
+/********** TOOLBOX **********/
 
 #techskills-page {
+  margin-top: 100px;
   padding: 100px 50px 0px;
   min-height: 100vh;
 }
-
-#techskills-page h4 {
-  color: $green;
-  text-shadow: -2px -2px 5px $blue;
+#techskills-page .col-lg-6 {
+  padding-right: 0px;
+  padding-left: 0px;
 }
-
-.toolbox-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  border: 5px solid $purple;
-  background: $black;
-  margin-bottom: 20px;
-  &:focus {
-    outline: none;
-  }
-}
-
-.techskills {
-  background-color: $blue;
-  border: 3px solid $orange;
-}
-
-.skillimage {
-  max-width: 100px;
-}
-
-.header {
-  background-color: $black;
-  border: 3px solid $orange;
-  text-align: center;
-}
-
 @media screen and (max-width: 768px) {
   #techskills-page {
-    min-height: 50vh;
-    padding: 20px;
-  }
-  #techskills-page h4 {
-    font-size: 16px;
-  }
-  .toolbox-item {
-    width: 110px;
-    height: 110px;
-  }
-  .skillimage {
-    width: 50px;
-  }
-}
-
-/********** Contact Me **********/
-
-.contact-me {
-  position: relative;
-  background-color: $black;
-  width: 50%;
-  font-size: 28px;
-  line-height: 36px;
-  text-align: center;
-  padding: 28px 56px;
-  margin: 50px auto;
-  color: $green;
-  border: 5px solid $blue;
-  border-radius: 100px;
-}
-
-.contact-me input,
-.contact-me textarea {
-  border-radius: 10px;
-  background-color: $gold;
-  color: white;
-}
-
-#norton-idsafe-field-styling-divId {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .contact-me {
-    width: 100%;
-    padding: 28px 28px;
-    border-radius: 25px;
+    padding: 150px 20px;
   }
 }
 
 /********** TOOLBOX SLIDER **********/
 
-.slider {
-  padding: 50px 0;
+.slider-inner {
+  display: block;
+  width: 100% !important;
+  height: 550px !important;
+  margin: auto;
 }
 .slider-origin {
   border-radius: 50%;
@@ -433,16 +396,10 @@ a {
   height: 100%;
   width: 115px !important;
 }
-.slider-inner {
-  display: block;
-  width: 100% !important;
-  height: 550px !important;
-  margin: auto;
-}
-
 .slider-item {
   width: 150px;
   height: 150px;
+  background-color: $black;
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -473,8 +430,8 @@ a {
     user-select: none;
   border-radius: 100%;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -ms-flexbox;
+      display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -486,11 +443,11 @@ a {
     -ms-flex-pack: center;
       justify-content: center;
   border: 5px solid $purple;
+  transition: all .4s;
 }
 .slider-item img {
   width: 100px;
 }
-
 .slider-item.active {
   background-color: $black;
   cursor: default;
@@ -499,17 +456,19 @@ a {
   border-color: #222;
 }
 .slider-item:not(.active):hover {
-  -webkit-filter: brightness(0.8);
-  filter: brightness(0.8);
+  transition: all .4s;
+  -webkit-box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
+    box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
+  // -webkit-filter: brightness(1);
+  // filter: brightness(1);
 }
-.slider-item:not(.active) {
-  -webkit-filter: brightness(0.6);
-  filter: brightness(0.6);
-}
+// .slider-item:not(.active) {
+//   -webkit-filter: brightness(0.8);
+//   filter: brightness(0.8);
+// }
 .text-section div {
   -webkit-animation: fadeIt 2s;
     animation: fadeIt 2s;
-  margin-left: 50px;
   text-align: right;
 }
 @-webkit-keyframes fadeIt {
@@ -551,8 +510,9 @@ a {
   }
 }
 .text-section {
-  margin-top: 30px;
-  margin-right: 20px;
+  position: absolute;
+  bottom: -75px;
+  width: 100%;
   color: $white;
   background: $black;
   padding: 20px;
@@ -560,19 +520,16 @@ a {
   border-radius: 25px;
 }
 .text-section p {
-  font-size: 35px;
+  font-size: 18px;
 }
 .text-section h2 {
-  font-size: 55px !important;
+  font-size: 42px !important;
   color: $gold;
   margin: 0px !important;
   line-height: 1 !important;
   padding-bottom: 13px;
   margin-bottom: 20px !important;
   border-bottom: 2px solid $green;
-}
-.slider-item {
-  background-color: $black;
 }
 .slider-wrap img {
   position: absolute;
@@ -667,4 +624,70 @@ a {
 }
 .menu-item:hover > a {
   color: #9b9b9b !important;
+}
+@media screen and (max-width: 1200px) {
+  .slider-item {
+    width: 120px;
+    height: 120px;
+  }
+  .slider-item img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider-item {
+    width: 100px;
+    height: 100px;
+  }
+  .slider-item img {
+    width: 66px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider-item {
+    width: 66px;
+    height: 66px;
+  }
+  .slider-item img {
+    width: 44px;
+  }
+}
+
+/********** Contact Me **********/
+
+.contact-me {
+  position: relative;
+  background-color: $black;
+  width: 50%;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  padding: 28px 56px;
+  margin: 50px auto;
+  color: $green;
+  border: 5px solid $blue;
+  border-radius: 100px;
+}
+
+.contact-me input,
+.contact-me textarea {
+  border-radius: 10px;
+  background-color: $gold;
+  color: white;
+}
+
+#norton-idsafe-field-styling-divId {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .contact-me {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-me {
+    width: 100%;
+    padding: 28px 28px;
+    border-radius: 25px;
+  }
 }

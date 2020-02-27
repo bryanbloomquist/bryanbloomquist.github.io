@@ -7,6 +7,7 @@ body {
   background-image: url("../images/coding-wp-2.jpg");
   background-size: auto;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 html {
@@ -23,7 +24,8 @@ a:hover {
 
 .content {
   width: calc(100% - 200px);
-  transition: all 1s;
+  transition: all 0.5s;
+  margin-top: 100px;
   padding: 100px 50px 0px;
   position: relative;
   top: 0;
@@ -80,7 +82,7 @@ a:hover {
   background-color: #222222;
   padding: 15px;
   text-align: center;
-  transition: all 1s;
+  transition: all 0.5s;
   overflow: hidden;
 }
 
@@ -90,7 +92,7 @@ a:hover {
 
 .navbutton {
   position: fixed;
-  transition: all 1s;
+  transition: all 0.5s;
   top: 0;
   left: 160px;
   z-index: 99;
@@ -131,10 +133,6 @@ a:hover {
   .navbutton.active {
     left: 160px;
   }
-
-  #techskills, #techskills-page {
-    display: none;
-  }
 }
 /********** Welcome Page **********/
 #welcome-page {
@@ -142,29 +140,58 @@ a:hover {
   height: 100vh;
 }
 
-.logo-img {
+.welcome {
+  position: relative;
+  border: 5px solid #ff8800;
+  width: 75%;
+  min-height: 175px;
+  padding: 30px 50px;
+  margin: 0 auto;
+  color: #55aacc;
+  background-color: rgba(34, 34, 34, 0.9);
+  border-radius: 10px;
+}
+
+.welcome img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 150px;
   border: 5px solid #55aacc;
-  border-radius: 10%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -77px;
+  right: -40px;
 }
 
-.greetings {
-  border: 5px solid #ff8800;
-  width: 75%;
-  min-height: 166px;
-  padding: 30px 50px;
-  margin: 50px auto;
-  color: #55aacc;
-  background-color: rgba(34, 34, 34, 0.9);
-  border-radius: 50px;
+@media screen and (max-width: 1200px) {
+  .welcome {
+    width: 100%;
+    min-height: 270px;
+  }
 }
-
 @media screen and (max-width: 768px) {
   #welcome-page {
-    padding: 50px;
+    padding: 0px;
+  }
+
+  .welcome img {
+    right: 10px;
+    bottom: -80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .welcome {
+    padding: 15px 30px;
+    min-height: 200px;
+  }
+
+  .welcome h1 {
+    font-size: 32px;
+  }
+
+  .welcome img {
+    bottom: -100px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -172,9 +199,8 @@ a:hover {
     padding: 25px;
   }
 
-  .greetings {
-    font-size: 1.5em;
-    width: 100%;
+  .welcome {
+    font-size: 32px;
     padding: 25px;
   }
 }
@@ -202,7 +228,7 @@ a:hover {
   display: block;
   width: 240px;
   padding: 5px;
-  border: 5px solid #55aacc;
+  border: 5px solid #ff8800;
   border-radius: 25%;
   background-color: #222222;
 }
@@ -216,28 +242,38 @@ a:hover {
   text-align: right;
   padding: 28px 56px 28px 128px;
   margin: 50px auto;
-  color: #55aacc;
-  border: 5px solid #ff8800;
+  color: #9977bb;
+  border: 5px solid #55aacc;
   border-radius: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+  .aboutme {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 768px) {
   #aboutme-page {
-    padding: 25px;
+    padding: 150px 25px;
   }
 
   .aboutme {
     width: 100%;
-    font-size: 24px;
+    font-size: 32px;
     padding: 100px 25px 25px;
     border-radius: 25px;
     line-height: 30px;
   }
 
   .aboutme-pic {
-    top: 0;
-    left: 80px;
-    width: 200px;
+    top: -25px;
+    left: 90px;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutme {
+    font-size: 24px;
   }
 }
 /********** Portfolio **********/
@@ -307,103 +343,29 @@ a:hover {
     padding: 0 25px;
   }
 }
-/********** TechSkills **********/
+/********** TOOLBOX **********/
 #techskills-page {
+  margin-top: 100px;
   padding: 100px 50px 0px;
   min-height: 100vh;
 }
 
-#techskills-page h4 {
-  color: #ccff88;
-  text-shadow: -2px -2px 5px #55aacc;
-}
-
-.toolbox-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  border: 5px solid #9977bb;
-  background: #222222;
-  margin-bottom: 20px;
-}
-.toolbox-item:focus {
-  outline: none;
-}
-
-.techskills {
-  background-color: #55aacc;
-  border: 3px solid #ff8800;
-}
-
-.skillimage {
-  max-width: 100px;
-}
-
-.header {
-  background-color: #222222;
-  border: 3px solid #ff8800;
-  text-align: center;
+#techskills-page .col-lg-6 {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 @media screen and (max-width: 768px) {
   #techskills-page {
-    min-height: 50vh;
-    padding: 20px;
-  }
-
-  #techskills-page h4 {
-    font-size: 16px;
-  }
-
-  .toolbox-item {
-    width: 110px;
-    height: 110px;
-  }
-
-  .skillimage {
-    width: 50px;
-  }
-}
-/********** Contact Me **********/
-.contact-me {
-  position: relative;
-  background-color: #222222;
-  width: 50%;
-  font-size: 28px;
-  line-height: 36px;
-  text-align: center;
-  padding: 28px 56px;
-  margin: 50px auto;
-  color: #ccff88;
-  border: 5px solid #55aacc;
-  border-radius: 100px;
-}
-
-.contact-me input,
-.contact-me textarea {
-  border-radius: 10px;
-  background-color: #f5e9a6;
-  color: white;
-}
-
-#norton-idsafe-field-styling-divId {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .contact-me {
-    width: 100%;
-    padding: 28px 28px;
-    border-radius: 25px;
+    padding: 150px 20px;
   }
 }
 /********** TOOLBOX SLIDER **********/
-.slider {
-  padding: 50px 0;
+.slider-inner {
+  display: block;
+  width: 100% !important;
+  height: 550px !important;
+  margin: auto;
 }
 
 .slider-origin {
@@ -414,16 +376,10 @@ a:hover {
   width: 115px !important;
 }
 
-.slider-inner {
-  display: block;
-  width: 100% !important;
-  height: 550px !important;
-  margin: auto;
-}
-
 .slider-item {
   width: 150px;
   height: 150px;
+  background-color: #222222;
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -467,6 +423,7 @@ a:hover {
   -ms-flex-pack: center;
   justify-content: center;
   border: 5px solid #9977bb;
+  transition: all 0.4s;
 }
 
 .slider-item img {
@@ -482,19 +439,14 @@ a:hover {
 }
 
 .slider-item:not(.active):hover {
-  -webkit-filter: brightness(0.8);
-  filter: brightness(0.8);
-}
-
-.slider-item:not(.active) {
-  -webkit-filter: brightness(0.6);
-  filter: brightness(0.6);
+  transition: all 0.4s;
+  -webkit-box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
+  box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
 }
 
 .text-section div {
   -webkit-animation: fadeIt 2s;
   animation: fadeIt 2s;
-  margin-left: 50px;
   text-align: right;
 }
 
@@ -537,8 +489,9 @@ a:hover {
   }
 }
 .text-section {
-  margin-top: 30px;
-  margin-right: 20px;
+  position: absolute;
+  bottom: -75px;
+  width: 100%;
   color: #ffffff;
   background: #222222;
   padding: 20px;
@@ -547,21 +500,17 @@ a:hover {
 }
 
 .text-section p {
-  font-size: 35px;
+  font-size: 18px;
 }
 
 .text-section h2 {
-  font-size: 55px !important;
+  font-size: 42px !important;
   color: #f5e9a6;
   margin: 0px !important;
   line-height: 1 !important;
   padding-bottom: 13px;
   margin-bottom: 20px !important;
   border-bottom: 2px solid #ccff88;
-}
-
-.slider-item {
-  background-color: #222222;
 }
 
 .slider-wrap img {
@@ -668,6 +617,75 @@ a:hover {
 }
 .menu-item:hover > a {
   color: #9b9b9b !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .slider-item {
+    width: 120px;
+    height: 120px;
+  }
+
+  .slider-item img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .slider-item img {
+    width: 66px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider-item {
+    width: 66px;
+    height: 66px;
+  }
+
+  .slider-item img {
+    width: 44px;
+  }
+}
+/********** Contact Me **********/
+.contact-me {
+  position: relative;
+  background-color: #222222;
+  width: 50%;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  padding: 28px 56px;
+  margin: 50px auto;
+  color: #ccff88;
+  border: 5px solid #55aacc;
+  border-radius: 100px;
+}
+
+.contact-me input,
+.contact-me textarea {
+  border-radius: 10px;
+  background-color: #f5e9a6;
+  color: white;
+}
+
+#norton-idsafe-field-styling-divId {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-me {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-me {
+    width: 100%;
+    padding: 28px 28px;
+    border-radius: 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

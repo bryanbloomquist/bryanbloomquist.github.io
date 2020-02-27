@@ -14,7 +14,8 @@ const typed = (divID, string, delay) => {
     strings: [string],
     typeSpeed: 20,
     startDelay: delay,
-    loop: false
+    loop: false,
+    showCursor: false
   });
 };
 
