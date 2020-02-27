@@ -6,6 +6,7 @@ $(document).ready(function() {
   portfolioPage();
 
   techSkillsPage();
+
 });
 
 // Typed.js by Matt Boldt https://github.com/mattboldt/typed.js/
@@ -62,19 +63,22 @@ const portfolioPage = () => {
 
 /// TECH SKILLS //////////////////////////////////////////////////
 let techSkillsPage = () => {
-  toolbox.map(tool => {
-    $("#toolbox").append(
-      '<button type="button" class="toolbox-item" data-toggle="popover" title="' +
-        tool.title +
-        '" data-content="' +
-        tool.content +
-        '">' +
-        ' <img class="skillimage" src="' +
-        tool.src +
-        '" alt="' +
-        tool.alt +
-        '" />' +
-        "</div>"
+  toolbox.map((tool,i) => {
+    $(".slider-origin").append(
+      '<div class="slider-item" id="section'+(i+1)+'">' +
+        '<img src="'+tool.src+'"/>' +
+      '</div>'
+      // '<button type="button" class="toolbox-item" data-toggle="popover" title="' +
+      //   tool.title +
+      //   '" data-content="' +
+      //   tool.content +
+      //   '">' +
+      //   ' <img class="skillimage" src="' +
+      //   tool.src +
+      //   '" alt="' +
+      //   tool.alt +
+      //   '" />' +
+      //   "</div>"
     );
   });
 };

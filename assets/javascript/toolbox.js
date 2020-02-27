@@ -34,14 +34,14 @@ const toolbox = [
     alt: "Sass logo",
     src: "assets/images/sass.png",
   },{
-    name: "Git",
-    alt: "Git logo",
-    src: "assets/images/git.png",
-  },{
-    name: "Github",
-    alt: "Github logo",
-    src: "assets/images/github.png",
-  },{
+  //   name: "Git",
+  //   alt: "Git logo",
+  //   src: "assets/images/git.png",
+  // },{
+  //   name: "Github",
+  //   alt: "Github logo",
+  //   src: "assets/images/github.png",
+  // },{
     name: "Node.js",
     alt: "Node.js logo",
     src: "assets/images/nodejs.png",
