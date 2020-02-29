@@ -5,12 +5,17 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
     <script src="https://kit.fontawesome.com/05388d649a.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <link 
       rel = "stylesheet" 
       href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin = "anonymous">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel = "shortcut icon" href = "assets/images/favicon.ico" type = "image/x-icon">
     <title>Bryan Bloomquist</title>
   </head>
@@ -61,34 +66,22 @@
         </div>
       </div>
 
-      <!--spacer-->
-
-      <div class = "spacer"></div>
-
       <!--about me content-->
 
       <div class = "content" id = "aboutme-page">
         <div class = "aboutme">
         <img src = "assets/images/bryan.jpg" alt = "my beautiful visage" class = "aboutme-pic" />
           <p>
-            I am a front end web developer and designer with training in full stack web development.  I love making awesome-looking responsive projects; from single page websites to full stack applications.  Let's work together and make something amazing.
+            I am a front end web developer and designer with training in full stack web development.  I love making awesome-looking responsive projects; from single page websites to full stack applications.  Let's work together and make something beautiful.
           </p>
         </div>
       </div>
-
-      <!--spacer-->
-
-      <div class = "spacer"></div>
 
       <!--portfolio content-->
 
       <div class = "content" id = "portfolio-page">
         <div class = "row justify-content-center" id = "portfolio-projects"></div>
       </div>
-
-      <!--spacer-->
-
-      <div class = "spacer"></div>
 
       <!--tech skills content-->
 
@@ -102,65 +95,10 @@
             </div>
           </div>
           <div class = "col-lg-6">
-            <div class = "text-section">
-              <div class = "section1">
-                <h2>HTML 5</h2>
-                <p>HyperText Markup Language, defines the meaning and structure of web content.</p>
-                <h4>Skill Level: Expert</h4>
-              </div>
-              <div class = "section2">
-                <h2>CSS 3</h2>
-                <p>Style sheet language that describes the presentation of a document written in HTML.</p>
-                <h4>Skill Level: Professional</h4>
-              </div>
-              <div class = "section3">
-                <h2>JavaScript</h2>
-                <p>Key scripting language that enables interactivity of web pages and web applications.</p>
-                <h4>Skill Level: Professional</h4>
-              </div>
-              <div class = "section4">
-                <h2>jQuery</h2>
-                <p>JavaScript Library designed to simplify DOM manipulation.</p>
-                <h4>Skill Level: Professional</h4>
-              </div>
-              <div class = "section5">
-                <h2>React</h2>
-                <p>JavaScript Library for building user interfaces.</p>
-                <h4>Skill Level: Advanced</h4>
-              </div>
-              <div class = "section6">
-                <h2>Bootstrap</h2>
-                <p>Open source CSS framework directed at responsive, mobile-first web development.</p>
-                <h4>Skill Level: Professional</h4>
-              </div>
-              <div class = "section7">
-                <h2>Sass</h2>
-                <p>A CSS preprocesseor that extends CSS with more traditional programming mechanisms.</p>
-                <h4>Skill Level: Intermediate</h4>
-              </div>
-              <div class = "section8">
-                <h2>Node.js</h2>
-                <p>A JavaScript runtime environment that executes JavaScript outside of the browser, used for server-side development.</p>
-                <h4>Skill Level: Intermediate</h4>
-              </div>
-              <div class = "section9">
-                <h2>Express.js</h2>
-                <p>The de facto standard server framework for Node, designed for building web applications and APIs.</p>
-                <h4>Skill Level: Advanced</h4>
-              </div>
-              <div class = "section10">
-                <h2>MongoDB</h2>
-                <p>A Cross-platform document-oriented NoSQL database program that uses JSON-like documents.</p>
-                <h4>Skill Level: Intermediate</h4>
-              </div>
-            </div>
+            <div class = "text-section"></div>
           </div>
         </div>
       </div>
-
-      <!--spacer-->
-
-      <div class = "spacer"></div>
 
       <!--contact me content-->
 
@@ -184,11 +122,10 @@
         </div>
       </div>
 
-      <div class = "spacer"></div>
-
-    </div>
+    </div> <!-- End Wrapper -->
 
     <!--required scripts for jQuery,Bootstrap, and Typed.js-->
+
     <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "assets/javascript/toolbox.js"></script>
@@ -197,5 +134,6 @@
     <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity = "sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin = "anonymous"></script>
+
   </body>
 </html>

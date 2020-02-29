@@ -10,6 +10,7 @@ $(document).ready(function() {
 });
 
 // Typed.js by Matt Boldt https://github.com/mattboldt/typed.js/
+
 const typed = (divID, string, delay) => {
   let typed = new Typed(divID, {
     strings: [string],
@@ -23,6 +24,7 @@ const typed = (divID, string, delay) => {
 const toggel = () => $("#navbar, .navbutton, .content").toggleClass("active");
 
 /// WELCOMEPAGE ////////////
+
 const welcomePage = () => {
   $(".greetings").empty();
   typed(
@@ -33,6 +35,7 @@ const welcomePage = () => {
 };
 
 /// PORTFOLIO //////////////////////////////////////////////////
+
 const portfolioPage = () => {
   for (let i = 0; i < portfolio.length; i++) {
     $("#portfolio-projects").append(
@@ -62,24 +65,21 @@ const portfolioPage = () => {
 };
 
 /// TECH SKILLS //////////////////////////////////////////////////
+
 let techSkillsPage = () => {
   toolbox.map((tool,i) => {
     $(".slider-origin").append(
       '<div class="slider-item" id="section'+(i+1)+'">' +
         '<img src="'+tool.src+'"/>' +
       '</div>'
-      // '<button type="button" class="toolbox-item" data-toggle="popover" title="' +
-      //   tool.title +
-      //   '" data-content="' +
-      //   tool.content +
-      //   '">' +
-      //   ' <img class="skillimage" src="' +
-      //   tool.src +
-      //   '" alt="' +
-      //   tool.alt +
-      //   '" />' +
-      //   "</div>"
     );
+    $(".text-section").append(
+      '<div class="section'+(i+1)+'">'+
+        '<h2>'+tool.name+'</h2>'+
+        '<p>'+tool.description+'</p>'+
+        '<h4>Skill Level: '+tool.level+' / 5</h4>'+
+      '</div>'
+    )
   });
 };
 
@@ -113,10 +113,10 @@ $(document).ready(function() {
   var sliderInnerWidth = sliderInner.outerWidth();
   var sliderInnerOffset = sliderInner.offset();
 
-  sliderOrigin.css(
-    "margin-top",
-    sliderInner.height() / 2 - sliderOrigin.height() / 2
-  );
+  // sliderOrigin.css(
+  //   "margin-top",
+  //   sliderInner.height() / 2 - sliderOrigin.height() / 2
+  // );
 
   // calc rotation positioning
   function rotationPosition(exceptIndex) {

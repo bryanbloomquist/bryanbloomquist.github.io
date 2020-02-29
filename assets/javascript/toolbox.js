@@ -3,36 +3,44 @@ const toolbox = [
     name: "HTML",
     alt: "HTML logo",
     src: "assets/images/html.png",
-    title: "HTML { Proficiency: 10/10 }",
-    content: "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. HTML describes the structure of a web page.",
+    level: 5,
+    description: "<p>HyperText Markup Language, defines the meaning and structure of web content.",
   },{
     name: "CSS",
     alt: "CSS logo",
     src: "assets/images/css.png",
-    title: "CSS { Proficiency: 10/10 }",
-    content: "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alsongside HTML and JavaScript",
+    level: 4.5,
+    description: "Style sheet language that describes the presentation of a document written in HTML.",
   },{
     name: "JavaScript",
     alt: "JavaScript logo",
     src: "assets/images/javascript.png",
-    title: "JavaScript { Proficiency: 9/10 }",
-    content: "Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.",
+    level: 4,
+    description: "Key scripting language that enables interactivity of web pages and web applications.",
   },{
     name: "jQuery",
     alt: "jQuery logo",
     src: "assets/images/jquery.png",
+    level: 4,
+    description: "JavaScript Library designed to simplify DOM manipulation."
   },{
     name: "React",
     alt: "React logo",
     src: "assets/images/react.png",
+    level: 3.5,
+    description: "JavaScript Library for building user interfaces."
   },{
     name: "Bootstrap",
     alt: "Bootstrap logo",
     src: "assets/images/bootstrap.png",
+    level: 4.5,
+    description: "Open source CSS framework directed at responsive, mobile-first web development."
   },{
     name: "Sass",
     alt: "Sass logo",
     src: "assets/images/sass.png",
+    level: 4,
+    description: "A CSS preprocesseor that extends CSS with more traditional programming mechanisms."
   },{
   //   name: "Git",
   //   alt: "Git logo",
@@ -45,13 +53,19 @@ const toolbox = [
     name: "Node.js",
     alt: "Node.js logo",
     src: "assets/images/nodejs.png",
+    level: 3.5,
+    description: "A JavaScript runtime environment that executes JavaScript outside of the browser, used for server-side development."
   },{
     name: "MongoDB",
     alt: "Mongo DB logo",
     src: "assets/images/mongodb.png",
+    level: 4,
+    description: "The de facto standard server framework for Node, designed for building web applications and APIs."
   },{
     name: "Express.js",
     alt: "Express JS logo",
     src: "assets/images/expressjs.png",
+    level: 3.5,
+    description: "A Cross-platform document-oriented NoSQL database program that uses JSON-like documents."
   }
 ];

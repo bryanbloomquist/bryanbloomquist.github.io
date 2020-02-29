@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* sass assets/css/style.scss assets/css/style.css */
 /* or to automate it while working */
 /* sass --watch assets/css/style.scss assets/css/style.css */
@@ -40,13 +42,16 @@ a {
 }
 
 .content {
+  min-height: 100vh;
   width: calc(100% - #{$navWidth});
-  transition: $transition;
-  margin-top: 100px;
-  padding: 100px 50px 0px;
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
   position: relative;
   top: 0;
   left: $navWidth;
+  margin: 50px 0px;
+  padding: 0px;
 }
 
 .content.active {
@@ -101,7 +106,9 @@ a {
   background-color: $black;
   padding: 15px;
   text-align: center;
-  transition: $transition;
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
   overflow: hidden;
 }
 
@@ -111,7 +118,9 @@ a {
 
 .navbutton {
   position: fixed;
-  transition: $transition;
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
   top: 0;
   left: $navWidth - 40px;
   z-index: 99;
@@ -152,17 +161,22 @@ a {
 /********** Welcome Page **********/
 
 #welcome-page {
-  padding: 100px;
+  padding: 0px;
+  margin: 0px;
   height: 100vh;
 }
 
 .welcome {
   position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+      -ms-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
   border: 5px solid $orange;
-  width: 75%;
+  width: 50%;
   min-height: 175px;
   padding: 30px 50px;
-  margin: 0 auto;
   color: $blue;
   background-color: rgba($black, 0.9);
   border-radius: 10px;
@@ -180,16 +194,9 @@ a {
   right: -40px;
 }
 
-@media screen and (max-width: 1200px) {
-  .welcome {
-    width: 100%; 
-    min-height: 270px;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  #welcome-page {
-    padding: 0px;
+  .welcome {
+    width: 90%;
   }
   .welcome img {
     right: 10px; 
@@ -220,30 +227,38 @@ a {
   }
 }
 
-/********** Spacer **********/
-
-.spacer {
-  height: 50vh;
-}
-
-@media screen and (max-width: 480px) {
-  .spacer {
-    height: 10vh;
-  }
-}
-
 /********** AboutMe **********/
 
-.aboutme-page {
+#aboutme-page {
   padding: 100px;
   height: 100vh;
+}
+
+.aboutme {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+      -ms-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
+  background-color: $black;
+  width: 66%;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  padding: 28px 56px 28px 128px;
+  color: $purple;
+  border: 5px solid $blue;
+  border-radius: 100px;
 }
 
 .aboutme-pic {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: block;
   width: 240px;
   padding: 5px;
@@ -252,23 +267,9 @@ a {
   background-color: $black;
 }
 
-.aboutme {
-  position: relative;
-  background-color: $black;
-  width: 50%;
-  font-size: 28px;
-  line-height: 36px;
-  text-align: right;
-  padding: 28px 56px 28px 128px;
-  margin: 50px auto;
-  color: $purple;
-  border: 5px solid $blue;
-  border-radius: 100px;
-}
-
 @media screen and (max-width: 1200px) {
   .aboutme {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -309,7 +310,8 @@ a {
 
 .project-body {
   padding: 0px;
-  align-content: center;
+  -ms-flex-line-pack: center;
+    align-content: center;
   border: 3px solid $green;
   background: rgba($black, 0.9);
 }
@@ -369,12 +371,13 @@ a {
 #techskills-page {
   margin-top: 100px;
   padding: 100px 50px 0px;
-  min-height: 100vh;
 }
+
 #techskills-page .col-lg-6 {
   padding-right: 0px;
   padding-left: 0px;
 }
+
 @media screen and (max-width: 768px) {
   #techskills-page {
     padding: 150px 20px;
@@ -389,13 +392,16 @@ a {
   height: 550px !important;
   margin: auto;
 }
+
 .slider-origin {
   border-radius: 50%;
   display: block;
-  margin: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   height: 100%;
   width: 115px !important;
 }
+
 .slider-item {
   width: 150px;
   height: 150px;
@@ -443,11 +449,15 @@ a {
     -ms-flex-pack: center;
       justify-content: center;
   border: 5px solid $purple;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
   transition: all .4s;
 }
+
 .slider-item img {
   width: 100px;
 }
+
 .slider-item.active {
   background-color: $black;
   cursor: default;
@@ -455,34 +465,34 @@ a {
     box-shadow: 5px 5px 10px #97b, 5px -5px 10px #5ac, -5px -5px 10px #cf8, -5px 5px 10px #f80;
   border-color: #222;
 }
+
 .slider-item:not(.active):hover {
-  transition: all .4s;
+  -webkit-transition: all .4s;
+    -o-transition: all .4s;
+      transition: all .4s;
   -webkit-box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
     box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
-  // -webkit-filter: brightness(1);
-  // filter: brightness(1);
 }
-// .slider-item:not(.active) {
-//   -webkit-filter: brightness(0.8);
-//   filter: brightness(0.8);
-// }
+
 .text-section div {
   -webkit-animation: fadeIt 2s;
     animation: fadeIt 2s;
   text-align: right;
 }
+
 @-webkit-keyframes fadeIt {
   0% {
     opacity: 0;
-      -webkit-transform: translateX(-20px);
-        transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+      transform: translateX(-20px);
   }
   100% {
     opacity: 1;
-      -webkit-transform: translateX(0px);
-        transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+      transform: translateX(0px);
   }
 }
+
 @keyframes fadeIt {
   0% {
     opacity: 0;
@@ -495,63 +505,106 @@ a {
       transform: translateX(0px);
   }
 }
-@keyframes bouncing {
+
+@-webkit-keyframes bouncing {
   0% {
-    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   50% {
-    transform: translatey(-5px) scaleY(1.1);
+    -webkit-transform: translatey(-5px) scaleY(1.1);
+            transform: translatey(-5px) scaleY(1.1);
   }
   70% {
-    transform: translatey(0px) scaleY(0.8);
+    -webkit-transform: translatey(0px) scaleY(0.8);
+            transform: translatey(0px) scaleY(0.8);
   }
   100% {
-    transform: translatey(0px) scaleY(1);
+    -webkit-transform: translatey(0px) scaleY(1);
+            transform: translatey(0px) scaleY(1);
   }
 }
+
+@keyframes bouncing {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-5px) scaleY(1.1);
+            transform: translatey(-5px) scaleY(1.1);
+  }
+  70% {
+    -webkit-transform: translatey(0px) scaleY(0.8);
+            transform: translatey(0px) scaleY(0.8);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scaleY(1);
+            transform: translatey(0px) scaleY(1);
+  }
+}
+
 .text-section {
   position: absolute;
-  bottom: -75px;
-  width: 100%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  bottom: 50%;
+  right: 0px;
+  width: 75%;
   color: $white;
   background: $black;
   padding: 20px;
   border: 5px solid $red;
   border-radius: 25px;
 }
+
 .text-section p {
   font-size: 18px;
 }
+
 .text-section h2 {
   font-size: 42px !important;
   color: $gold;
+  text-shadow: -3px -3px 6px $orange;
   margin: 0px !important;
   line-height: 1 !important;
   padding-bottom: 13px;
   margin-bottom: 20px !important;
   border-bottom: 2px solid $green;
 }
+
+.text-section h4 {
+  color: $green;
+  text-shadow: -3px -3px 6px $blue;
+}
+
 .slider-wrap img {
   position: absolute;
   z-index: -1;
   opacity: 0.4;
 }
+
 .slider-wrap img:nth-child(2) {
   top: 0px;
   right: -20px;
 }
+
 .slider-wrap img:nth-child(3) {
   top: 0;
   left: 7px;
 }
+
 .slider-wrap img:nth-child(4) {
   bottom: 20%;
   right: -10px;
 }
+
 .slider-wrap img:nth-child(5) {
   bottom: -12px;
   left: 87px;
 }
+
 .slider-wrap img:nth-child(6) {
   top: -72px;
   right: 28%;
@@ -559,17 +612,20 @@ a {
   left: auto;
   margin: auto;
 }
+
 .slider-wrap .fusion-imageframe:nth-child(7) {
   bottom: 20%;
   right: 0;
   left: -81px;
   margin: auto;
 }
+
 .slider-wrap .fusion-imageframe:nth-child(8) {
   left: auto;
   right: 91px;
   bottom: -70px;
 }
+
 .slider-wrap .fusion-imageframe:nth-child(9) {
   left: 241px;
   right: 91px;
@@ -578,11 +634,13 @@ a {
   bottom: -96px;
   right: auto;
 }
+
 .slider-wrap > div {
   max-width: 650px;
   margin: auto;
   position: relative;
 }
+
 @-webkit-keyframes breath {
   0% {
     max-width: 690px;
@@ -597,6 +655,7 @@ a {
     max-height: 535px;
   }
 }
+
 @keyframes breath {
   0% {
     max-width: 690px;
@@ -611,20 +670,24 @@ a {
     max-height: 535px;
   }
 }
+
 .min-it {
   min-height: 800px;
   max-width: 1400px;
   margin: auto !important;
   margin-top: 200px;
 }
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .reveal {
     display: none !important;
   }
 }
+
 .menu-item:hover > a {
   color: #9b9b9b !important;
 }
+
 @media screen and (max-width: 1200px) {
   .slider-item {
     width: 120px;
@@ -634,6 +697,7 @@ a {
     width: 80px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .slider-item {
     width: 100px;
@@ -643,6 +707,7 @@ a {
     width: 66px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .slider-item {
     width: 66px;
@@ -655,15 +720,22 @@ a {
 
 /********** Contact Me **********/
 
+#contactme-page {
+  height: 100vh;
+}
 .contact-me {
   position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: $black;
   width: 50%;
   font-size: 28px;
   line-height: 36px;
   text-align: center;
   padding: 28px 56px;
-  margin: 50px auto;
   color: $green;
   border: 5px solid $blue;
   border-radius: 100px;
@@ -679,11 +751,13 @@ a {
 #norton-idsafe-field-styling-divId {
   display: none;
 }
+
 @media screen and (max-width: 1200px) {
   .contact-me {
     width: 80%;
   }
 }
+
 @media screen and (max-width: 768px) {
   .contact-me {
     width: 100%;

@@ -1,3 +1,4 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 /* sass assets/css/style.scss assets/css/style.css */
 /* or to automate it while working */
 /* sass --watch assets/css/style.scss assets/css/style.css */
@@ -23,13 +24,16 @@ a:hover {
 }
 
 .content {
+  min-height: 100vh;
   width: calc(100% - 200px);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
-  margin-top: 100px;
-  padding: 100px 50px 0px;
   position: relative;
   top: 0;
   left: 200px;
+  margin: 50px 0px;
+  padding: 0px;
 }
 
 .content.active {
@@ -82,6 +86,8 @@ a:hover {
   background-color: #222222;
   padding: 15px;
   text-align: center;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   overflow: hidden;
 }
@@ -92,6 +98,8 @@ a:hover {
 
 .navbutton {
   position: fixed;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   top: 0;
   left: 160px;
@@ -136,17 +144,22 @@ a:hover {
 }
 /********** Welcome Page **********/
 #welcome-page {
-  padding: 100px;
+  padding: 0px;
+  margin: 0px;
   height: 100vh;
 }
 
 .welcome {
   position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  transform: translate(-50%, -60%);
   border: 5px solid #ff8800;
-  width: 75%;
+  width: 50%;
   min-height: 175px;
   padding: 30px 50px;
-  margin: 0 auto;
   color: #55aacc;
   background-color: rgba(34, 34, 34, 0.9);
   border-radius: 10px;
@@ -164,15 +177,9 @@ a:hover {
   right: -40px;
 }
 
-@media screen and (max-width: 1200px) {
-  .welcome {
-    width: 100%;
-    min-height: 270px;
-  }
-}
 @media screen and (max-width: 768px) {
-  #welcome-page {
-    padding: 0px;
+  .welcome {
+    width: 90%;
   }
 
   .welcome img {
@@ -204,26 +211,36 @@ a:hover {
     padding: 25px;
   }
 }
-/********** Spacer **********/
-.spacer {
-  height: 50vh;
-}
-
-@media screen and (max-width: 480px) {
-  .spacer {
-    height: 10vh;
-  }
-}
 /********** AboutMe **********/
-.aboutme-page {
+#aboutme-page {
   padding: 100px;
   height: 100vh;
+}
+
+.aboutme {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+  -ms-transform: translate(-40%, -50%);
+  transform: translate(-40%, -50%);
+  background-color: #222222;
+  width: 66%;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  padding: 28px 56px 28px 128px;
+  color: #9977bb;
+  border: 5px solid #55aacc;
+  border-radius: 100px;
 }
 
 .aboutme-pic {
   position: absolute;
   top: 50%;
   left: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: block;
   width: 240px;
@@ -233,23 +250,9 @@ a:hover {
   background-color: #222222;
 }
 
-.aboutme {
-  position: relative;
-  background-color: #222222;
-  width: 50%;
-  font-size: 28px;
-  line-height: 36px;
-  text-align: right;
-  padding: 28px 56px 28px 128px;
-  margin: 50px auto;
-  color: #9977bb;
-  border: 5px solid #55aacc;
-  border-radius: 100px;
-}
-
 @media screen and (max-width: 1200px) {
   .aboutme {
-    width: 80%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -288,6 +291,7 @@ a:hover {
 
 .project-body {
   padding: 0px;
+  -ms-flex-line-pack: center;
   align-content: center;
   border: 3px solid #ccff88;
   background: rgba(34, 34, 34, 0.9);
@@ -347,7 +351,6 @@ a:hover {
 #techskills-page {
   margin-top: 100px;
   padding: 100px 50px 0px;
-  min-height: 100vh;
 }
 
 #techskills-page .col-lg-6 {
@@ -371,7 +374,8 @@ a:hover {
 .slider-origin {
   border-radius: 50%;
   display: block;
-  margin: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   height: 100%;
   width: 115px !important;
 }
@@ -423,6 +427,8 @@ a:hover {
   -ms-flex-pack: center;
   justify-content: center;
   border: 5px solid #9977bb;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -439,6 +445,8 @@ a:hover {
 }
 
 .slider-item:not(.active):hover {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
   box-shadow: 3px 3px 6px #97b, 3px -3px 6px #5ac, -3px -3px 6px #cf8, -3px 3px 6px #f80;
@@ -474,24 +482,50 @@ a:hover {
     transform: translateX(0px);
   }
 }
-@keyframes bouncing {
+@-webkit-keyframes bouncing {
   0% {
+    -webkit-transform: translatey(0px);
     transform: translatey(0px);
   }
   50% {
+    -webkit-transform: translatey(-5px) scaleY(1.1);
     transform: translatey(-5px) scaleY(1.1);
   }
   70% {
+    -webkit-transform: translatey(0px) scaleY(0.8);
     transform: translatey(0px) scaleY(0.8);
   }
   100% {
+    -webkit-transform: translatey(0px) scaleY(1);
+    transform: translatey(0px) scaleY(1);
+  }
+}
+@keyframes bouncing {
+  0% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-5px) scaleY(1.1);
+    transform: translatey(-5px) scaleY(1.1);
+  }
+  70% {
+    -webkit-transform: translatey(0px) scaleY(0.8);
+    transform: translatey(0px) scaleY(0.8);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scaleY(1);
     transform: translatey(0px) scaleY(1);
   }
 }
 .text-section {
   position: absolute;
-  bottom: -75px;
-  width: 100%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  bottom: 50%;
+  right: 0px;
+  width: 75%;
   color: #ffffff;
   background: #222222;
   padding: 20px;
@@ -506,11 +540,17 @@ a:hover {
 .text-section h2 {
   font-size: 42px !important;
   color: #f5e9a6;
+  text-shadow: -3px -3px 6px #ff8800;
   margin: 0px !important;
   line-height: 1 !important;
   padding-bottom: 13px;
   margin-bottom: 20px !important;
   border-bottom: 2px solid #ccff88;
+}
+
+.text-section h4 {
+  color: #ccff88;
+  text-shadow: -3px -3px 6px #55aacc;
 }
 
 .slider-wrap img {
@@ -650,15 +690,23 @@ a:hover {
   }
 }
 /********** Contact Me **********/
+#contactme-page {
+  height: 100vh;
+}
+
 .contact-me {
   position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: #222222;
   width: 50%;
   font-size: 28px;
   line-height: 36px;
   text-align: center;
   padding: 28px 56px;
-  margin: 50px auto;
   color: #ccff88;
   border: 5px solid #55aacc;
   border-radius: 100px;
