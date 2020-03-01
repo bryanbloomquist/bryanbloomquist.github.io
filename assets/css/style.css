@@ -153,9 +153,9 @@ a:hover {
   position: relative;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -60%);
-  -ms-transform: translate(-50%, -60%);
-  transform: translate(-50%, -60%);
+  -webkit-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
   border: 5px solid #ff8800;
   width: 50%;
   min-height: 175px;
@@ -180,11 +180,6 @@ a:hover {
 @media screen and (max-width: 768px) {
   .welcome {
     width: 90%;
-  }
-
-  .welcome img {
-    right: 10px;
-    bottom: -80px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -221,9 +216,9 @@ a:hover {
   position: relative;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-40%, -50%);
-  -ms-transform: translate(-40%, -50%);
-  transform: translate(-40%, -50%);
+  -webkit-transform: translate(-40%, -75%);
+  -ms-transform: translate(-40%, -75%);
+  transform: translate(-40%, -75%);
   background-color: #222222;
   width: 66%;
   font-size: 28px;
@@ -384,12 +379,8 @@ a:hover {
   width: 150px;
   height: 150px;
   background-color: #222222;
-  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
   position: absolute;
   cursor: pointer;
-  left: 41%;
   transform-origin: center 175%;
   -webkit-transform-origin: center 175%;
   -ms-transform-origin: center 175%;
@@ -398,20 +389,6 @@ a:hover {
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -ms-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  text-align: left;
-  color: #fff;
-  padding: 7px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  /*Introduced in IE 10. See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/ */
-  -ms-user-select: none;
-  user-select: none;
   border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
