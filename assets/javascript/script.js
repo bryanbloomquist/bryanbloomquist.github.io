@@ -93,7 +93,6 @@ $(document).ready(function() {
   var sliderInner = slider.find(".slider-inner");
   var sliderOrigin = slider.find(".slider-origin");
   var sliderItems = slider.find(".slider-item");
-  console.log(sliderItems.outerHeight());
   var itemsLength = sliderItems.length;
   var calcDeg = 400 / itemsLength;
   var clickDown = false;
@@ -110,7 +109,6 @@ $(document).ready(function() {
   // slider inner width & height = item height * 3.5
   sliderInner.width(sliderItems.outerHeight() * 3.5);
   sliderInner.height(sliderItems.outerHeight() * 3.5);
-  console.log(sliderItems.outerWidth() * 3.5)
 
   var sliderInnerWidth = sliderInner.outerWidth();
   var sliderInnerOffset = sliderInner.offset();
