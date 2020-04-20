@@ -27,7 +27,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: 15%, 50%;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 html {
@@ -70,9 +70,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    background-position: left;
-  }
   .content {
     width: 100%; 
     left: 0;
@@ -204,7 +201,7 @@ a {
 
 .aboutme {
   position: relative;
-  top: 33vh;
+  top: 25vh;
   background-color: $black;
   width: 66%;
   margin: 0px auto;
@@ -214,12 +211,12 @@ a {
   padding: 28px 56px 28px 128px;
   color: $purple;
   border: 5px solid $blue;
-  border-radius: 100px;
+  border-radius: 50px;
 }
 
 .aboutme-pic {
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 0;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -228,8 +225,20 @@ a {
   width: 240px;
   padding: 5px;
   border: 5px solid $orange;
-  border-radius: 25%;
+  border-radius: 25px;
   background-color: $black;
+}
+
+.aboutme h1 {
+  position: absolute;
+  top: 85%;
+  right: -25%;
+  border: 5px solid $red;
+  padding: 10px;
+  border-radius: 10px;
+  color: $green;
+  background: $black;
+  font-size: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -242,8 +251,13 @@ a {
   }
   .aboutme-pic {
     top: -10px;
-    left: 100px;
+    left: 30%;
     width: 200px;
+  }
+  .aboutme h1 {
+    top: -35%;
+    right: 0%;
+    font-size: 50px;
   }
 }
 
