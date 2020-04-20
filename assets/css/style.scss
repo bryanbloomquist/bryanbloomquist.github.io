@@ -70,6 +70,9 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    background-position: left;
+  }
   .content {
     width: 100%; 
     left: 0;
