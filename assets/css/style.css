@@ -6,8 +6,9 @@
 /********** Universal **********/
 body {
   background-image: url("../images/coding-wp-2.jpg");
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
+  background-position: 15%, 50%;
   overflow-x: hidden;
 }
 
@@ -41,20 +42,19 @@ a:hover {
   left: 0;
 }
 
+.page-dimmer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #22222299;
+}
+
 @media screen and (max-width: 768px) {
   .content {
-    padding: 40px 5px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .content {
     width: 100%;
-    padding: 25px;
     left: 0;
-  }
-
-  .content.active {
-    left: 200px;
   }
 }
 /********** Navbar **********/
@@ -102,8 +102,12 @@ a:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   top: 0;
-  left: 160px;
+  left: 200px;
   z-index: 99;
+}
+
+.navbutton button {
+  font-size: 1.5rem;
 }
 
 .navbutton.active {
@@ -116,7 +120,7 @@ a:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #bio-link {
     margin-bottom: 1rem;
   }
@@ -144,83 +148,40 @@ a:hover {
 }
 /********** Welcome Page **********/
 #welcome-page {
-  padding: 0px;
-  margin: 0px;
   height: 100vh;
 }
 
 .welcome {
   position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-  -ms-transform: translate(-50%, -100%);
-  transform: translate(-50%, -100%);
-  border: 5px solid #ff8800;
-  width: 50%;
-  min-height: 175px;
-  padding: 30px 50px;
-  color: #55aacc;
-  background-color: rgba(34, 34, 34, 0.9);
-  border-radius: 10px;
+  top: 25vh;
+  width: 80%;
+  margin: 0px auto;
+  text-align: center;
 }
 
-.welcome img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150px;
-  border: 5px solid #55aacc;
-  border-radius: 10px;
-  position: absolute;
-  bottom: -77px;
-  right: -40px;
+.welcome h1 {
+  text-shadow: 5px 5px #000, -5px 5px #000, 5px -5px #000, -5px -5px #000;
+  font-weight: 900;
+  font-size: 80px;
+  color: #55aacc;
 }
 
 @media screen and (max-width: 768px) {
-  .welcome {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .welcome {
-    padding: 15px 30px;
-    min-height: 200px;
-  }
-
   .welcome h1 {
-    font-size: 32px;
-  }
-
-  .welcome img {
-    bottom: -100px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #welcome-page {
-    padding: 25px;
-  }
-
-  .welcome {
-    font-size: 32px;
-    padding: 25px;
+    font-size: 40px;
   }
 }
 /********** AboutMe **********/
 #aboutme-page {
-  padding: 100px;
   height: 100vh;
 }
 
 .aboutme {
   position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-40%, -75%);
-  -ms-transform: translate(-40%, -75%);
-  transform: translate(-40%, -75%);
+  top: 33vh;
   background-color: #222222;
   width: 66%;
+  margin: 0px auto;
   font-size: 28px;
   line-height: 36px;
   text-align: right;
@@ -245,33 +206,19 @@ a:hover {
   background-color: #222222;
 }
 
-@media screen and (max-width: 1200px) {
-  .aboutme {
-    width: 100%;
-  }
-}
 @media screen and (max-width: 768px) {
-  #aboutme-page {
-    padding: 150px 25px;
-  }
-
   .aboutme {
+    padding: 100px 28px 28px;
     width: 100%;
-    font-size: 32px;
-    padding: 100px 25px 25px;
+    font-size: 24px;
     border-radius: 25px;
     line-height: 30px;
   }
 
   .aboutme-pic {
-    top: -25px;
-    left: 90px;
-    width: 240px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .aboutme {
-    font-size: 24px;
+    top: -10px;
+    left: 100px;
+    width: 200px;
   }
 }
 /********** Portfolio **********/
@@ -683,10 +630,10 @@ a:hover {
   font-size: 28px;
   line-height: 36px;
   text-align: center;
-  padding: 28px 56px;
+  padding: 28px;
   color: #ccff88;
   border: 5px solid #55aacc;
-  border-radius: 100px;
+  border-radius: 24px;
 }
 
 .contact-me input,
@@ -708,8 +655,44 @@ a:hover {
 @media screen and (max-width: 768px) {
   .contact-me {
     width: 100%;
-    padding: 28px 28px;
+    padding: 4px;
     border-radius: 25px;
+  }
+}
+footer {
+  border: 3px solid #f5e9a6;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  margin: 10px;
+  transition: all 0.5s;
+}
+
+footer p {
+  color: #ffffff;
+  background-color: #222222;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+
+footer img {
+  width: 100%;
+  border: 1px solid #222222;
+  margin-bottom: 0;
+}
+
+footer:hover {
+  transition: all 0.5s;
+  transform: scale(1.2, 1.2);
+  border: 1px solid #663399;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    position: relative;
+    margin: 150px auto 20px;
   }
 }
 

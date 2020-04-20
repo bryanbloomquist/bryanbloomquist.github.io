@@ -14,7 +14,7 @@ $(document).ready(function() {
 const typed = (divID, string, delay) => {
   let typed = new Typed(divID, {
     strings: [string],
-    typeSpeed: 20,
+    typeSpeed: 50,
     startDelay: delay,
     loop: false,
     showCursor: false
