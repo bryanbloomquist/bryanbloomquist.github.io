@@ -23,7 +23,7 @@ const typed = (divID, string, delay) => {
 
 const toggel = () => $("#navbar, .navbutton, .content").toggleClass("active");
 
-/// WELCOMEPAGE ////////////
+/// WELCOMEPAGE ////////////////////////////////////////////////
 
 const welcomePage = () => {
   $(".greetings").empty();
@@ -37,32 +37,27 @@ const welcomePage = () => {
 /// PORTFOLIO //////////////////////////////////////////////////
 
 const portfolioPage = () => {
-  for (let i = 0; i < portfolio.length; i++) {
-    $("#portfolio-projects").append(
-      '<div class="project col-12 col-md-6 col-xl-4 mb-3">' +
-        '<div class="project-body text-center">' +
-        '<h5 class="project-title">' +
-        portfolio[i].name +
-        "</h5>" +
-        '<img class="project-image" src="' +
-        portfolio[i].src +
-        '" alt="' +
-        portfolio[i].alt +
-        '" />' +
-        '<p class="project-skills">' +
-        portfolio[i].skills +
-        "</p>" +
-        '<a class="pagelink btn p-1" href="' +
-        portfolio[i].deployed +
-        '" target="_blank">Deployed Site</a>' +
-        '<a class="pagelink btn p-1" href="' +
-        portfolio[i].github +
-        '" target="_blank">Github Repo</a>' +
-        "</div>" +
-        "</div>"
+  portfolio.map((project, i) => {
+    $("#project-buttons").append(
+      "<div class = 'col-12'>" +
+        "<button class = 'pagelink btn-block p-3 mb-3' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'false' aria-controls = 'project-" + i + "'>" +
+          project.name +
+        "</button>" +
+      "</div>"
     );
-  }
-};
+    $("#project-accordion").append(
+      "<div class = 'col-12 p-0 collapse' id = 'project-" + i + "' data-parent = '#project-accordion'>" +
+        "<div class = 'project-body text-center'>" +
+          "<h5 class = 'project-title'>" + project.name + "</h5>" +
+          "<img class = 'project-image' src = '" + project.src + "' alt = '" + project.alt + "' />" +
+          "<p class = 'project-skills'>" + project.skills + "</p>" +
+          "<a class='pagelink btn p-3 m-3' href='" + project.deployed + "' target='_blank'>Deployed Site</a>" +
+          "<a class='pagelink btn p-3 m-3' href='" + project.github + "' target='_blank'>Github Repo</a>" +
+        "</div>" +
+      "</div>"
+    );
+  })
+}
 
 /// TECH SKILLS //////////////////////////////////////////////////
 
@@ -82,6 +77,8 @@ let techSkillsPage = () => {
     )
   });
 };
+
+/// TECH SKILLS SLIDER /////////////////////////////////////////////
 
 $(function() {
   $('[data-toggle="popover"]').popover();

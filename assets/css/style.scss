@@ -74,15 +74,11 @@ a {
     width: 100%; 
     left: 0;
   }
-  // .content.active {
-  //   left: $navWidth;
-  // }
 }
 
 /********** Navbar **********/
 
 #bio-link {
-  margin-bottom: 3rem;
   color: $green;
   text-shadow: -3px -3px 6px $blue;
 }
@@ -91,7 +87,7 @@ a {
   background-color: $purple;
   color: $green;
   border: 2px solid $blue;
-  margin-bottom: 1.5rem;
+  font-size: 16px;
   &:hover {
     background-color: $green;
     color: $purple;
@@ -148,10 +144,6 @@ a {
   #bio-link {
     margin-bottom: 1rem;
   }
-  .pagelink {
-    font-size: 0.75em; 
-    margin-bottom: 0.75rem;
-  }
   #navbar {
     margin-left: -$navWidth;
   }
@@ -177,7 +169,7 @@ a {
   top: 25vh;
   width: 80%;
   margin: 0px auto;
-  text-align: center;
+  // text-align: center;
 }
 
 .welcome h1{
@@ -231,14 +223,15 @@ a {
 
 .aboutme h1 {
   position: absolute;
-  top: 85%;
-  right: -25%;
+  top: 90%;
+  right: -15%;
   border: 5px solid $red;
   padding: 10px;
   border-radius: 10px;
   color: $green;
   background: $black;
   font-size: 80px;
+  text-shadow: 5px 5px 5px $red;
 }
 
 @media screen and (max-width: 768px) {
@@ -274,19 +267,13 @@ a {
 }
 
 .portfolio h1 {
-  position: absolute;
-  top: -10%;
-  right: -5%;
   border: 5px solid $gold;
   padding: 10px;
   border-radius: 10px;
   color: $purple;
   background: $black;
   font-size: 80px;
-}
-
-.portfolio div.row {
-  padding-top: 60px;
+  text-shadow: 5px 5px 5px $gold;
 }
 
 .project {
@@ -311,18 +298,18 @@ a {
   text-align: center;
   background: rgba($black, 0.9);
   color: $blue;
-  font-size: 17px;
+  font-size: 36px;
   padding: 20px;
   margin-bottom: 0px;
 }
 
 .project-skills {
   text-align: center;
-  font-size: 12px;
+  font-size: 20px;
   border: 2px solid $green;
   background-color: $red;
   color: $green;
-  padding: 5px 10px;
+  padding: 10px;
   margin: 0px auto;
   width: 90%;
   min-height: 50px;
@@ -333,21 +320,21 @@ a {
   width: 45%;
 }
 
-@media screen and (max-width: 1200px) {
-  #portfolio-page {
-    padding: 0 50px;
-  }
-  #techskills-page {
-    padding: 0 50px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #portfolio-page {
-    padding: 0 25px;
-  }
+@media screen and (max-width: 768px) {
+  #portfolio-page,
   #techskills-page {
     padding: 0 25px;
+  }
+  .portfolio h1 {
+    font-size: 50px;
+    position: static;
+    text-align: center;
+  }
+  .project-title {
+    font-size: 20px;
+  }
+  .project-skills {
+    font-size: 16px;
   }
 }
 
@@ -770,3 +757,4 @@ footer:hover {
     margin: 150px auto 20px;
   }
 }
+

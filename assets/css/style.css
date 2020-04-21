@@ -59,7 +59,6 @@ a:hover {
 }
 /********** Navbar **********/
 #bio-link {
-  margin-bottom: 3rem;
   color: #ccff88;
   text-shadow: -3px -3px 6px #55aacc;
 }
@@ -68,7 +67,7 @@ a:hover {
   background-color: #9977bb;
   color: #ccff88;
   border: 2px solid #55aacc;
-  margin-bottom: 1.5rem;
+  font-size: 16px;
 }
 .pagelink:hover {
   background-color: #ccff88;
@@ -125,11 +124,6 @@ a:hover {
     margin-bottom: 1rem;
   }
 
-  .pagelink {
-    font-size: 0.75em;
-    margin-bottom: 0.75rem;
-  }
-
   #navbar {
     margin-left: -200px;
   }
@@ -156,7 +150,6 @@ a:hover {
   top: 25vh;
   width: 80%;
   margin: 0px auto;
-  text-align: center;
 }
 
 .welcome h1 {
@@ -208,14 +201,15 @@ a:hover {
 
 .aboutme h1 {
   position: absolute;
-  top: 85%;
-  right: -25%;
+  top: 90%;
+  right: -15%;
   border: 5px solid #bb4466;
   padding: 10px;
   border-radius: 10px;
   color: #ccff88;
   background: #222222;
   font-size: 80px;
+  text-shadow: 5px 5px 5px #bb4466;
 }
 
 @media screen and (max-width: 768px) {
@@ -251,19 +245,13 @@ a:hover {
 }
 
 .portfolio h1 {
-  position: absolute;
-  top: -10%;
-  right: -5%;
   border: 5px solid #f5e9a6;
   padding: 10px;
   border-radius: 10px;
   color: #9977bb;
   background: #222222;
   font-size: 80px;
-}
-
-.portfolio div.row {
-  padding-top: 60px;
+  text-shadow: 5px 5px 5px #f5e9a6;
 }
 
 .project {
@@ -288,18 +276,18 @@ a:hover {
   text-align: center;
   background: rgba(34, 34, 34, 0.9);
   color: #55aacc;
-  font-size: 17px;
+  font-size: 36px;
   padding: 20px;
   margin-bottom: 0px;
 }
 
 .project-skills {
   text-align: center;
-  font-size: 12px;
+  font-size: 20px;
   border: 2px solid #ccff88;
   background-color: #bb4466;
   color: #ccff88;
-  padding: 5px 10px;
+  padding: 10px;
   margin: 0px auto;
   width: 90%;
   min-height: 50px;
@@ -310,22 +298,24 @@ a:hover {
   width: 45%;
 }
 
-@media screen and (max-width: 1200px) {
-  #portfolio-page {
-    padding: 0 50px;
-  }
-
-  #techskills-page {
-    padding: 0 50px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #portfolio-page {
+@media screen and (max-width: 768px) {
+  #portfolio-page,
+#techskills-page {
     padding: 0 25px;
   }
 
-  #techskills-page {
-    padding: 0 25px;
+  .portfolio h1 {
+    font-size: 50px;
+    position: static;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-skills {
+    font-size: 16px;
   }
 }
 /********** TOOLBOX **********/

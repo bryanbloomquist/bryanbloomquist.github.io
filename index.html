@@ -25,20 +25,20 @@
       <!--navbar-->
 
       <nav id = "navbar">
-        <h3 class = "engraved" id = "bio-link">
+        <h3 class = "engraved mb-5" id = "bio-link">
           <a href = "#">Bryan Bloomquist</a>
         </h3>
-        <a class = "btn btn-block pagelink" href = "#aboutme-page" id = "aboutme">About Me</a>
-        <a class = "btn btn-block pagelink" href = "#portfolio-page" id = "portfolio">My Projects</a>
-        <a class = "btn btn-block pagelink" href = "#techskills-page" id = "techskills">My Tool Box</a>
-        <a class = "btn btn-block pagelink" href = "#contactme-page" id = "contactme">Contact Me</a>
-        <a class = "btn btn-block pagelink p-1" href = "https://github.com/bryanbloomquist" title = "GitHub" target = "_blank">
+        <a class = "btn btn-block mb-4 pagelink" href = "#aboutme-page" id = "aboutme">About Me</a>
+        <a class = "btn btn-block mb-4 pagelink" href = "#portfolio-page" id = "portfolio">My Projects</a>
+        <a class = "btn btn-block mb-4 pagelink" href = "#techskills-page" id = "techskills">My Tool Box</a>
+        <a class = "btn btn-block mb-4 pagelink" href = "#contactme-page" id = "contactme">Contact Me</a>
+        <a class = "btn btn-block mb-4 pagelink p-1" href = "https://github.com/bryanbloomquist" title = "GitHub" target = "_blank">
           <i class="fab fa-github-square fa-2x"></i>
         </a>
-        <a class = "btn btn-block pagelink p-1" href = "https://linkedin.com/in/bryan-bloomquist-b1374416b" title = "LinkedIn" target = "_blank">
+        <a class = "btn btn-block mb-4 pagelink p-1" href = "https://linkedin.com/in/bryan-bloomquist-b1374416b" title = "LinkedIn" target = "_blank">
           <i class = "fab fa-linkedin fa-2x"></i>
         </a>
-        <a class = "btn btn-block pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
+        <a class = "btn btn-block mb-4 pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
           <i class = "fas fa-envelope-square fa-2x"></i>
         </a>
         <!-- <a class = "btn btn-block pagelink p-1" href = "resume.pdf" title = "Resume" target = "_blank">
@@ -77,7 +77,7 @@
           <p>
             I am a front end web developer and designer with training in full stack web development.  I love making awesome-looking responsive projects; from single page websites to full stack applications.  Let's work together and make something beautiful.
           </p>
-          <h1>About Me</h1>
+          <h1 class = "wow fadeInRightBig">About Me</h1>
         </div>
       </div>
 
@@ -85,8 +85,15 @@
 
       <div class = "content" id = "portfolio-page">
         <div class = "portfolio">
-          <h1>My Projects</h1>
-          <div class = "row justify-content-center" id = "portfolio-projects"></div>  
+          <div class = "row">
+            <div class = "col-md-4">
+              <h1>My Projects</h1>
+              <div class = "row justify-content-center" id = "project-buttons"></div>
+            </div>
+            <div class = "col-md-8">
+              <div class = "accordion" id = "project-accordion"></div>
+            </div>
+          </div>
         </div>
       </div>
 
