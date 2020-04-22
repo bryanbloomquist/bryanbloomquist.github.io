@@ -4,8 +4,8 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
-    <script src="https://kit.fontawesome.com/05388d649a.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src = "https://kit.fontawesome.com/05388d649a.js" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
@@ -15,7 +15,7 @@
       integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin = "anonymous">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel = "stylesheet" href="assets/css/animate.css">
     <link rel = "shortcut icon" href = "assets/images/favicon.ico" type = "image/x-icon">
     <title>Bryan Bloomquist</title>
   </head>
@@ -38,15 +38,15 @@
         <a class = "btn btn-block mb-4 pagelink p-1" href = "https://linkedin.com/in/bryan-bloomquist-b1374416b" title = "LinkedIn" target = "_blank">
           <i class = "fab fa-linkedin fa-2x"></i>
         </a>
-        <a class = "btn btn-block mb-4 pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
+        <!-- <a class = "btn btn-block mb-4 pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
           <i class = "fas fa-envelope-square fa-2x"></i>
-        </a>
+        </a> -->
         <!-- <a class = "btn btn-block pagelink p-1" href = "resume.pdf" title = "Resume" target = "_blank">
           <i class = "far fa-file fa-2x"></i>
         </a> -->
-        <div class = "footer mt-5">
-          Copyright &copy; 2020
-        </div>
+        <!-- <div class = "footer mt-5">
+          Copyright &copy; <span id = "current-year"></span>
+        </div> -->
       </nav>
 
       <!--navbar control-->
@@ -88,7 +88,7 @@
           <div class = "row">
             <div class = "col-md-4">
               <h1>My Projects</h1>
-              <div class = "row justify-content-center" id = "project-buttons"></div>
+              <div class = "row" id = "project-buttons"></div>
             </div>
             <div class = "col-md-8">
               <div class = "accordion" id = "project-accordion"></div>
@@ -128,7 +128,7 @@
         <a href = "#">
           <img src = "assets/images/logo-color.png" alt = "Bryan Bloomquist Logo" />
         </a>
-        <p>&copy; 2020</p>
+        <p>&copy; <span id = "current-year"></span></p>
       </footer>
 
     </div> <!-- End Wrapper -->

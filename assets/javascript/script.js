@@ -1,5 +1,8 @@
 $(document).ready(function() {
+
   $("#navbarCollapse").on("click", toggel);
+
+  getYear();
 
   welcomePage();
 
@@ -23,6 +26,8 @@ const typed = (divID, string, delay) => {
 
 const toggel = () => $("#navbar, .navbutton, .content").toggleClass("active");
 
+const getYear = () => $("#current-year").html(new Date().getFullYear());
+
 /// WELCOMEPAGE ////////////////////////////////////////////////
 
 const welcomePage = () => {
@@ -39,7 +44,7 @@ const welcomePage = () => {
 const portfolioPage = () => {
   portfolio.map((project, i) => {
     $("#project-buttons").append(
-      "<div class = 'col-12'>" +
+      "<div class = 'col-6 col-md-12'>" +
         "<button class = 'pagelink btn-block p-3 mb-3' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'false' aria-controls = 'project-" + i + "'>" +
           project.name +
         "</button>" +
@@ -132,7 +137,6 @@ $(document).ready(function() {
           );
         var the_id = this.id;
 
-        console.log(the_id);
         $(".text-section div").hide();
         $("." + the_id).show();
       } else {
@@ -157,7 +161,6 @@ $(document).ready(function() {
     if (notclicked == true) {
       rotationPosition(count);
       count++;
-      console.log("switched");
       if (count == 10) {
         count = 0;
       }
