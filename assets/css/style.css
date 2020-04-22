@@ -137,7 +137,7 @@ a:hover {
   }
 
   .navbutton.active {
-    left: 160px;
+    left: 200px;
   }
 }
 /********** Welcome Page **********/
@@ -303,6 +303,10 @@ a:hover {
   #portfolio-page,
 #techskills-page {
     padding: 0 25px;
+  }
+
+  .portfolio {
+    top: 0;
   }
 
   .portfolio h1 {
