@@ -40,7 +40,7 @@ const toolbox = [
     alt: "Sass logo",
     src: "assets/images/sass.png",
     level: 4,
-    description: "A CSS preprocesseor that extends CSS with more traditional programming mechanisms."
+    description: "A CSS preprocessor that extends CSS with more traditional programming mechanisms."
   },{
     name: "WordPress",
     alt: "WordPress Logo",
