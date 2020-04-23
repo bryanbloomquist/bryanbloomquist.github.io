@@ -162,16 +162,11 @@ a {
 
 /********** Welcome Page **********/
 
-#welcome-page {
-  height: 100vh;
-}
-
 .welcome {
   position: relative;
   top: 25vh;
   width: 80%;
   margin: 0px auto;
-  // text-align: center;
 }
 
 .welcome h1{
@@ -188,10 +183,6 @@ a {
 }
 
 /********** AboutMe **********/
-
-#aboutme-page {
-  height: 100vh;
-}
 
 .aboutme {
   position: relative;
@@ -260,7 +251,6 @@ a {
 
 #portfolio-page {
   padding: 0px 100px;
-  min-height: 100vh;
 }
 
 .portfolio {
@@ -336,10 +326,10 @@ a {
     position: static;
     text-align: center;
   }
-  .portfolio .pagelink {
+  #project-buttons .pagelink {
     min-height: 60px;
   }
-  .portfolio .p-3 {
+  #project-buttons .p-3 {
     padding: .25rem !important;
   }
   .project-title {
@@ -353,7 +343,6 @@ a {
 /********** TOOLBOX **********/
 
 #techskills-page {
-  margin-top: 100px;
   padding: 100px 50px 0px;
 }
 
@@ -681,6 +670,78 @@ a {
   }
   .slider-item img {
     width: 44px;
+  }
+}
+
+/********** Testimonials **********/
+
+#testimonials-page {
+  padding-top: 25vh;
+}
+
+#testimonials-page h1 {
+  color: $green;
+  border: 5px solid $gold;
+  border-radius: 25px;
+  background: #222;
+  font-size: 80px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#testimonials-slider {
+  width: 66%;
+  margin: 0 auto;
+}
+
+#testimonials-slider .slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid $orange;
+  border-radius: 25px;
+  background: $black;
+  color: $blue;
+  padding: 32px;
+  min-height: 400px;
+}
+
+#testimonials-slider .slide p {
+  font-size: 18px;
+  font-style: italic;
+  text-align: justify;
+}
+
+#testimonials-slider .slide h5 {
+  color: $green;
+  margin-left: auto;
+}
+
+#testimonials-slider .slide h6 {
+  color: $purple;
+  margin-left: auto;
+}
+
+#testimonials-slider .slick-dots li button{
+  background: $red;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #testimonials-page h1 {
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+  }
+  #testimonials-slider {
+    width: 100%;
+  }
+  #testimonials-slider .slide {
+    padding: 8px;
+  }
+  #testimonials-slider .slide p {
+    font-size: 16px;
   }
 }
 

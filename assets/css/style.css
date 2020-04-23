@@ -141,10 +141,6 @@ a:hover {
   }
 }
 /********** Welcome Page **********/
-#welcome-page {
-  height: 100vh;
-}
-
 .welcome {
   position: relative;
   top: 25vh;
@@ -165,10 +161,6 @@ a:hover {
   }
 }
 /********** AboutMe **********/
-#aboutme-page {
-  height: 100vh;
-}
-
 .aboutme {
   position: relative;
   top: 25vh;
@@ -236,7 +228,6 @@ a:hover {
 /********** Portfolio **********/
 #portfolio-page {
   padding: 0px 100px;
-  min-height: 100vh;
 }
 
 .portfolio {
@@ -315,11 +306,11 @@ a:hover {
     text-align: center;
   }
 
-  .portfolio .pagelink {
+  #project-buttons .pagelink {
     min-height: 60px;
   }
 
-  .portfolio .p-3 {
+  #project-buttons .p-3 {
     padding: 0.25rem !important;
   }
 
@@ -333,7 +324,6 @@ a:hover {
 }
 /********** TOOLBOX **********/
 #techskills-page {
-  margin-top: 100px;
   padding: 100px 50px 0px;
 }
 
@@ -653,6 +643,79 @@ a:hover {
 
   .slider-item img {
     width: 44px;
+  }
+}
+/********** Testimonials **********/
+#testimonials-page {
+  padding-top: 25vh;
+}
+
+#testimonials-page h1 {
+  color: #ccff88;
+  border: 5px solid #f5e9a6;
+  border-radius: 25px;
+  background: #222;
+  font-size: 80px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#testimonials-slider {
+  width: 66%;
+  margin: 0 auto;
+}
+
+#testimonials-slider .slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ff8800;
+  border-radius: 25px;
+  background: #222222;
+  color: #55aacc;
+  padding: 32px;
+  min-height: 400px;
+}
+
+#testimonials-slider .slide p {
+  font-size: 18px;
+  font-style: italic;
+  text-align: justify;
+}
+
+#testimonials-slider .slide h5 {
+  color: #ccff88;
+  margin-left: auto;
+}
+
+#testimonials-slider .slide h6 {
+  color: #9977bb;
+  margin-left: auto;
+}
+
+#testimonials-slider .slick-dots li button {
+  background: #bb4466;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #testimonials-page h1 {
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #testimonials-slider {
+    width: 100%;
+  }
+
+  #testimonials-slider .slide {
+    padding: 8px;
+  }
+
+  #testimonials-slider .slide p {
+    font-size: 16px;
   }
 }
 /********** Contact Me **********/

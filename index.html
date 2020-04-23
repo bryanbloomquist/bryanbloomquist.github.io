@@ -9,13 +9,11 @@
     <script>
       new WOW().init();
     </script>
-    <link 
-      rel = "stylesheet" 
-      href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin = "anonymous">
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
-    <link rel = "stylesheet" href="assets/css/animate.css">
+    <link rel = "stylesheet" href = "assets/css/animate.css">
     <link rel = "shortcut icon" href = "assets/images/favicon.ico" type = "image/x-icon">
     <title>Bryan Bloomquist</title>
   </head>
@@ -31,6 +29,7 @@
         <a class = "btn btn-block mb-4 pagelink" href = "#aboutme-page" id = "aboutme">About Me</a>
         <a class = "btn btn-block mb-4 pagelink" href = "#portfolio-page" id = "portfolio">My Projects</a>
         <a class = "btn btn-block mb-4 pagelink" href = "#techskills-page" id = "techskills">My Tool Box</a>
+        <a class = "btn btn-block mb-4 pagelink" href = "#testimonials-page" id = "testimonials">Testimonials</a>
         <a class = "btn btn-block mb-4 pagelink" href = "#contactme-page" id = "contactme">Contact Me</a>
         <a class = "btn btn-block mb-4 pagelink p-1" href = "https://github.com/bryanbloomquist" title = "GitHub" target = "_blank">
           <i class="fab fa-github-square fa-2x"></i>
@@ -87,7 +86,7 @@
         <div class = "portfolio">
           <div class = "row">
             <div class = "col-md-4">
-              <h1>My Projects</h1>
+              <h1 class = "wow fadeInLeftBig">My Projects</h1>
               <div class = "row" id = "project-buttons"></div>
             </div>
             <div class = "col-md-8">
@@ -114,6 +113,13 @@
         </div>
       </div>
 
+      <!--testimonials content-->
+
+      <div class = "content" id = "testimonials-page">
+        <h1 class = "wow fadeInRightBig">Testimonials</h1>
+        <div class = "wow fadeInUpBig" id = "testimonials-slider"></div>
+      </div>
+
       <!--contact me content-->
 
       <div class = "content" id = "contactme-page">
@@ -133,16 +139,18 @@
 
     </div> <!-- End Wrapper -->
 
-    <!--required scripts for jQuery,Bootstrap, and Typed.js-->
+    <!--required scripts for jQuery,Bootstrap, Slick Carousel, and Typed.js-->
 
     <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src = "assets/javascript/toolbox.js"></script>
     <script src = "assets/javascript/portfolio.js"></script>
+    <script src = "assets/javascript/testimonials.js"></script>
+    <script src = "assets/javascript/toolbox.js"></script>
     <script src = "assets/javascript/script.js"></script>
     <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity = "sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin = "anonymous"></script>
+    <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
   </body>
 </html>
