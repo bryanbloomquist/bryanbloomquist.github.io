@@ -246,6 +246,11 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.portfolio button[aria-expanded=true] {
+  background: #222222;
+  color: #55aacc;
+}
+
 .project {
   height: 100%;
 }
