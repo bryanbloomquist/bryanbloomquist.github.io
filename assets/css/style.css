@@ -68,11 +68,14 @@ a:hover {
   color: #ccff88;
   border: 2px solid #55aacc;
   font-size: 16px;
+  transition: all 0.5s;
 }
 .pagelink:hover {
   background-color: #ccff88;
   color: #9977bb;
   border: 2px solid #bb4466;
+  transform: scale(1.2) rotate(-3deg);
+  transition: all 0.5s;
 }
 
 #navbar {
@@ -163,7 +166,7 @@ a:hover {
 /********** AboutMe **********/
 .aboutme {
   position: relative;
-  top: 25vh;
+  top: 20vh;
   background-color: #222222;
   width: 66%;
   margin: 0px auto;
@@ -178,11 +181,8 @@ a:hover {
 
 .aboutme-pic {
   position: absolute;
-  top: 100%;
-  left: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 75%;
+  left: -15%;
   display: block;
   width: 240px;
   padding: 5px;
@@ -214,8 +214,8 @@ a:hover {
   }
 
   .aboutme-pic {
-    top: -10px;
-    left: 30%;
+    top: -30%;
+    left: 5%;
     width: 200px;
   }
 
@@ -339,7 +339,7 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   #techskills-page {
-    padding: 150px 20px;
+    padding: 50px 20px;
   }
 }
 /********** TOOLBOX SLIDER **********/
@@ -479,14 +479,21 @@ a:hover {
     transform: translatey(0px) scaleY(1);
   }
 }
+#techskills-page h1 {
+  color: #55aacc;
+  text-shadow: 5px 5px 5px #ff8800;
+  border: 5px solid #55aacc;
+  padding: 10px;
+  font-size: 70px;
+  background: #222222;
+  display: inline-block;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
 .text-section {
-  position: absolute;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-  bottom: 50%;
-  right: 0px;
   width: 75%;
+  margin-left: auto;
   color: #ffffff;
   background: #222222;
   padding: 20px;
@@ -631,6 +638,14 @@ a:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  #techskills-page h1 {
+    font-size: 50px;
+  }
+
+  .slider-inner {
+    height: 420px !important;
+  }
+
   .slider-item {
     width: 100px;
     height: 100px;
@@ -639,8 +654,17 @@ a:hover {
   .slider-item img {
     width: 66px;
   }
+
+  .text-section {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 600px) {
+  .slider-inner {
+    height: 280px !important;
+    width: 420px !important;
+  }
+
   .slider-item {
     width: 66px;
     height: 66px;
@@ -649,10 +673,19 @@ a:hover {
   .slider-item img {
     width: 44px;
   }
+
+  .text-section {
+    width: 100%;
+  }
+
+  #techskills-page h1 {
+    display: block;
+    text-align: center;
+  }
 }
 /********** Testimonials **********/
 #testimonials-page {
-  padding-top: 25vh;
+  padding-top: 10vh;
 }
 
 #testimonials-page h1 {
@@ -663,6 +696,8 @@ a:hover {
   font-size: 80px;
   padding: 10px;
   display: inline-block;
+  margin: 20px;
+  text-shadow: 5px 5px 5px #f5e9a6;
 }
 
 #testimonials-slider {
@@ -709,6 +744,7 @@ a:hover {
     font-size: 60px;
     width: 100%;
     text-align: center;
+    margin: 0 0 20px 0;
   }
 
   #testimonials-slider {

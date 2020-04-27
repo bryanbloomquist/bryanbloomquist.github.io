@@ -47,7 +47,7 @@ const portfolioPage = () => {
   const random = Math.floor(Math.random() * portfolio.length);
   portfolio.map((project, i) => {
     i === random  ?
-      buttonClass = "class = 'pagelink btn-block p-3 mb-3 wow tada delay-1000ms' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'true' aria-controls = 'project-" + i + "'"
+      buttonClass = "class = 'pagelink btn-block p-3 mb-3 wow tada delay-1500ms' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'true' aria-controls = 'project-" + i + "'"
     :
       buttonClass = "class = 'pagelink btn-block p-3 mb-3' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'false' aria-controls = 'project-" + i + "'"
     ;
