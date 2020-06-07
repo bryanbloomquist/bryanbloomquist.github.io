@@ -1,11 +1,16 @@
 $(document).ready(function() {
+
   $("#navbarCollapse").on("click", toggel);
+
+  getYear();
 
   welcomePage();
 
   portfolioPage();
 
   techSkillsPage();
+
+  testimonialsPage();
 
 });
 
@@ -23,6 +28,8 @@ const typed = (divID, string, delay) => {
 
 const toggel = () => $("#navbar, .navbutton, .content").toggleClass("active");
 
+const getYear = () => $("#current-year").html(new Date().getFullYear());
+
 /// WELCOMEPAGE ////////////////////////////////////////////////
 
 const welcomePage = () => {
@@ -37,10 +44,16 @@ const welcomePage = () => {
 /// PORTFOLIO //////////////////////////////////////////////////
 
 const portfolioPage = () => {
+  const random = Math.floor(Math.random() * portfolio.length);
   portfolio.map((project, i) => {
+    i === random  ?
+      buttonClass = "class = 'pagelink btn-block p-3 mb-3 wow tada delay-1500ms' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'true' aria-controls = 'project-" + i + "'"
+    :
+      buttonClass = "class = 'pagelink btn-block p-3 mb-3' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'false' aria-controls = 'project-" + i + "'"
+    ;
     $("#project-buttons").append(
-      "<div class = 'col-12'>" +
-        "<button class = 'pagelink btn-block p-3 mb-3' type = 'button' data-toggle = 'collapse' data-target = '#project-" + i + "' aria-expanded = 'false' aria-controls = 'project-" + i + "'>" +
+      "<div class = 'col-6 col-md-12'>" +
+        "<button " + buttonClass + ">" +
           project.name +
         "</button>" +
       "</div>"
@@ -57,11 +70,13 @@ const portfolioPage = () => {
       "</div>"
     );
   })
+  const randomProject = "#project-" + random;
+  $(randomProject).addClass("show wow fadeInRightBig delay-2000ms");
 }
 
 /// TECH SKILLS //////////////////////////////////////////////////
 
-let techSkillsPage = () => {
+const techSkillsPage = () => {
   toolbox.map((tool,i) => {
     $(".slider-origin").append(
       '<div class="slider-item" id="section'+(i+1)+'">' +
@@ -122,7 +137,6 @@ $(document).ready(function() {
     sliderItems.each(function(e) {
       var $this = $(this);
       extraDeg = exceptIndex > itemsLength / 2 ? 360 : 0;
-
       if (e === exceptIndex) {
         $this
           .addClass("active")
@@ -131,8 +145,6 @@ $(document).ready(function() {
             "rotate(" + extraDeg + "deg)translateY(200%)scale(1.6)"
           );
         var the_id = this.id;
-
-        console.log(the_id);
         $(".text-section div").hide();
         $("." + the_id).show();
       } else {
@@ -157,7 +169,6 @@ $(document).ready(function() {
     if (notclicked == true) {
       rotationPosition(count);
       count++;
-      console.log("switched");
       if (count == 10) {
         count = 0;
       }
@@ -253,4 +264,33 @@ $(document).ready(function() {
       currentItem = sliderInner.find(".slider-item.active");
     }
   }
+});
+
+/// TESTIMONIALS //////////////////////////////////////////////////
+
+const testimonialsPage = () => {
+  testimonials.map(data => {
+    $("#testimonials-slider").append(
+      "<div class = 'slide'>" +
+        "<p>" + data.testimonial + "</p>" +
+        "<h5>" + data.name + "</h5>" +
+        "<h6>" + data.role + "</h6>" +
+        "<h6>" + data.company + "</h6>" +
+      "</div>"
+    )
+  })
+};
+
+$(document).ready(function(){
+  $('#testimonials-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 15000,
+    cssEase: "linear",
+    dots: true,
+    fade: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500
+  });
 });

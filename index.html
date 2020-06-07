@@ -4,14 +4,16 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
-    <script src="https://kit.fontawesome.com/05388d649a.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src = "https://kit.fontawesome.com/05388d649a.js" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
     <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel = "stylesheet" href = "assets/css/animate.css">
     <link rel = "shortcut icon" href = "assets/images/favicon.ico" type = "image/x-icon">
     <title>Bryan Bloomquist</title>
   </head>
@@ -27,6 +29,7 @@
         <a class = "btn btn-block mb-4 pagelink" href = "#aboutme-page" id = "aboutme">About Me</a>
         <a class = "btn btn-block mb-4 pagelink" href = "#portfolio-page" id = "portfolio">My Projects</a>
         <a class = "btn btn-block mb-4 pagelink" href = "#techskills-page" id = "techskills">My Tool Box</a>
+        <a class = "btn btn-block mb-4 pagelink" href = "#testimonials-page" id = "testimonials">Testimonials</a>
         <a class = "btn btn-block mb-4 pagelink" href = "#contactme-page" id = "contactme">Contact Me</a>
         <a class = "btn btn-block mb-4 pagelink p-1" href = "https://github.com/bryanbloomquist" title = "GitHub" target = "_blank">
           <i class="fab fa-github-square fa-2x"></i>
@@ -34,15 +37,15 @@
         <a class = "btn btn-block mb-4 pagelink p-1" href = "https://linkedin.com/in/bryan-bloomquist-b1374416b" title = "LinkedIn" target = "_blank">
           <i class = "fab fa-linkedin fa-2x"></i>
         </a>
-        <a class = "btn btn-block mb-4 pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
+        <!-- <a class = "btn btn-block mb-4 pagelink p-1" href = "mailto:bmbloomquist@gmail.com" title = "Email" target = "_top">
           <i class = "fas fa-envelope-square fa-2x"></i>
-        </a>
+        </a> -->
         <!-- <a class = "btn btn-block pagelink p-1" href = "resume.pdf" title = "Resume" target = "_blank">
           <i class = "far fa-file fa-2x"></i>
         </a> -->
-        <div class = "footer mt-5">
-          Copyright &copy; 2020
-        </div>
+        <!-- <div class = "footer mt-5">
+          Copyright &copy; <span id = "current-year"></span>
+        </div> -->
       </nav>
 
       <!--navbar control-->
@@ -68,12 +71,12 @@
       <!--about me content-->
 
       <div class = "content" id = "aboutme-page">
-        <div class = "aboutme">
-          <img src = "assets/images/bryan.jpg" alt = "my beautiful visage" class = "aboutme-pic" />
+        <div class = "aboutme wow fadeInLeftBig">
+          <img src = "assets/images/bryan.jpg" alt = "my beautiful visage" class = "aboutme-pic wow fadeInUpBig delay-1000ms" />
           <p>
             I am a front end web developer and designer with training in full stack web development.  I love making awesome-looking responsive projects; from single page websites to full stack applications.  Let's work together and make something beautiful.
           </p>
-          <h1 class = "wow fadeInRightBig">About Me</h1>
+          <h1 class = "wow fadeInRightBig delay-500ms">About Me</h1>
         </div>
       </div>
 
@@ -83,8 +86,8 @@
         <div class = "portfolio">
           <div class = "row">
             <div class = "col-md-4">
-              <h1>My Projects</h1>
-              <div class = "row justify-content-center" id = "project-buttons"></div>
+              <h1 class = "wow fadeInLeftBig">My Projects</h1>
+              <div class = "row wow fadeInUpBig delay-500ms" id = "project-buttons"></div>
             </div>
             <div class = "col-md-8">
               <div class = "accordion" id = "project-accordion"></div>
@@ -96,23 +99,32 @@
       <!--tech skills content-->
 
       <div class = "content" id = "techskills-page">
+        <h1 class = "wow fadeInDownBig delay-1000ms">My Toolbox</h1>
         <div class = "row">
-          <div class = "col-lg-6">
+          <div class = "col-lg-6 wow fadeInLeftBig">
             <div class = "slider-inside">
               <div class = "slider-inner">
                 <div class = "slider-origin"></div>
               </div>
             </div>
           </div>
-          <div class = "col-lg-6">
+          <div class = "col-lg-6 wow fadeInRightBig delay-500ms">
+            <!-- <h1 class = "wow fadeInDownBig delay-1000ms">My Toolbox</h1> -->
             <div class = "text-section"></div>
           </div>
         </div>
       </div>
 
+      <!--testimonials content-->
+
+      <div class = "content" id = "testimonials-page">
+        <h1 class = "wow fadeInLeftBig">Testimonials</h1>
+        <div class = "wow fadeInRightBig delay-500ms" id = "testimonials-slider"></div>
+      </div>
+
       <!--contact me content-->
 
-      <div class = "content" id = "contactme-page">
+      <div class = "content wow fadeInRightBig" id = "contactme-page">
         <div class = "contact-me">
           <script type="text/javascript" src="https://form.jotform.com/jsform/201095989414059"></script>
         </div>
@@ -124,21 +136,23 @@
         <a href = "#">
           <img src = "assets/images/logo-color.png" alt = "Bryan Bloomquist Logo" />
         </a>
-        <p>&copy; 2020</p>
+        <p>&copy; <span id = "current-year"></span></p>
       </footer>
 
     </div> <!-- End Wrapper -->
 
-    <!--required scripts for jQuery,Bootstrap, and Typed.js-->
+    <!--required scripts for jQuery,Bootstrap, Slick Carousel, and Typed.js-->
 
     <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src = "assets/javascript/toolbox.js"></script>
     <script src = "assets/javascript/portfolio.js"></script>
+    <script src = "assets/javascript/testimonials.js"></script>
+    <script src = "assets/javascript/toolbox.js"></script>
     <script src = "assets/javascript/script.js"></script>
     <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script>
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity = "sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin = "anonymous"></script>
+    <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
   </body>
 </html>
