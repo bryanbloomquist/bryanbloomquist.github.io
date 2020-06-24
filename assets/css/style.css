@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 /* sass assets/css/style.scss assets/css/style.css */
 /* or to automate it while working */
@@ -146,7 +147,7 @@ a:hover {
 /********** Welcome Page **********/
 .welcome {
   position: relative;
-  top: 25vh;
+  top: 10vh;
   width: 80%;
   margin: 0px auto;
 }
@@ -166,7 +167,7 @@ a:hover {
 /********** AboutMe **********/
 .aboutme {
   position: relative;
-  top: 20vh;
+  top: 15vh;
   background-color: #222222;
   width: 66%;
   margin: 0px auto;
@@ -232,7 +233,7 @@ a:hover {
 
 .portfolio {
   position: relative;
-  top: 10vh;
+  top: 5vh;
 }
 
 .portfolio h1 {
@@ -329,7 +330,7 @@ a:hover {
 }
 /********** TOOLBOX **********/
 #techskills-page {
-  padding: 100px 50px 0px;
+  padding: 20px 50px 0px;
 }
 
 #techskills-page .col-lg-6 {
@@ -685,7 +686,7 @@ a:hover {
 }
 /********** Testimonials **********/
 #testimonials-page {
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 #testimonials-page h1 {
@@ -737,6 +738,22 @@ a:hover {
 #testimonials-slider .slick-dots li button {
   background: #bb4466;
   border-radius: 100%;
+}
+
+#testimonials-slider .slick-prev:before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "";
+  color: var(--fa-primary-color, #ff8800);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+#testimonials-slider .slick-next:before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "";
+  color: var(--fa-primary-color, #55aacc);
+  opacity: var(--fa-primary-opacity, 1);
 }
 
 @media screen and (max-width: 768px) {

@@ -31,8 +31,15 @@ const portfolio = [
     name: "Dungeons & Dragons Hangman",
     src: "assets/images/hangman.png",
     alt: "Dungeons & Dragons Hangman screenshot",
-    skills: "HTML | CSS | JavaScript | ES6",
+    skills: "HTML | CSS | JavaScript",
     deployed: "https://bryanbloomquist.github.io/word-guess-game",
     github: "https://github.com/bryanbloomquist/word-guess-game"
+  },{
+    name: "Clue Companion App",
+    src: "assets/images/clue.png",
+    alt: "Clue Companion App screenshot",
+    skills: "HTML | CSS | JavaScript | jQuery",
+    deployed: "https://clue-app.netlify.app",
+    github: "https://github.com/bryanbloomquist/clue"
   }
 ];

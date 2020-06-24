@@ -167,7 +167,7 @@ a {
 
 .welcome {
   position: relative;
-  top: 25vh;
+  top: 10vh;
   width: 80%;
   margin: 0px auto;
 }
@@ -189,7 +189,7 @@ a {
 
 .aboutme {
   position: relative;
-  top: 20vh;
+  top: 15vh;
   background-color: $black;
   width: 66%;
   margin: 0px auto;
@@ -255,7 +255,7 @@ a {
 
 .portfolio {
   position: relative;
-  top: 10vh;
+  top: 5vh;
 }
 
 .portfolio h1 {
@@ -348,7 +348,7 @@ a {
 /********** TOOLBOX **********/
 
 #techskills-page {
-  padding: 100px 50px 0px;
+  padding: 20px 50px 0px;
 }
 
 #techskills-page .col-lg-6 {
@@ -708,7 +708,7 @@ a {
 /********** Testimonials **********/
 
 #testimonials-page {
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 #testimonials-page h1 {
@@ -760,6 +760,22 @@ a {
 #testimonials-slider .slick-dots li button{
   background: $red;
   border-radius: 100%;
+}
+
+#testimonials-slider .slick-prev:before {
+  font-family: "FontAwesome"; 
+  font-weight: 900; 
+  content: "\f0a8";
+  color: var(--fa-primary-color, $orange);
+  opacity: var(--fa-primary-opacity,1);
+}
+
+#testimonials-slider .slick-next:before {
+  font-family: "FontAwesome"; 
+  font-weight: 900; 
+  content: "\f0a9";
+  color: var(--fa-primary-color, $blue);
+  opacity: var(--fa-primary-opacity,1);
 }
 
 @media screen and (max-width: 768px) {

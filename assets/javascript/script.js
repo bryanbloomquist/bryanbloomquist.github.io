@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $("#navbarCollapse").on("click", toggel);
+  $("#navbarCollapse, #aboutme, #portfolio, #techskills, #testimonials, #contactme").on("click", toggel);
 
   getYear();
 
@@ -13,6 +13,7 @@ $(document).ready(function() {
   testimonialsPage();
 
 });
+
 
 // Typed.js by Matt Boldt https://github.com/mattboldt/typed.js/
 
