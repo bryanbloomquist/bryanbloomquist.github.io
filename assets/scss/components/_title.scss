@@ -1,0 +1,34 @@
+.title {
+    width: 100%;
+    text-align: right;
+    font-size: 7rem;
+    font-family: "fira code", monospace;
+    @include respond(tablet) {
+        font-size: 7rem;
+        margin-bottom: 0.5rem;
+    }
+    &--red {
+        color: $color-red;
+        text-shadow: 0 0.5rem 1rem $shadow-red;
+    }
+    &--orange {
+        color: $color-orange;
+        text-shadow: 0 0.5rem 1rem $shadow-orange;
+    }
+    &--gold {
+        color: $color-gold;
+        text-shadow: 0 0.5rem 1rem $shadow-gold;
+    }
+    &--green {
+        color: $color-green;
+        text-shadow: 0 0.5rem 1rem $shadow-green;
+    }
+    &--blue {
+        color: $color-blue;
+        text-shadow: 0 0.5rem 1rem $shadow-blue;
+    }
+    &--purple {
+        color: $color-purple;
+        text-shadow: 0 0.5rem 1rem $shadow-purple;
+    }
+}

@@ -1,20 +1,35 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
 }
 
 html {
-	font-size: 62.5%; // 1rem = 10px ; 10 ÷ 16 = 0.625
+    font-size: 62.5%; // 1rem = 10px ; 10 ÷ 16 = 0.625
+    box-sizing: border-box;
 }
 
 body {
-	box-sizing: border-box;
-	font-family: "IM Fell DW Pica", serif;
-	font-size: 2rem;
-	color: $color-black;
-    background-color: $color-purple;
+    font-size: 2rem;
+    background-image: url("../images/coding-wp-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 15%, 50%;
+    overflow-x: hidden;
+    @include respond(tablet) {
+        background-attachment: unset;
+        background-size: contain;
+    }
 }
 
+.wrapper {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+button:focus {
+    outline: none;
+}

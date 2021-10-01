@@ -1,6 +1,7 @@
 {
     "name": "portfolio",
     "homepage": "https://bryanbloomquist.com",
+    "author": "Bryan Bloomquist",
     "version": "3.1.0",
     "scripts": {
         "sass": "sass --watch assets/scss/main.scss assets/css/main.css"

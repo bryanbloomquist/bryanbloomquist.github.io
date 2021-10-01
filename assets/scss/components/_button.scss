@@ -1,0 +1,70 @@
+.btn {
+    background-color: $color-black;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 1.5rem;
+    display: block;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    transition: all 0.5s;
+    &:hover {
+        text-decoration: none;
+        letter-spacing: 1.5px;
+    }
+    &--big {
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+    &--red {
+        color: $color-green;
+        border-color: $color-red;
+        &:hover {
+            color: $color-red;
+            border-color: $color-green;
+        }
+    }
+    &--orange {
+        color: $color-blue;
+        border-color: $color-orange;
+        &:hover {
+            color: $color-orange;
+            border-color: $color-blue;
+        }
+    }
+    &--gold {
+        color: $color-purple;
+        border-color: $color-gold;
+        &:hover {
+            color: $color-gold;
+            border-color: $color-purple;
+        }
+        &[aria-expanded="true"] {
+            background-color: $shadow-purple;
+            color: $color-gold;
+        }
+    }
+    &--green {
+        color: $color-red;
+        border-color: $color-green;
+        &:hover {
+            color: $color-green;
+            border-color: $color-red;
+        }
+    }
+    &--blue {
+        color: $color-orange;
+        border-color: $color-blue;
+        &:hover {
+            color: $color-blue;
+            border-color: $color-orange;
+        }
+    }
+    &--purple {
+        color: $color-gold;
+        border-color: $color-purple;
+        &:hover {
+            color: $color-purple;
+            border-color: $color-gold;
+        }
+    }
+}

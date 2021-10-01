@@ -1,132 +1,3 @@
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes flipInY {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-  }
-  to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-}
-@keyframes flipInY {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-  }
-  to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-}
-.flipInY {
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
-  -webkit-animation-name: flipInY;
-  animation-name: flipInY;
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.delay-0s {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-
-.animated.delay-1s {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.animated.delay-2s {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.animated.delay-3s {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-}
-
-@media (print), (prefers-reduced-motion) {
-  .animated {
-    -webkit-animation: unset !important;
-    animation: unset !important;
-    -webkit-transition: none !important;
-    transition: none !important;
-  }
-}
-.animated.slow {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
-.animated.slower {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-}
-
 @font-face {
   font-family: "fira code";
   src: url(../fonts/FiraCode-Regular.ttf);
@@ -158,18 +29,169 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
-  font-family: "IM Fell DW Pica", serif;
   font-size: 2rem;
-  color: #202020;
-  background-color: #9977bb;
+  background-image: url("../images/coding-wp-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 15%, 50%;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 48em) {
+  body {
+    background-attachment: unset;
+    background-size: contain;
+  }
+}
+
+.wrapper {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn {
+  background-color: #202020;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.5rem;
+  display: block;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  transition: all 0.5s;
+}
+.btn:hover {
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+.btn--big {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.btn--red {
+  color: #ccff88;
+  border-color: #bb4466;
+}
+.btn--red:hover {
+  color: #bb4466;
+  border-color: #ccff88;
+}
+.btn--orange {
+  color: #55aacc;
+  border-color: #ff8800;
+}
+.btn--orange:hover {
+  color: #ff8800;
+  border-color: #55aacc;
+}
+.btn--gold {
+  color: #9977bb;
+  border-color: #f5e9a6;
+}
+.btn--gold:hover {
+  color: #f5e9a6;
+  border-color: #9977bb;
+}
+.btn--gold[aria-expanded=true] {
+  background-color: rgba(153, 119, 187, 0.5);
+  color: #f5e9a6;
+}
+.btn--green {
+  color: #bb4466;
+  border-color: #ccff88;
+}
+.btn--green:hover {
+  color: #ccff88;
+  border-color: #bb4466;
+}
+.btn--blue {
+  color: #ff8800;
+  border-color: #55aacc;
+}
+.btn--blue:hover {
+  color: #55aacc;
+  border-color: #ff8800;
+}
+.btn--purple {
+  color: #f5e9a6;
+  border-color: #9977bb;
+}
+.btn--purple:hover {
+  color: #9977bb;
+  border-color: #f5e9a6;
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 20rem;
+  width: 100%;
+  left: 0rem;
+  padding: 2vh 0 0 0;
+  transition: all 0.5s;
+}
+.section.active {
+  left: 20rem;
+}
+@media only screen and (min-width: 48em) {
+  .section {
+    margin-bottom: 50rem;
+    width: calc(100% - 20rem);
+    left: 20rem;
+    padding: 0;
+  }
+  .section .active {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.title {
+  width: 100%;
+  text-align: right;
+  font-size: 7rem;
+  font-family: "fira code", monospace;
+}
+@media only screen and (min-width: 48em) {
+  .title {
+    font-size: 7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.title--red {
+  color: #bb4466;
+  text-shadow: 0 0.5rem 1rem rgba(187, 68, 102, 0.5);
+}
+.title--orange {
+  color: #ff8800;
+  text-shadow: 0 0.5rem 1rem rgba(255, 136, 0, 0.5);
+}
+.title--gold {
+  color: #f5e9a6;
+  text-shadow: 0 0.5rem 1rem rgba(245, 233, 166, 0.5);
+}
+.title--green {
+  color: #ccff88;
+  text-shadow: 0 0.5rem 1rem rgba(204, 255, 136, 0.5);
+}
+.title--blue {
+  color: #55aacc;
+  text-shadow: 0 0.5rem 1rem rgba(85, 170, 204, 0.5);
+}
+.title--purple {
+  color: #9977bb;
+  text-shadow: 0 0.5rem 1rem rgba(153, 119, 187, 0.5);
 }
 
 /*# sourceMappingURL=main.css.map */
