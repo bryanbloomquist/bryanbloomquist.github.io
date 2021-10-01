@@ -1,0 +1,11 @@
+{
+    "name": "portfolio",
+    "homepage": "https://bryanbloomquist.com",
+    "version": "3.1.0",
+    "scripts": {
+        "sass": "sass --watch assets/scss/main.scss assets/css/main.css"
+    },
+    "dependencies": {
+        "sass": "^1.42.1"
+    }
+}
