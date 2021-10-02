@@ -1,0 +1,63 @@
+.container {
+    padding: 2rem;
+    border-style: solid;
+    border-width: .5rem 0 .5rem 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    &__header {
+        width: 100%;
+        font-size: 4.2rem;
+        text-align: right;
+        font-family: $font-fira;
+        @include respond(tablet) {
+            font-size: 7rem;
+            padding: 5rem;
+        }
+    }
+    &--red {
+        border-color: $color-red;
+        color: $color-red;
+        .container__header {
+            text-shadow: 0 0.5rem 1rem $shadow-red;
+        }
+    }
+    &--orange {
+        border-color: $color-orange;
+        color: $color-orange;
+        .container__header {
+            text-shadow: 0 0.5rem 1rem $shadow-orange;
+        }
+    }
+    &--gold {
+        border-color: $color-gold;
+        color: $color-gold;
+        .container__header {
+            text-shadow: 0 0.5rem 1rem $shadow-gold;
+        }
+    }
+    &--green {
+        border-color: $color-green;
+        color: $color-green;
+        .container__header {
+            text-shadow: 0 0.5rem 1rem $shadow-green;
+        }
+    }
+    &--blue {
+        border-color: $color-blue;
+        color: $color-blue;
+        .container__header {
+            text-shadow: 0 0.5rem 1rem $shadow-blue;
+        }
+    }
+    &--purple {
+        border-color: $color-purple;
+        color: $color-purple;
+        .container__header {
+            text-shadow: 0 0.5rem 1rem $shadow-purple;
+        }
+    }
+}

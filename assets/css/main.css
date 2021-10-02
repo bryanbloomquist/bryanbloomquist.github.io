@@ -1,3 +1,4 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap"); */
 @font-face {
   font-family: "fira code";
   src: url(../fonts/FiraCode-Regular.ttf);
@@ -22,7 +23,40 @@
   font-weight: 700;
   src: url(../fonts/FiraCode-Bold.ttf);
 }
-/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap"); */
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?c56178");
+  src: url("../fonts/icomoon.eot?c56178#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?c56178") format("truetype"), url("../fonts/icomoon.woff?c56178") format("woff"), url("../fonts/icomoon.svg?c56178#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=i-], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-chevron-double-left:before {
+  content: "\e900";
+}
+
+.i-github-square:before {
+  content: "\e901";
+}
+
+.i-linkedin:before {
+  content: "\e902";
+}
+
 *,
 *::after,
 *::before {
@@ -39,16 +73,16 @@ html {
 
 body {
   font-size: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.2;
   background-image: url("../images/coding-wp-2.jpg");
-  background-size: cover;
-  background-attachment: fixed;
   background-position: 15%, 50%;
   overflow-x: hidden;
 }
 @media only screen and (min-width: 48em) {
   body {
-    background-attachment: unset;
-    background-size: contain;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 
@@ -61,15 +95,60 @@ button:focus {
   outline: none;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
+.about-me__body {
+  max-width: 100rem;
+  margin: 4rem auto 0;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 48em) {
+  .about-me__body {
+    flex-direction: row-reverse;
+    margin: 5rem auto 0;
+  }
+}
+.about-me__image {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 0.5rem solid;
+  border-radius: 2.5rem;
+  align-self: center;
+}
+@media only screen and (min-width: 48em) {
+  .about-me__image {
+    width: 25rem;
+  }
+}
+.about-me__text {
+  font-size: 2rem;
+  font-family: "Fira Code", sans-serif;
+  color: #ff8800;
+  margin: 0 0 2rem 0;
+}
+@media only screen and (min-width: 48em) {
+  .about-me__text {
+    font-size: 2.8rem;
+    margin: 0 0 0 2rem;
+  }
+}
+
 .btn {
   background-color: #202020;
   border-width: 2px;
   border-style: solid;
   font-size: 1.5rem;
   display: block;
-  padding: 0.5rem 0;
+  line-height: 1;
+  padding: 1rem 0;
   margin-bottom: 1rem;
   transition: all 0.5s;
+  width: 100%;
 }
 .btn:hover {
   text-decoration: none;
@@ -78,6 +157,10 @@ button:focus {
 .btn--big {
   padding: 1rem 0;
   margin-bottom: 2rem;
+}
+.btn--small {
+  width: calc(50% - 0.5rem);
+  display: inline-block;
 }
 .btn--red {
   color: #ccff88;
@@ -132,28 +215,218 @@ button:focus {
   border-color: #f5e9a6;
 }
 
-.section {
-  position: relative;
-  min-height: 100vh;
-  margin-bottom: 20rem;
+.container {
+  padding: 2rem;
+  border-style: solid;
+  border-width: 0.5rem 0 0.5rem 0;
+  position: absolute;
+  height: 100%;
   width: 100%;
-  left: 0rem;
-  padding: 2vh 0 0 0;
-  transition: all 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
-.section.active {
+.container__header {
+  width: 100%;
+  font-size: 4.2rem;
+  text-align: right;
+  font-family: "Fira Code", sans-serif;
+}
+@media only screen and (min-width: 48em) {
+  .container__header {
+    font-size: 7rem;
+    padding: 5rem;
+  }
+}
+.container--red {
+  border-color: #bb4466;
+  color: #bb4466;
+}
+.container--red .container__header {
+  text-shadow: 0 0.5rem 1rem rgba(187, 68, 102, 0.5);
+}
+.container--orange {
+  border-color: #ff8800;
+  color: #ff8800;
+}
+.container--orange .container__header {
+  text-shadow: 0 0.5rem 1rem rgba(255, 136, 0, 0.5);
+}
+.container--gold {
+  border-color: #f5e9a6;
+  color: #f5e9a6;
+}
+.container--gold .container__header {
+  text-shadow: 0 0.5rem 1rem rgba(245, 233, 166, 0.5);
+}
+.container--green {
+  border-color: #ccff88;
+  color: #ccff88;
+}
+.container--green .container__header {
+  text-shadow: 0 0.5rem 1rem rgba(204, 255, 136, 0.5);
+}
+.container--blue {
+  border-color: #55aacc;
+  color: #55aacc;
+}
+.container--blue .container__header {
+  text-shadow: 0 0.5rem 1rem rgba(85, 170, 204, 0.5);
+}
+.container--purple {
+  border-color: #9977bb;
+  color: #9977bb;
+}
+.container--purple .container__header {
+  text-shadow: 0 0.5rem 1rem rgba(153, 119, 187, 0.5);
+}
+
+.navbar {
+  width: 20rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: -20rem;
+  height: 100vh;
+  z-index: 1;
+  background-color: #202020;
+  box-shadow: 1px 0 0 #55aacc;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 48em) {
+  .navbar {
+    margin-left: 0rem;
+  }
+}
+.navbar.active {
+  margin-left: 0rem;
+  box-shadow: 0 0 1rem rgba(85, 170, 204, 0.5);
+}
+@media only screen and (min-width: 48em) {
+  .navbar.active {
+    margin-left: -20rem;
+  }
+}
+
+.main-menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-menu__title {
+  font-size: 2.8rem;
+  font-family: "fira code", monospace;
+  margin-bottom: 3rem;
+  color: #55aacc;
+  text-shadow: 0 0.5rem 1rem rgba(85, 170, 204, 0.5);
+}
+.main-menu__icon {
+  font-size: 4rem;
+}
+
+.navbar-toggle {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background-color: #202020;
+  color: #d0d0d0;
+  border-bottom: 1px solid #55aacc;
+  border-right: 1px solid #55aacc;
+  border-bottom-right-radius: 25%;
+  position: fixed;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 48em) {
+  .navbar-toggle {
+    left: 20rem;
+  }
+}
+.navbar-toggle i {
+  transition: all 0.5s;
+  display: block;
+  color: #55aacc;
+  transform: rotate(180deg);
+}
+@media only screen and (min-width: 48em) {
+  .navbar-toggle i {
+    transform: rotate(0);
+  }
+}
+.navbar-toggle.active {
   left: 20rem;
 }
 @media only screen and (min-width: 48em) {
-  .section {
-    margin-bottom: 50rem;
+  .navbar-toggle.active {
+    left: 0;
+  }
+}
+.navbar-toggle.active i {
+  transform: rotate(0deg);
+  color: #ff8800;
+}
+@media only screen and (min-width: 48em) {
+  .navbar-toggle.active i {
+    transform: rotate(180deg);
+  }
+}
+.navbar-toggle:focus {
+  outline: none;
+}
+
+.footer {
+  color: #55aacc;
+  font-size: 1.6rem;
+  padding: 2rem 1.5rem;
+  margin: 0 -1.5rem;
+  border-top: 1px solid #55aacc;
+}
+
+.main-content {
+  transition: all 0.5s;
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+@media only screen and (min-width: 48em) {
+  .main-content {
     width: calc(100% - 20rem);
     left: 20rem;
-    padding: 0;
   }
-  .section .active {
+}
+.main-content.active {
+  left: 20rem;
+}
+@media only screen and (min-width: 48em) {
+  .main-content.active {
     width: 100%;
     left: 0;
+  }
+}
+
+.section {
+  position: relative;
+  background-color: rgba(32, 32, 32, 0.75);
+  min-height: 100vh;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  padding: 0;
+}
+@media only screen and (min-width: 48em) {
+  .section {
+    margin-bottom: 25rem;
+  }
+  .section:last-child {
+    margin-bottom: 0;
   }
 }
 

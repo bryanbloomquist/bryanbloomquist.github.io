@@ -10,11 +10,12 @@
 		</script>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /> -->
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 		<title>Bryan Bloomquist</title>
@@ -22,53 +23,53 @@
 	<body>
 		<div class="wrapper">
 
-<!-- Sidebar -->
+            <!-- Sidebar -->
 
 			<div class="navbar" id="navbar">
-				<nav class="mainMenu">
-					<h3 class="mainMenu__title" id="bio-link">Bryan Bloomquist</a></h3>
-					<a class="mainMenu__link" href="#aboutme-section" id="aboutme">About Me</a>
-					<a class="mainMenu__link" href="#portfolio-section" id="portfolio">My Projects</a>
-					<a class="mainMenu__link" href="#techskills-section" id="techskills">My Tool Box</a>
-					<a class="mainMenu__link" href="#testimonials-section" id="testimonials">Testimonials</a>
-					<a class="mainMenu__link" href="#contact-section" id="contactme">Contact Me</a>
-					<a class="mainMenu__link--small" href="https://github.com/bryanbloomquist" title="GitHub" target="_blank" rel="noreferrer noopener"><i class="fab fa-github-square fa-2x"></i></a>
-					<a class="mainMenu__link--small" href="https://linkedin.com/in/bryan-bloomquist-b1374416b" title="LinkedIn" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin fa-2x"></i></a>	
+				<nav class="main-menu">
+					<h3 class="main-menu__title" id="bio-link">Bryan Bloomquist</a></h3>
+					<a class="btn btn--blue" href="#aboutme-section" id="aboutme">About Me</a>
+					<a class="btn btn--blue" href="#portfolio-section" id="portfolio">My Projects</a>
+					<a class="btn btn--blue" href="#techskills-section" id="techskills">My Tool Box</a>
+					<a class="btn btn--blue" href="#testimonials-section" id="testimonials">Testimonials</a>
+					<a class="btn btn--blue" href="#contact-section" id="contactme">Contact Me</a>
+					<a class="btn btn--blue btn--small" href="https://github.com/bryanbloomquist" title="GitHub" target="_blank" rel="noreferrer noopener"><i class="main-menu__icon i-github-square"></i></a>
+					<a class="btn btn--blue btn--small" href="https://linkedin.com/in/bryan-bloomquist-b1374416b" title="LinkedIn" target="_blank" rel="noreferrer noopener"><i class="main-menu__icon i-linkedin"></i></a>	
 				</nav>
 				<footer>
 					<p class="footer">Copyright &copy; <span id="current-year"></span> - Bryan Bloomquist</p>
 				</footer>
 			</div>
 
-<!-- Sidebar Toggle -->
+            <!-- Sidebar Toggle -->
 
-			<button type="button" id="navbarCollapse" class="navButton"> 
-				<i class="fas fa-angle-double-left"></i>
+			<button type="button" id="navbarCollapse" class="navbar-toggle"> 
+				<i class="i-chevron-double-left"></i>
 			</button>
 
-<!-- Page Content -->
+            <!-- Page Content -->
 
-			<main>
+			<main class="main-content">
 
-<!-- About Me -->
+                <!-- About Me -->
 
-				<section class="content" id="aboutme-section"> 
-					<div class="about-me">
-						<h2 class="about-me__header">About Me</h2>
+				<section class="section" id="aboutme-section"> 
+					<div class="container container--blue about-me">
+						<h2 class="container__header">About Me</h2>
 						<div class="about-me__body">
-							<img class="about-me__image" src="assets/images/bryan.jpg" alt="Bryan Bloomquist Profile Image" />
 							<p class="about-me__text">
-								I'm Bryan, a web developer and designer from the Twin Cities. I love making awesome-looking responsive projects; from single page websites to full stack applications.  Let's work together and make something beautiful.
+								I'm Bryan, a web developer and designer from the Twin Cities. I love making awesome-looking responsive projects, from single page websites to full stack applications.  Let's work together and make something beautiful.
 							</p>	
+							<img class="about-me__image" src="assets/images/bryan.jpg" alt="Bryan Bloomquist Profile Image" />
 						</div>
 					</div>
 				</section>
 
-<!-- Project Portfolio-->
+                <!-- Project Portfolio-->
 
-				<section class="content" id="portfolio-section"> 
-					<div class="portfolio">
-						<h2 class="portfolio__header">My Projects</h2>
+				<section class="section" id="portfolio-section"> 
+					<div class="container container--purple portfolio">
+						<h2 class="container__header">My Projects</h2>
 						<div class="portfolio__projects">
 							<div class="portfolio__buttons" id="project-buttons"></div>
 						</div>
@@ -76,29 +77,29 @@
 					</div>
 				</section>
 
-<!-- Technical Skills -->
+                <!-- Technical Skills -->
 
-				<section class="content" id="techskills-section">
-					<div class="toolbox">
-						<h2 class="toolbox__header">My Toolbox</h2>
+				<section class="section" id="techskills-section">
+					<div class="container container--green toolbox">
+						<h2 class="container__header">My Toolbox</h2>
 						<div class="toolbox__container"></div>
 					</div>
 				</section>
 
-<!-- Testimonials -->
+                <!-- Testimonials -->
 
-				<section class="content" id="testimonials-section"> 
-					<div class="testimonials">
-						<h2 class="testimonials__header">Testimonials</h2>
+				<section class="section" id="testimonials-section"> 
+					<div class="container container--orange testimonials">
+						<h2 class="container__header">Testimonials</h2>
 						<div class="testimonials__slider" id="testimonials-slider"></div>
 					</div>
 				</section>
 
-<!-- Contact Me -->
+                <!-- Contact Me -->
 
-				<section class="content" id="contact-section">
-					<div class="contact-me">
-						<h2 class="contact-me__header">Contact Me</h2>
+				<section class="section" id="contact-section">
+					<div class="container container--gold contact-me">
+						<h2 class="container__header">Contact Me</h2>
 						<script type="text/javascript" src="https://form.jotform.com/jsform/201095989414059"></script>
 					</div>
 				</section>
@@ -107,7 +108,7 @@
 
 		</div> <!-- End Wrapper -->
 
-<!-- required scripts for jQuery,Bootstrap, Slick Carousel, and Typed.js -->
+        <!-- required scripts for jQuery,Bootstrap, Slick Carousel, and Typed.js -->
 
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
