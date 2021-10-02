@@ -3,8 +3,8 @@
     border-width: 2px;
     border-style: solid;
     font-size: 1.5rem;
-    display: block;
     line-height: 1;
+    text-align: center;
     padding: 1rem 0;
     margin-bottom: 1rem;
     transition: all 0.5s;
@@ -15,7 +15,11 @@
     }
     &--big {
         padding: 1rem 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        @include respond(tablet) {
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+        }
     }
     &--small {
         width: calc(50% - .5rem);

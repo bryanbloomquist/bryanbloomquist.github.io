@@ -1,86 +1,85 @@
 $(document).ready(function () {
+
     $("#navbarCollapse").on("click", toggel);
 
     getYear();
 
-    portfolioPage();
+    projectsPage();
 
     techSkillsPage();
 
     testimonialsPage();
+
 });
 
 const toggel = () => $("#navbar, .navbar-toggle, .main-content").toggleClass("active");
 
 const getYear = () => $("#current-year").html(new Date().getFullYear());
 
-//// PORTFOLIO //////////////////////////////////////////////////
+const smallScreen = $(window).width() < 768 ? true : false;
 
-const portfolioPage = () => {
-    const random = Math.floor(Math.random() * portfolio.length);
+//// PROJECTS //////////////////////////////////////////////////
+
+const projectsPage = () => {
+
+    const random = smallScreen ? null : Math.floor(Math.random() * portfolio.length);
+
     portfolio.map((project, i) => {
         $("#project-buttons").append(`
-                <button 
-                    class='${
-            i === random
-                ? "portfolio__link wow tada delay-500ms"
-                : "portfolio__link"
-            }' 
-                    type='button' 
-                    data-toggle='collapse' 
-                    data-target='#project-${i}' 
-                    aria-controls='project-${i}' 
-                    aria-expanded=${i === random ? true : false}
-                >${project.name}</button>
-            `);
+            <button 
+                class='${i === random ? "btn btn--big btn--gold wow tada delay-500ms" : "btn btn--big btn--gold"}' 
+                type='button' 
+                data-toggle='collapse' 
+                data-target='#project-${i}' 
+                aria-controls='project-${i}' 
+                aria-expanded=${i === random ? true : false}
+            >${project.name}</button>
+        `);
+
         $("#project-accordion").append(`
-                <div class='project collapse' id='project-${i}' data-parent='#project-accordion'>
-                    <h3 class='project__header'>${project.name}</h3>
-                    <img class='project__image' src='${project.src}' alt='${project.alt}' />
-                    <p class='project__skills'>${project.skills}</p>
-                    <div class="project__link-container">
-                        <a class='project__link' href='${
-                project.deployed
-            }' target='_blank' rel='noopener noreferrer'>Deployed Site</a>
-                        ${
-                project.github !== undefined
-                ? `<a class='project__link' href='${project.github}' target='_blank' rel='noopener noreferrer'>Github Repo</a>`
-                : null
-            }
-                    </div>
+            <div class='project collapse' id='project-${i}' data-parent='#project-accordion'>
+                <h3 class='project__header'>${project.name}</h3>
+                <img class='project__image' src='${project.src}' alt='${project.alt}' />
+                <p class='project__skills'>${project.skills}</p>
+                <div class="project__links">
+                    <a class='btn btn--gold btn--small' href='${project.deployed}' target='_blank' rel='noopener noreferrer'>Deployed Site</a>
+                    ${project.github !== undefined ? `<a class='btn btn--gold btn--small' href='${project.github}' target='_blank' rel='noopener noreferrer'>Github Repo</a>`: null }
                 </div>
-            `);
+            </div>
+        `);
     });
+
     const randomProject = "#project-" + random;
-    $(randomProject).addClass("show wow fadeInRightBig delay-1000ms");
+
+    smallScreen ? null : $(randomProject).addClass("show wow fadeInRightBig delay-1000ms");
+
+    $('[data-toggle="collapse"]').on('click',function(e){
+        if ( $(this).parents('.accordion').find('.collapse.show') ){
+            var idx = $(this).index('[data-toggle="collapse"]');
+            if (idx == $('.collapse.show').index('.collapse')) {
+                e.stopPropagation();
+            }
+        }
+    });
+
 };
 
 /// TECH SKILLS //////////////////////////////////////////////////
 
 const techSkillsPage = () => {
     toolbox.map((tool, i) => {
-        $(".toolbox__container").append(
-        '<div class="card">' +
-            '<div class="card__side card__side--front">' +
-            '<img src="' +
-            tool.src +
-            '" alt="' +
-            tool.name +
-            ' logo">' +
-            "</div>" +
-            '<div class="card__side card__side--back">' +
-            "<h2>" +
-            tool.name +
-            "</h2>" +
-            "<p>" +
-            tool.description +
-            "</p>" +
-            "<h4>Skill Level: " +
-            tool.level +
-            " / 5</h4>" +
-            "</div>" +
-            "</div>"
-        );
+        $(".toolbox__container").append(`
+            <div class="tool">
+                <div class="tool__side tool__side--front">
+                    <img class="tool__image" src="${tool.src}" alt="${tool.name} logo" />
+                </div>
+                <div class="tool__side tool__side--back">
+                    <h2 class="tool__title">${tool.name}</h2>
+                    <p class="tool__text">${tool.description}</p>
+                    <h4 class="tool__skill">Skill Level: ${tool.level} / 5</h4>
+                </div>
+            </div>
+        `);
     });
 };
 

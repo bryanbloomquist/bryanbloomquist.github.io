@@ -143,8 +143,8 @@ a, a:hover {
   border-width: 2px;
   border-style: solid;
   font-size: 1.5rem;
-  display: block;
   line-height: 1;
+  text-align: center;
   padding: 1rem 0;
   margin-bottom: 1rem;
   transition: all 0.5s;
@@ -156,7 +156,13 @@ a, a:hover {
 }
 .btn--big {
   padding: 1rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 48em) {
+  .btn--big {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
 }
 .btn--small {
   width: calc(50% - 0.5rem);
@@ -391,6 +397,94 @@ a, a:hover {
   border-top: 1px solid #55aacc;
 }
 
+.projects__body {
+  max-width: 100rem;
+  margin: 5rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects__links {
+  width: 100%;
+}
+@media only screen and (min-width: 48em) {
+  .projects__links {
+    width: 33%;
+  }
+}
+.projects__links .btn[aria-expanded=true] {
+  background-color: #9977bb;
+}
+.projects__display {
+  width: 100%;
+}
+@media only screen and (min-width: 48em) {
+  .projects__display {
+    width: 67%;
+  }
+}
+
+.project {
+  background-color: #202020;
+  width: 100%;
+}
+@media only screen and (min-width: 48em) {
+  .project {
+    width: calc(100% - 2rem);
+    margin-left: 2rem;
+  }
+}
+.project__header {
+  text-align: center;
+  color: #f5e9a6;
+  text-shadow: 0 0.5rem 1rem rgba(245, 233, 166, 0.5);
+  background-color: rgba(153, 119, 187, 0.5);
+  font-size: 2rem;
+  font-family: serif;
+  padding: 1rem 0;
+  border: 2px solid #9977bb;
+}
+@media only screen and (min-width: 48em) {
+  .project__header {
+    font-size: 4rem;
+  }
+}
+.project__image {
+  border: 2px solid #9977bb;
+  border-bottom-width: 0;
+  border-top-width: 0;
+  display: block;
+  width: 100%;
+}
+.project__skills {
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid #9977bb;
+  background-color: rgba(153, 119, 187, 0.5);
+  color: #f5e9a6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 48em) {
+  .project__skills {
+    font-size: 1.2rem;
+  }
+}
+.project__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
 .main-content {
   transition: all 0.5s;
   position: relative;
@@ -465,6 +559,52 @@ a, a:hover {
 .title--purple {
   color: #9977bb;
   text-shadow: 0 0.5rem 1rem rgba(153, 119, 187, 0.5);
+}
+
+.toolbox__container {
+  max-width: 100rem;
+  margin: 5rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tool {
+  position: relative;
+  margin: 0 1rem 2rem;
+  width: 25rem;
+  height: 25rem;
+  -moz-perspective: 200rem;
+  perspective: 200rem;
+  background-color: #202020;
+}
+.tool__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccff88;
+  transition: all 0.8s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.tool__side--front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  border-color: #bb4466;
+}
+.tool__side--back {
+  display: flex;
+  flex-direction: column;
+  transform: rotateY(-180deg);
+}
+.tool:hover .tool__side--front {
+  transform: rotateY(180deg);
+}
+.tool:hover .tool__side--back {
+  transform: rotateY(0deg);
 }
 
 /*# sourceMappingURL=main.css.map */

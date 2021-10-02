@@ -315,7 +315,7 @@ button:focus {
 
 /* ***** ***** ***** ***** Portfolio ***** ***** ***** ***** */
 
-.portfolio {
+/* .portfolio {
     padding: 2rem 5rem;
     min-height: 100vh;
     background-color: var(--color-black);
@@ -346,9 +346,9 @@ button:focus {
 .portfolio__buttons {
     display: flex;
     flex-direction: column;
-}
+} */
 
-.portfolio__link,
+/* .portfolio__link,
 .project__link {
     background-color: var(--color-black);
     color: var(--color-purple);
@@ -365,18 +365,18 @@ button:focus {
     border-color: var(--color-purple);
     text-decoration: none;
     letter-spacing: 1.5px;
-}
+} */
 
-.portfolio__link[aria-expanded="true"] {
+/* .portfolio__link[aria-expanded="true"] {
     background-color: var(--shadow-purple);
     color: var(--color-gold);
-}
+} */
 
-.portfolio .accordion {
+/* .portfolio .accordion {
     width: 75%;
-}
+} */
 
-.project {
+/* .project {
     padding: 0;
     align-content: center;
 }
@@ -393,9 +393,9 @@ button:focus {
     width: 90%;
     margin: 0 auto;
     border: 2px solid var(--color-purple);
-}
+} */
 
-.project__image {
+/* .project__image {
     width: 90%;
     border: 2px solid var(--color-purple);
     border-bottom-width: 0;
@@ -413,9 +413,9 @@ button:focus {
     padding: 1rem;
     margin: 0 auto 2rem;
     width: 90%;
-}
+} */
 
-.project__link-container {
+/* .project__link-container {
     width: 90%;
     margin: 0 auto 2rem;
     display: flex;
@@ -427,9 +427,9 @@ button:focus {
     text-align: center;
     width: 33%;
     display: inline-block;
-}
+} */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .portfolio {
         width: 100%;
         margin: 0 auto;
@@ -467,11 +467,11 @@ button:focus {
         width: 46.5%;
         margin: 0 auto;
     }
-}
+} */
 
 /* ***** ***** ***** ***** TOOLBOX ***** ***** ***** ***** */
 
-.toolbox {
+/* .toolbox {
     padding: 2rem 5rem 0;
     min-height: 100vh;
     background-color: var(--color-black);
@@ -488,7 +488,7 @@ button:focus {
     text-shadow: 0 0.5rem 1rem var(--shadow-red);
     margin-bottom: 2rem;
     text-align: center;
-}
+} */
 
 .toolbox__text {
     margin-left: auto;

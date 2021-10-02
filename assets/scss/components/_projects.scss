@@ -1,0 +1,79 @@
+.projects {
+    &__body {
+        max-width: 100rem;
+        margin: 5rem auto 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__links {
+        width: 100%;
+        @include respond(tablet) {
+            width: 33%;
+        }
+        .btn[aria-expanded="true"] {
+            background-color: $color-purple;
+        }
+    }
+    &__display {
+        width: 100%;
+        @include respond(tablet) {
+            width: 67%;
+        }
+    }
+}
+
+.project {
+    background-color: $color-black;
+    width: 100%;
+    @include respond(tablet) {
+        width: calc(100% - 2rem);
+        margin-left: 2rem;            
+    }
+    &__header {
+        text-align: center;
+        color: $color-gold;
+        text-shadow: 0 0.5rem 1rem $shadow-gold;
+        background-color: $shadow-purple;
+        font-size: 2rem;
+        font-family: serif;
+        padding: 1rem 0;
+        border: 2px solid $color-purple;
+        @include respond(tablet) {
+            font-size: 4rem;
+        }
+    }
+    &__image {
+        border: 2px solid $color-purple;
+        border-bottom-width: 0;
+        border-top-width: 0;
+        display: block;
+        width: 100%;
+    }
+    &__skills {
+        text-align: center;
+        font-size: 1.2rem;
+        border: 2px solid $color-purple;
+        background-color: $shadow-purple;
+        color: $color-gold;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        @include respond(tablet) {
+            font-size: 1.2rem;
+        }
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}

@@ -1,0 +1,56 @@
+.toolbox {
+    &__container {
+        max-width: 100rem;
+        margin: 5rem auto 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.tool {
+    position: relative;
+    margin: 0 1rem 2rem;
+    width: 25rem;
+    height: 25rem;
+    -moz-perspective: 200rem;
+    perspective: 200rem;
+    background-color: $color-black;
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color-green;
+        transition: all 0.8s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        &--front {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-black;
+            border-color: $color-red;
+            // z-index: 2;
+        }
+        &--back {
+            // z-index: 1;
+            display: flex;
+            flex-direction: column;
+            transform: rotateY(-180deg);
+        }
+    }
+    // &:hover .tool__side--front {
+        // transform: scale(0.33) translate(30rem, -28rem);
+        // border-radius: 100%;
+        // border-width: 0.5rem;
+    // }
+    &:hover {
+        .tool__side--front {
+            transform: rotateY(180deg);
+        }
+        .tool__side--back {
+            transform: rotateY(0deg);
+        }
+    }
+}
