@@ -684,26 +684,33 @@ a, a:hover {
 }
 @media only screen and (min-width: 48em) {
   .tool {
+    width: calc(33.3333% - 2rem);
+  }
+}
+@media only screen and (min-width: 75em) {
+  .tool {
     width: calc(25% - 2rem);
   }
 }
 .tool__title {
-  text-align: center;
   color: #bb4466;
   text-shadow: 0 0.5rem 1rem rgba(187, 68, 102, 0.5);
-  padding: 1rem 0 12.5% 0;
+  padding: 1rem 1rem 1rem 7.5rem;
+  display: inline-block;
   border-bottom: 1px solid #ccff88;
 }
 @media only screen and (min-width: 48em) {
   .tool__title {
+    text-align: center;
     padding: 1rem 0 25% 0;
+    width: 100%;
   }
 }
 .tool__image {
   width: 25%;
   height: 0;
   padding: 12.5% 0;
-  margin: -12.5% auto 0;
+  margin: -22.5% auto 0 -0.5rem;
   background-color: #202020;
   border: 1px solid #bb4466;
   border-radius: 100%;
@@ -722,8 +729,13 @@ a, a:hover {
   width: 70%;
 }
 .tool__text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem;
+}
+@media only screen and (min-width: 48em) {
+  .tool__text {
+    font-size: 2rem;
+  }
 }
 .tool__skill {
   font-size: 1.5rem;
