@@ -20,9 +20,11 @@
     position: relative;
     background-color: rgba($color-black, .75);
     min-height: 100vh;
+    height: auto;
     margin-bottom: .5rem;
     width: 100%;
     padding: 0;
+    display: flex;
     @include respond(tablet) {
         margin-bottom: 25rem;
         &:last-child {

@@ -30,10 +30,14 @@ body {
     overflow-x: hidden;
 }
 
-button:focus {
-    outline: none;
+button {
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
 }
 
 a, a:hover {
+    cursor: pointer;
     text-decoration: none;
 }

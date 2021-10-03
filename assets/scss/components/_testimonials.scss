@@ -1,0 +1,73 @@
+.testimonials {
+    &__container {
+        width: 100%;
+        max-width: 100rem;
+        margin: 2rem auto 0;
+        padding: 1rem 1rem 4rem 1rem;
+        background-color: $color-black;
+        border: .5rem ridge $color-blue;
+        @include respond(tablet) {
+            margin: 3rem auto 0;
+            padding: 2rem 6rem;
+        }
+        .slick-prev {
+            left: 2.5rem;
+            bottom: 1rem;
+            top: unset;
+            z-index: 10;
+            @include respond(tablet) {
+                bottom: 50%;
+            }
+            &:before {
+                color: $color-orange;
+                font-size: 4rem;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        .slick-next {
+            right: 2.5rem;
+            bottom: 1rem;
+            top: unset;
+            z-index: 10;
+            @include respond(tablet) {
+                bottom: 50%;
+            }
+            &:before {
+                color: $color-orange;
+                font-size: 4rem;
+            }
+        }
+        .slick-dots {
+            bottom: 1.25rem;
+            left: 0;
+            li button {
+                background: $color-blue;
+                border-radius: 100%;
+            }
+        }
+        .slide {
+            padding: 1rem;
+            @include respond(tablet) {
+                padding: 5rem;
+            }
+            &__text {
+                font-size: 1.8rem;
+                line-height: 1.5;
+                color: $color-white;
+                font-style: italic;
+                text-align: justify;                            
+            }
+            &__name {
+                color: $color-blue;
+                text-align: right;
+            }
+            &__role {
+                color: $color-orange;
+                text-align: right;
+            }
+        }
+    }
+}
+

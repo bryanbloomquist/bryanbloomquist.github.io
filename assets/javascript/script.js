@@ -70,14 +70,10 @@ const techSkillsPage = () => {
     toolbox.map((tool, i) => {
         $(".toolbox__container").append(`
             <div class="tool">
-                <div class="tool__side tool__side--front">
-                    <img class="tool__image" src="${tool.src}" alt="${tool.name} logo" />
-                </div>
-                <div class="tool__side tool__side--back">
-                    <h2 class="tool__title">${tool.name}</h2>
-                    <p class="tool__text">${tool.description}</p>
-                    <h4 class="tool__skill">Skill Level: ${tool.level} / 5</h4>
-                </div>
+                <h2 class="tool__title">${tool.name}</h2>
+                <div class="tool__image"><img src="${tool.src}" alt="${tool.name} logo" /></div>
+                <p class="tool__text">${tool.description}</p>
+                <h4 class="tool__skill">Skill Level: ${tool.level} / 5</h4>
             </div>
         `);
     });
@@ -87,22 +83,14 @@ const techSkillsPage = () => {
 
 const testimonialsPage = () => {
     testimonials.map((data) => {
-        $("#testimonials-slider").append(
-        "<div class = 'slide'>" +
-            "<p>" +
-            data.testimonial +
-            "</p>" +
-            "<h5>" +
-            data.name +
-            "</h5>" +
-            "<h6>" +
-            data.role +
-            "</h6>" +
-            "<h6>" +
-            data.company +
-            "</h6>" +
-            "</div>"
-        );
+        $("#testimonials-slider").append(`
+            <div class='slide'>
+                <p class="slide__text">${data.testimonial}</p>
+                <h5 class="slide__name">${data.name}</h5>
+                <h6 class="slide__role">${data.role}</h6>
+                <h6 class="slide__role">${data.company}</h6>
+            </div>
+        `);
     });
 };
 
@@ -117,4 +105,5 @@ $(document).ready(function () {
         slidesToScroll: 1,
         speed: 500,
     });
+
 });

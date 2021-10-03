@@ -58,7 +58,7 @@ const toolbox = [
         alt: "WordPress Logo",
         src: "assets/images/wordpress.png",
         level: 4.5,
-        description: "A free and open-source content management system (CMS) written in PHP and paired with a MySQL database, used in more than 60 million websites.",
+        description: "A free and open-source content management system (CMS) used in more than 60 million websites.",
 	},
 	{
         name: "PHP",

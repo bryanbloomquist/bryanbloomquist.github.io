@@ -2,6 +2,9 @@
     &__body {
         max-width: 100rem;
         margin: 4rem auto 0;
+        padding: 2rem;
+        border: .5rem ridge $color-orange;
+        background-color: $color-black;
         display: flex;
         flex-direction: column;
         @include respond(tablet) {
@@ -13,8 +16,10 @@
         width: 100%;
         max-width: 40rem;
         margin: 0 auto;
-        padding: 0.5rem;
-        border: 0.5rem solid;
+        padding: 0.25rem;
+        border: 0.25rem solid $color-black;
+        background-color: $color-orange;
+        outline: 0.25rem solid $color-blue;
         border-radius: 2.5rem;
         align-self: center;
         @include respond(tablet) {
@@ -24,8 +29,10 @@
     &__text {
         font-size: 2rem;
         font-family: $font-fira;
-        color: $color-orange;
+        color: $color-blue;
         margin: 0 0 2rem 0;
+        display: flex;
+        align-items: center;
         @include respond(tablet) {
             font-size: 2.8rem;
             margin: 0 0 0 2rem;
